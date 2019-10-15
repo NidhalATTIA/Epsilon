@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Oct 15, 2019 at 12:49 PM
+-- Generation Time: Oct 15, 2019 at 01:02 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.1.22
 
@@ -146,6 +146,18 @@ CREATE TABLE `Review` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Subscribtion`
+--
+
+CREATE TABLE `Subscribtion` (
+  `ID` int(11) NOT NULL,
+  `ID_client` int(11) NOT NULL,
+  `ID_Freelancer` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Sujet_forum`
 --
 
@@ -221,6 +233,14 @@ ALTER TABLE `Review`
   ADD KEY `idfreelancer` (`idfreelancer`);
 
 --
+-- Indexes for table `Subscribtion`
+--
+ALTER TABLE `Subscribtion`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `subC_fk` (`ID_client`),
+  ADD KEY `subF_fk` (`ID_Freelancer`);
+
+--
 -- Indexes for table `Sujet_forum`
 --
 ALTER TABLE `Sujet_forum`
@@ -280,6 +300,12 @@ ALTER TABLE `Review`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `Subscribtion`
+--
+ALTER TABLE `Subscribtion`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `Sujet_forum`
 --
 ALTER TABLE `Sujet_forum`
@@ -322,6 +348,13 @@ ALTER TABLE `Postulation`
 ALTER TABLE `Review`
   ADD CONSTRAINT `idC_fk` FOREIGN KEY (`idClient`) REFERENCES `Client` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `idF_fk2` FOREIGN KEY (`idfreelancer`) REFERENCES `Freelancer` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Subscribtion`
+--
+ALTER TABLE `Subscribtion`
+  ADD CONSTRAINT `subC_fk` FOREIGN KEY (`ID_client`) REFERENCES `Client` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `subF_fk` FOREIGN KEY (`ID_Freelancer`) REFERENCES `Freelancer` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `Sujet_forum`
