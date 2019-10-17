@@ -11,12 +11,12 @@ import java.sql.*;
 import java.util.List;
 import java.sql.Connection;
 import java.sql.Statement;
-import utils.DataSource;
+import DataSource.DataSource;
 
 
 /**
  *
- * @author Arzack
+ * @author Nidhal
  */
 public class Main 
 {
@@ -25,7 +25,7 @@ public class Main
         public static void main(String[] args) 
         {
         // TODO code application logic here
-        Client c1=new Client(1, "attia", "nidhal","mail","TN","esprit","123","test");
+        Client c1=new Client(10, "attia2", "nidhal2","mail2","TN2","esprit2","123","test1");
         ServiceClient service=new ServiceClient();
         
        
@@ -36,7 +36,7 @@ public class Main
         }
 
         try {
-            service.supprimerClient(5);
+            service.supprimerClient(7);
         } catch (SQLException ex) {
             System.out.println(ex);
         }
