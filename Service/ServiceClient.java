@@ -20,37 +20,9 @@ import java.util.logging.Logger;
 public class ServiceClient 
 
 {
-    
     private Connection con = DataSource.getInstance().getConnection();
     private Statement ste;
     
-        public static void main(String[] args) 
-        {
-        // TODO code application logic here
-        Client c1=new Client(1, "attia", "nidhal","mail","TN","esprit","123","test");
-        ServiceClient service=new ServiceClient();
-        
-/*        
-        try {
-            service.ajouterClient(c1);
-        } catch (SQLException ex) {
-            System.out.println(ex);  
-        }
-/*
-        try {
-            service.supprimerClient(2);
-        } catch (SQLException ex) {
-            System.out.println(ex);
-        }
- */             
-         try {
-            service.modifierClient(c1);
-        } catch (SQLException ex) {
-            System.out.println(ex);
-        }     
-        
-    }
-
     public ServiceClient() {
         try {
             ste=con.createStatement();
@@ -83,13 +55,13 @@ public class ServiceClient
     public List<Client> readAll() throws SQLException
     {
         List<Client> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from Client");
-    Client clt=null;
-    while (res.next()) {
-      clt=new Client(res.getInt(1), res.getInt(4),res.getString(2),res.getString(3),res.getString(5)); // ??????????
-      list.add(clt);
-       }
+        ResultSet res=ste.executeQuery("select * from Client");
+        Client clt=null;
+        while (res.next()) {
+        clt=new Client(res.getInt(1), res.getString(2),res.getString(3),res.getString(4),res.getString(5),res.getString(6),res.getString(7),res.getString(8));
+        list.add(clt);
+        }
     return list;
   }
+    
 }
-
