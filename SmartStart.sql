@@ -2,8 +2,8 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Oct 15, 2019 at 01:02 PM
+-- Host: localhost:3306
+-- Generation Time: Oct 21, 2019 at 08:10 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.1.22
 
@@ -72,7 +72,8 @@ CREATE TABLE `Client` (
 --
 
 INSERT INTO `Client` (`ID`, `Nom`, `Prenom`, `Email`, `Nationalite`, `Nom_company`, `MotDePass`, `Description_company`) VALUES
-(1, 'client1', 'prenomC', 'EmailC', 'tunisie', 'esprit', 'esprit', 'esprit test');
+(1, 'client1', 'prenomC', 'EmailC', 'tunisie', 'esprit', 'esprit', 'esprit test'),
+(2, 'baazoug', 'houssem', 'fgdfhj', 'tunisien', 'sahsicompa', '123', 'asdfsrgdhtfj');
 
 -- --------------------------------------------------------
 
@@ -86,6 +87,18 @@ CREATE TABLE `Commentaire_forum` (
   `idfreelancer` int(11) NOT NULL,
   `Contenu` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Commentaire_forum`
+--
+
+INSERT INTO `Commentaire_forum` (`ID`, `id_sujet`, `idfreelancer`, `Contenu`) VALUES
+(1, 1, 1, 'commentaire modifier'),
+(3, 1, 1, 'commentaire'),
+(4, 1, 1, 'commentaire'),
+(5, 1, 1, 'commentaire'),
+(6, 1, 1, 'commentaire'),
+(7, 1, 1, 'commentaire');
 
 -- --------------------------------------------------------
 
@@ -102,6 +115,29 @@ CREATE TABLE `Freelancer` (
   `Nationalite` varchar(20) NOT NULL,
   `CV` varchar(20) NOT NULL,
   `Description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Freelancer`
+--
+
+INSERT INTO `Freelancer` (`ID`, `Nom`, `Prenom`, `Email`, `MotDePass`, `Nationalite`, `CV`, `Description`) VALUES
+(1, 'baazoug', 'houssem', 'houssembaazoug@', 'test', 'tunisien', 'cv', 'cv cv');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `FreelancerSkills`
+--
+
+CREATE TABLE `FreelancerSkills` (
+  `ID` int(11) NOT NULL,
+  `idFreelancer` int(11) NOT NULL,
+  `skill1` int(11) NOT NULL,
+  `skill2` int(11) NOT NULL,
+  `skill3` int(11) NOT NULL,
+  `skill4` int(11) NOT NULL,
+  `skill5` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -133,6 +169,39 @@ CREATE TABLE `Postulation` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Reclamation`
+--
+
+CREATE TABLE `Reclamation` (
+  `ID` int(11) NOT NULL,
+  `Titre` text NOT NULL,
+  `Contenu` text NOT NULL,
+  `IdFreelancer` int(11) NOT NULL,
+  `IdClient` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Reclamation`
+--
+
+INSERT INTO `Reclamation` (`ID`, `Titre`, `Contenu`, `IdFreelancer`, `IdClient`) VALUES
+(1, 'reclamation 1 modifiee', 'contemu de la reclamation modifiee', 1, 1),
+(3, 'reclamation 1', 'contemu de la reclamation', 1, 1),
+(4, 'reclamation 1', 'contemu de la reclamation', 1, 1),
+(5, 'reclamation 1', 'contemu de la reclamation', 1, 1),
+(6, 'reclamation 1', 'contemu de la reclamation', 1, 1),
+(7, 'reclamation 1', 'contemu de la reclamation', 1, 1),
+(8, 'reclamation 1', 'contemu de la reclamation', 1, 1),
+(9, 'reclamation 1', 'contemu de la reclamation', 1, 1),
+(11, 'reclamation 1 modifiee', 'contemu de la reclamation modifiee', 1, 1),
+(12, 'reclamation 1', 'contemu de la reclamation', 1, 1),
+(13, 'reclamation 1', 'contemu de la reclamation', 1, 1),
+(14, 'reclamation 1', 'contemu de la reclamation', 1, 1),
+(15, 'reclamation 1', 'contemu de la reclamation', 1, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Review`
 --
 
@@ -142,6 +211,42 @@ CREATE TABLE `Review` (
   `idfreelancer` int(11) NOT NULL,
   `Contenu` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Review`
+--
+
+INSERT INTO `Review` (`ID`, `idClient`, `idfreelancer`, `Contenu`) VALUES
+(3, 1, 1, 'review modifier'),
+(4, 1, 1, 'review'),
+(5, 1, 1, 'review'),
+(6, 1, 1, 'review'),
+(7, 1, 1, 'review'),
+(8, 1, 1, 'review'),
+(9, 1, 1, 'review'),
+(10, 1, 1, 'review'),
+(11, 1, 1, 'review'),
+(12, 1, 1, 'review'),
+(13, 1, 1, 'review');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Skills`
+--
+
+CREATE TABLE `Skills` (
+  `ID` int(11) NOT NULL,
+  `Skill` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Skills`
+--
+
+INSERT INTO `Skills` (`ID`, `Skill`) VALUES
+(1, 'web'),
+(2, 'java');
 
 -- --------------------------------------------------------
 
@@ -167,6 +272,32 @@ CREATE TABLE `Sujet_forum` (
   `Contenu` text NOT NULL,
   `IdFreelancer` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Sujet_forum`
+--
+
+INSERT INTO `Sujet_forum` (`ID`, `Titre`, `Contenu`, `IdFreelancer`) VALUES
+(1, 'test', 'test', 1),
+(5, 'test avec la modification', 'contenu du test avec la modification', 1),
+(6, 'test', 'contenu du test', 1),
+(7, 'test', 'contenu du test', 1),
+(8, 'test', 'contenu du test', 1),
+(9, 'test', 'contenu du test', 1),
+(10, 'test', 'contenu du test', 1),
+(11, 'test', 'contenu du test', 1),
+(12, 'test', 'contenu du test', 1),
+(13, 'test', 'contenu du test', 1),
+(14, 'test', 'contenu du test', 1),
+(15, 'test', 'contenu du test', 1),
+(16, 'test', 'contenu du test', 1),
+(17, 'test', 'contenu du test', 1),
+(18, 'test', 'contenu du test', 1),
+(19, 'test', 'contenu du test', 1),
+(20, 'test', 'contenu du test', 1),
+(21, 'test', 'contenu du test', 1),
+(22, 'test', 'contenu du test', 1),
+(23, 'test', 'contenu du test', 1);
 
 --
 -- Indexes for dumped tables
@@ -209,6 +340,18 @@ ALTER TABLE `Freelancer`
   ADD UNIQUE KEY `Email` (`Email`);
 
 --
+-- Indexes for table `FreelancerSkills`
+--
+ALTER TABLE `FreelancerSkills`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `idfreeskills` (`idFreelancer`),
+  ADD KEY `fkskill1` (`skill1`),
+  ADD KEY `fkskill3` (`skill3`),
+  ADD KEY `fkskill2` (`skill2`),
+  ADD KEY `fkskill5` (`skill5`),
+  ADD KEY `fkskill4` (`skill4`);
+
+--
 -- Indexes for table `Note`
 --
 ALTER TABLE `Note`
@@ -225,12 +368,26 @@ ALTER TABLE `Postulation`
   ADD KEY `idAnnonce` (`idAnnonce`);
 
 --
+-- Indexes for table `Reclamation`
+--
+ALTER TABLE `Reclamation`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `idcR_fk` (`IdClient`),
+  ADD KEY `idfR_fk` (`IdFreelancer`);
+
+--
 -- Indexes for table `Review`
 --
 ALTER TABLE `Review`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `idC_fk` (`idClient`),
   ADD KEY `idfreelancer` (`idfreelancer`);
+
+--
+-- Indexes for table `Skills`
+--
+ALTER TABLE `Skills`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `Subscribtion`
@@ -267,18 +424,24 @@ ALTER TABLE `Annonce`
 -- AUTO_INCREMENT for table `Client`
 --
 ALTER TABLE `Client`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `Commentaire_forum`
 --
 ALTER TABLE `Commentaire_forum`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `Freelancer`
 --
 ALTER TABLE `Freelancer`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `FreelancerSkills`
+--
+ALTER TABLE `FreelancerSkills`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -294,10 +457,22 @@ ALTER TABLE `Postulation`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `Reclamation`
+--
+ALTER TABLE `Reclamation`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
 -- AUTO_INCREMENT for table `Review`
 --
 ALTER TABLE `Review`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `Skills`
+--
+ALTER TABLE `Skills`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `Subscribtion`
@@ -309,7 +484,7 @@ ALTER TABLE `Subscribtion`
 -- AUTO_INCREMENT for table `Sujet_forum`
 --
 ALTER TABLE `Sujet_forum`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Constraints for dumped tables
@@ -329,6 +504,17 @@ ALTER TABLE `Commentaire_forum`
   ADD CONSTRAINT `idSujet_fk` FOREIGN KEY (`id_sujet`) REFERENCES `Sujet_forum` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `FreelancerSkills`
+--
+ALTER TABLE `FreelancerSkills`
+  ADD CONSTRAINT `fkskill1` FOREIGN KEY (`skill1`) REFERENCES `Skills` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fkskill2` FOREIGN KEY (`skill2`) REFERENCES `Skills` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fkskill3` FOREIGN KEY (`skill3`) REFERENCES `Skills` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fkskill4` FOREIGN KEY (`skill4`) REFERENCES `Skills` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fkskill5` FOREIGN KEY (`skill5`) REFERENCES `Skills` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `idfreeskills` FOREIGN KEY (`idFreelancer`) REFERENCES `Freelancer` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `Note`
 --
 ALTER TABLE `Note`
@@ -341,6 +527,13 @@ ALTER TABLE `Note`
 ALTER TABLE `Postulation`
   ADD CONSTRAINT `idA_fk` FOREIGN KEY (`idAnnonce`) REFERENCES `Annonce` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `idF_fk` FOREIGN KEY (`idFreelancer`) REFERENCES `Freelancer` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Reclamation`
+--
+ALTER TABLE `Reclamation`
+  ADD CONSTRAINT `idcR_fk` FOREIGN KEY (`IdClient`) REFERENCES `Client` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `idfR_fk` FOREIGN KEY (`IdFreelancer`) REFERENCES `Freelancer` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `Review`
