@@ -14,9 +14,6 @@ public class Postulation {
     int idFreelancer;
     int idAnnonce;
     String Contenu;
-    
-    public Postulation() {
-    }
 
     public Postulation(int ID, int idFreelancer, int idAnnonce, String Contenu) {
         this.ID = ID;
@@ -68,8 +65,6 @@ public class Postulation {
     public String toString() {
         return "Postulation{" + "ID=" + ID + ", idFreelancer=" + idFreelancer + ", idAnnonce=" + idAnnonce + ", Contenu=" + Contenu + '}';
     }
-
-    
     
     
     
