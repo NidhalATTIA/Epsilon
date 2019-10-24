@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ConnexionClientController">
+   <children>
+      <BorderPane layoutX="-7.0" layoutY="-7.0" prefHeight="411.0" prefWidth="607.0">
+         <top>
+            <AnchorPane prefHeight="57.0" prefWidth="607.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="tfinscription" layoutX="506.0" layoutY="19.0" mnemonicParsing="false" onAction="#inscriptionClient" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Join US" />
+                  <Label layoutX="289.0" layoutY="23.0" style="-fx-text-fill: white;" text="Pas encore membre ? Rejoignez-nous !" />
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="52.0" prefWidth="607.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="519.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" />
+                  <Button layoutX="435.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About US" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+      <TextArea fx:id="tfLogin" layoutX="212.0" layoutY="162.0" prefHeight="38.0" prefWidth="176.0" />
+      <PasswordField fx:id="tfPassword" layoutX="212.0" layoutY="222.0" prefHeight="38.0" prefWidth="176.0" />
+      <Label layoutX="113.0" layoutY="173.0" text="Adresse Mail :" />
+      <Label layoutX="111.0" layoutY="233.0" text="Mot de passe :" />
+      <Label layoutX="214.0" layoutY="84.0" text="Se connecter en tant que societe" />
+      <Button layoutX="239.0" layoutY="288.0" mnemonicParsing="false" onAction="#connexionClient" prefHeight="38.0" prefWidth="122.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Connexion" />
+   </children>
+</AnchorPane>
