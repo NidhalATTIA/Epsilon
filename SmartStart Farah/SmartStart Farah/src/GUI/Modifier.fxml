@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ModifierController">
+   <children>
+      <Label layoutX="38.0" layoutY="27.0" text="Nom" />
+      <Label layoutX="38.0" layoutY="72.0" text="Prenom" />
+      <Label layoutX="38.0" layoutY="112.0" text="Email" />
+      <Label layoutX="38.0" layoutY="154.0" text="MotDePasse" />
+      <Label layoutX="38.0" layoutY="200.0" text="Nationalite" />
+      <Label layoutX="38.0" layoutY="246.0" text="CV" />
+      <Label layoutX="38.0" layoutY="288.0" text="Description" />
+      <TextField fx:id="tfNom" layoutX="143.0" layoutY="23.0" />
+      <TextField fx:id="tfPrenom" layoutX="143.0" layoutY="68.0" />
+      <TextField fx:id="tfEmail" layoutX="143.0" layoutY="108.0" />
+      <TextField fx:id="tfMotDePasse" layoutX="143.0" layoutY="150.0" />
+      <TextField fx:id="tfNationalite" layoutX="143.0" layoutY="196.0" />
+      <TextField fx:id="tfCV" layoutX="143.0" layoutY="242.0" />
+      <TextField fx:id="tfDescription" layoutX="143.0" layoutY="284.0" />
+      <Button layoutX="45.0" layoutY="346.0" mnemonicParsing="false" onAction="#ModifierFree" text="Button" />
+      <Label layoutX="388.0" layoutY="27.0" text="ID" />
+      <TextField fx:id="tfID" layoutX="423.0" layoutY="23.0" />
+   </children>
+</AnchorPane>

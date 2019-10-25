@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjoutFreeSkillController">
+   <children>
+      <ButtonBar layoutY="-6.0" prefHeight="40.0" prefWidth="658.0" style="-fx-background-color: black;">
+         <buttons>
+            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Profil" textFill="WHITE" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Log out" textFill="WHITE" />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutY="380.0" prefHeight="40.0" prefWidth="658.0" style="-fx-background-color: black;">
+         <buttons>
+            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="About us" textFill="WHITE" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Contact us" textFill="WHITE" />
+         </buttons>
+      </ButtonBar>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="280.0" layoutY="52.0" text="Add your Skills" textAlignment="CENTER" textFill="DARKRED">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="148.0" text="Skill1" />
+      <Label layoutX="67.0" layoutY="185.0" text="Skill2" />
+      <Label layoutX="67.0" layoutY="226.0" text="Skill3" />
+      <Label layoutX="67.0" layoutY="263.0" text="Skill4" />
+      <Label layoutX="67.0" layoutY="300.0" text="Skill5" />
+      <TextField fx:id="tfSkill1" layoutX="198.0" layoutY="144.0" />
+      <TextField fx:id="tfSkill2" layoutX="198.0" layoutY="181.0" />
+      <TextField fx:id="tfSkill3" layoutX="198.0" layoutY="222.0" />
+      <TextField fx:id="tfSkill4" layoutX="198.0" layoutY="259.0" />
+      <TextField fx:id="tfSkill5" layoutX="198.0" layoutY="296.0" />
+      <Button layoutX="303.0" layoutY="333.0" mnemonicParsing="false" onAction="#AjouterFreeS" style="-fx-background-color: #8B0000;" text="ADD" textFill="WHITE" />
+      <TextField fx:id="tfIdFreelancer" layoutX="198.0" layoutY="101.0" />
+      <Label layoutX="67.0" layoutY="105.0" text="Freelancer " />
+      <Button fx:id="Goo" layoutX="405.0" layoutY="333.0" mnemonicParsing="false" onAction="#GoToAff" style="-fx-background-color: #8B0000;" text="***" textFill="WHITE" />
+   </children>
+</AnchorPane>
