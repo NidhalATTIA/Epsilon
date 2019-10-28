@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AcceuilFXMLController">
+   <center>
+      <ImageView fitHeight="298.0" fitWidth="598.0" pickOnBounds="true" smooth="false" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../image/cover-ill.png" />
+         </image>
+         <BorderPane.margin>
+            <Insets /> 
+         </BorderPane.margin>
+      </ImageView>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="BajouterAdmin" layoutX="84.0" layoutY="8.0" mnemonicParsing="false" onAction="#addAdmin" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="We are recruting moderators" AnchorPane.leftAnchor="84.0" />
+            <Button layoutX="334.0" layoutY="8.0" mnemonicParsing="false" onAction="#AboutUs" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" AnchorPane.rightAnchor="195.0" />
+            <Button layoutX="458.0" layoutY="8.0" mnemonicParsing="false" onAction="#ContactUs" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.rightAnchor="86.0" />
+         </children></AnchorPane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="74.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="r" layoutX="518.0" layoutY="18.0" mnemonicParsing="false" onAction="#g" prefHeight="36.0" prefWidth="54.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Login" AnchorPane.rightAnchor="28.0" />
+            <Button fx:id="BajouterClient" layoutX="353.0" layoutY="18.0" mnemonicParsing="false" onAction="#addClient" prefHeight="36.0" prefWidth="145.0" style="-fx-text-fill: white; -fx-background-color: #8B0000;" text="Join to hire freelancer" AnchorPane.rightAnchor="102.0" />
+            <Button fx:id="BajouterFreelancer" layoutX="205.0" layoutY="18.0" mnemonicParsing="false" onAction="#addFreelancer" prefHeight="36.0" prefWidth="133.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Join to work" AnchorPane.rightAnchor="262.0" />
+            <ImageView fitHeight="64.0" fitWidth="132.0" layoutX="24.0" layoutY="3.0">
+               <image>
+                  <Image url="@../image/Logo%20blanc.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </top>
+</BorderPane>
