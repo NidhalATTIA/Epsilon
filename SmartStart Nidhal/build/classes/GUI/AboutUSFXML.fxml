@@ -19,8 +19,8 @@
       </ButtonBar>
       <ButtonBar layoutX="-2.0" layoutY="468.0" prefHeight="46.0" prefWidth="658.0" style="-fx-background-color: black;">
          <buttons>
-            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="About us" textFill="WHITE" />
-            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Contact us" textFill="WHITE" />
+            <Button fx:id="BaboutUs" mnemonicParsing="false" onAction="#AboutUs" style="-fx-background-color: #8B0000;" text="About us" textFill="WHITE" />
+            <Button fx:id="BcontactUs" mnemonicParsing="false" onAction="#ContactUs" style="-fx-background-color: #8B0000;" text="Contact us" textFill="WHITE" />
          </buttons>
       </ButtonBar>
       <Label layoutX="151.0" layoutY="97.0" text="About us">
@@ -38,7 +38,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Button fx:id="back" layoutX="307.0" layoutY="395.0" mnemonicParsing="false" onAction="#GoToAccueil" style="-fx-background-color: #8B0000;" text="Back" textFill="WHITE" />
+      <Button fx:id="Baccueil" layoutX="307.0" layoutY="395.0" mnemonicParsing="false" onAction="#GoToAccueil" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #8B0000;" text="Back" textFill="WHITE" />
       <ImageView layoutX="327.0" layoutY="68.0">
          <image>
             <Image url="@../image/Logo%20noir.png" />

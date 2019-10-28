@@ -29,6 +29,10 @@ public class ContactUsFXMLController implements Initializable {
     private Button back1;
     @FXML
     private Button logout4;
+    @FXML
+    private Button BaboutUs;
+    @FXML
+    private Button BcontactUs;
 
     /**
      * Initializes the controller class.
@@ -46,8 +50,19 @@ public class ContactUsFXMLController implements Initializable {
 
     @FXML
     private void GoToSignIn4(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("AuthentificationFXML.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
         logout4.getScene().setRoot(root);
     }
-    
+
+    @FXML
+    private void AboutUs(ActionEvent event) throws IOException {
+               Parent root = FXMLLoader.load(getClass().getResource("AboutUSFXML.fxml"));
+       BaboutUs.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void ContactUs(ActionEvent event) throws IOException {
+               Parent root = FXMLLoader.load(getClass().getResource("ContactUSFXML.fxml"));
+       BcontactUs.getScene().setRoot(root);
+    }
 }

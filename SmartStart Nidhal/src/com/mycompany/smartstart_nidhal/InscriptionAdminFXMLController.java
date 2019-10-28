@@ -9,7 +9,6 @@ package com.mycompany.smartstart_nidhal;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import Entite.Admin;
 import Service.ServiceAdmin;
 import java.io.IOException;

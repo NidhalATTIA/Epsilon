@@ -18,8 +18,8 @@
       </ButtonBar>
       <ButtonBar layoutY="499.0" prefHeight="40.0" prefWidth="683.0" style="-fx-background-color: black;">
          <buttons>
-            <Button mnemonicParsing="false" style="-fx-background-color: #8D0000;" text="About us" textFill="#f8f7f7" />
-            <Button minWidth="59.0" mnemonicParsing="false" prefHeight="25.0" style="-fx-background-color: #8B0000;" text="Contact us" textFill="#fcf8f8" />
+            <Button fx:id="BaboutUs" mnemonicParsing="false" onAction="#AboutUs" style="-fx-background-color: #8D0000;" text="About us" textFill="#f8f7f7" />
+            <Button fx:id="BcontactUs" minWidth="59.0" mnemonicParsing="false" onAction="#ContactUs" prefHeight="25.0" style="-fx-background-color: #8B0000;" text="Contact us" textFill="#fcf8f8" />
          </buttons>
       </ButtonBar>
       <Label layoutX="230.0" layoutY="73.0" text="Contact us">

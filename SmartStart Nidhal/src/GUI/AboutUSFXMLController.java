@@ -22,10 +22,15 @@ import javafx.scene.control.Button;
  */
 public class AboutUSFXMLController implements Initializable {
 
-    @FXML
     private Button back;
     @FXML
     private Button logout3;
+    @FXML
+    private Button BaboutUs;
+    @FXML
+    private Button BcontactUs;
+    @FXML
+    private Button Baccueil;
 
     /**
      * Initializes the controller class.
@@ -44,8 +49,20 @@ public class AboutUSFXMLController implements Initializable {
 
     @FXML
     private void GoToSignIn3(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("AuthentificationFXML.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
         logout3.getScene().setRoot(root);
+    }
+
+     @FXML
+    private void AboutUs(ActionEvent event) throws IOException {
+               Parent root = FXMLLoader.load(getClass().getResource("AboutUSFXML.fxml"));
+       BaboutUs.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void ContactUs(ActionEvent event) throws IOException {
+               Parent root = FXMLLoader.load(getClass().getResource("ContactUSFXML.fxml"));
+       BcontactUs.getScene().setRoot(root);
     }
 
 }
