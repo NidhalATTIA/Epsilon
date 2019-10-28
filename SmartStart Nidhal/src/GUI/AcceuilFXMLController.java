@@ -46,8 +46,7 @@ public class AcceuilFXMLController implements Initializable {
 
     @FXML
     private void g(ActionEvent event) throws IOException {
-        URL url = new File("src/gui/LoginFXML.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
+       Parent root = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
         r.getScene().setRoot(root);
     }
 
@@ -70,11 +69,15 @@ public class AcceuilFXMLController implements Initializable {
     }
 
     @FXML
-    private void AboutUs(ActionEvent event) {
+    private void AboutUs(ActionEvent event) throws IOException {
+               Parent root = FXMLLoader.load(getClass().getResource("AboutUSFXML.fxml"));
+       BaboutUs.getScene().setRoot(root);
     }
 
     @FXML
-    private void ContactUs(ActionEvent event) {
+    private void ContactUs(ActionEvent event) throws IOException {
+               Parent root = FXMLLoader.load(getClass().getResource("ContactUSFXML.fxml"));
+       BcontactUs.getScene().setRoot(root);
     }
     
     

@@ -45,7 +45,7 @@ public class InscriptionFreelancerFXMLController implements Initializable {
     @FXML
     private Button Bconnexion;
     @FXML
-    private Button bAboutUs;
+    private Button BaboutUs;
     @FXML
     private Button BcontactUS;
     @FXML
@@ -67,12 +67,16 @@ public class InscriptionFreelancerFXMLController implements Initializable {
         Bconnexion.getScene().setRoot(root1);
     }
 
-    @FXML
-    private void AboutUs(ActionEvent event) {
+   @FXML
+    private void AboutUs(ActionEvent event) throws IOException {
+               Parent root = FXMLLoader.load(getClass().getResource("AboutUSFXML.fxml"));
+       BaboutUs.getScene().setRoot(root);
     }
 
     @FXML
-    private void ContactUs(ActionEvent event) {
+    private void ContactUs(ActionEvent event) throws IOException {
+               Parent root = FXMLLoader.load(getClass().getResource("ContactUSFXML.fxml"));
+       BcontactUS.getScene().setRoot(root);
     }
 
     @FXML
@@ -90,7 +94,7 @@ public class InscriptionFreelancerFXMLController implements Initializable {
         try {
             sp.ajouterFree(f);
         } catch (SQLException ex) {
-            Logger.getLogger(InscriptionAdminController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(InscriptionFreelancerFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
