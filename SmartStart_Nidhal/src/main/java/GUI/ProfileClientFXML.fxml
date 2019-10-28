@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI7.ProfileClientFXMLController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="18.0" prefHeight="73.0" prefWidth="608.0" style="-fx-background-color: ffffee;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="Accueil" layoutX="378.0" layoutY="14.0" mnemonicParsing="false" onAction="#Client_Accueil" prefHeight="34.0" prefWidth="87.0" style="-fx-background-color: #8B0000;" text="Accueil" textFill="WHITE" />
+            <Button fx:id="deconnexion" layoutX="477.0" layoutY="14.0" mnemonicParsing="false" onAction="#Deco" prefHeight="34.0" prefWidth="109.0" style="-fx-background-color: #8B0000;" text="Deconnexion" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="tfAvatar" fitHeight="150.0" fitWidth="150.0" layoutX="14.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/icone-perso.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lastname" layoutX="196.0" layoutY="119.0" text="Prenom">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="196.0" layoutY="79.0" text="Nom">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="modifierClient" layoutX="27.0" layoutY="207.0" mnemonicParsing="false" onAction="#modifierClient" prefHeight="34.0" prefWidth="124.0" style="-fx-background-color: #8B0000;" text="Modifier " textFill="WHITE" />
+      <AnchorPane layoutX="7.0" layoutY="313.0" prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: ffffee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button layoutX="490.0" layoutY="12.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="98.0" style="-fx-background-color: #8B0000;" text="Contact us" textFill="WHITE" />
+            <Button layoutX="382.0" layoutY="12.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="98.0" style="-fx-background-color: #8B0000;" text="About us" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="lastname1" layoutX="196.0" layoutY="157.0" text="Email">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lastname11" layoutX="196.0" layoutY="193.0" text="Nationalite">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lastname111" layoutX="195.0" layoutY="229.0" text="Compagnie">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lastname1111" layoutX="394.0" layoutY="79.0" text="Description">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tfNom" layoutX="242.0" layoutY="81.0" text="Label" />
+      <Label fx:id="tfPrenom" layoutX="268.0" layoutY="121.0" text="Label" />
+      <Label fx:id="tfEmail" layoutX="253.0" layoutY="159.0" text="Label" />
+      <Label fx:id="tfNationalite" layoutX="286.0" layoutY="195.0" text="Label" />
+      <Label fx:id="tfCompany" layoutX="286.0" layoutY="231.0" text="Label" />
+      <Label fx:id="tfDescription" layoutX="394.0" layoutY="113.0" text="Label" />
+   </children>
+</AnchorPane>
