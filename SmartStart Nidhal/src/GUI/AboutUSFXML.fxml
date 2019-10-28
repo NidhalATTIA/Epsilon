@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AboutUSFXMLController">
+   <children>
+      <ButtonBar layoutX="-2.0" prefHeight="46.0" prefWidth="658.0" style="-fx-background-color: black;">
+         <buttons>
+            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Profil" textFill="WHITE" />
+            <Button fx:id="logout3" mnemonicParsing="false" onAction="#GoToSignIn3" style="-fx-background-color: #8B0000;" text="Log out" textFill="#fffcfc" />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="-2.0" layoutY="468.0" prefHeight="46.0" prefWidth="658.0" style="-fx-background-color: black;">
+         <buttons>
+            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="About us" textFill="WHITE" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Contact us" textFill="WHITE" />
+         </buttons>
+      </ButtonBar>
+      <Label layoutX="151.0" layoutY="97.0" text="About us">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="178.0" prefHeight="40.0" prefWidth="567.0" text="Find &amp; hire top freelancers, web developers &amp; designers inexpensively" textAlignment="CENTER" textFill="#3a5086">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Text layoutX="92.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smart Start is a Tunisian crowdsourcing marketplace application/website, which allows potential employers to post jobs that freelancers can then bid to complete. Founded in 2019 powred by Epsilon group, its headquarters is located in ariana, Tunisia." textAlignment="CENTER" wrappingWidth="472.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="back" layoutX="307.0" layoutY="395.0" mnemonicParsing="false" onAction="#GoToAccueil" style="-fx-background-color: #8B0000;" text="Back" textFill="WHITE" />
+      <ImageView layoutX="327.0" layoutY="68.0">
+         <image>
+            <Image url="@../image/Logo%20noir.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

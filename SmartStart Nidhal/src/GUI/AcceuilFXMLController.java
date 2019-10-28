@@ -53,22 +53,19 @@ public class AcceuilFXMLController implements Initializable {
 
     @FXML
     private void addClient(ActionEvent event) throws IOException {
-        URL url = new File("src/gui/InscriptionClientFXML.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(getClass().getResource("InscriptionClientFXML.fxml"));
+       Parent root = FXMLLoader.load(getClass().getResource("InscriptionClientFXML.fxml"));
         BajouterClient.getScene().setRoot(root);
     }
 
     @FXML
     private void addFreelancer(ActionEvent event) throws IOException {
-        URL url = new File("src/gui/InscriptionFreelancerFXML.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(getClass().getResource("InscriptionFreelancerFXML.fxml"));
-        BajouterFreelancer.getScene().setRoot(root);
+       Parent root = FXMLLoader.load(getClass().getResource("InscriptionFreelancerFXML.fxml"));
+       BajouterFreelancer.getScene().setRoot(root);
     }
 
     @FXML
     private void addAdmin(ActionEvent event) throws IOException {
-        URL url = new File("src/gui/InscriptionAdminFXML.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(getClass().getResource("InscriptionAdminFXML.fxml"));
+       Parent root = FXMLLoader.load(getClass().getResource("InscriptionAdminFXML.fxml"));
         BajouterAdmin.getScene().setRoot(root);   
     }
 
