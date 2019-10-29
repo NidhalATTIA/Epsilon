@@ -1,48 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AboutUSFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="495.0" prefWidth="670.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AboutUSFXMLController">
    <children>
-      <ButtonBar layoutX="-2.0" prefHeight="46.0" prefWidth="658.0" style="-fx-background-color: black;">
-         <buttons>
-            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Profil" textFill="WHITE" />
-            <Button fx:id="logout3" mnemonicParsing="false" onAction="#GoToSignIn3" style="-fx-background-color: #8B0000;" text="Log out" textFill="#fffcfc" />
-         </buttons>
-      </ButtonBar>
-      <ButtonBar layoutX="-2.0" layoutY="468.0" prefHeight="46.0" prefWidth="658.0" style="-fx-background-color: black;">
-         <buttons>
-            <Button fx:id="BaboutUs" mnemonicParsing="false" onAction="#AboutUs" style="-fx-background-color: #8B0000;" text="About us" textFill="WHITE" />
-            <Button fx:id="BcontactUs" mnemonicParsing="false" onAction="#ContactUs" style="-fx-background-color: #8B0000;" text="Contact us" textFill="WHITE" />
-         </buttons>
-      </ButtonBar>
-      <Label layoutX="151.0" layoutY="97.0" text="About us">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
-      <Label layoutX="45.0" layoutY="178.0" prefHeight="40.0" prefWidth="567.0" text="Find &amp; hire top freelancers, web developers &amp; designers inexpensively" textAlignment="CENTER" textFill="#3a5086">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Text layoutX="92.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smart Start is a Tunisian crowdsourcing marketplace application/website, which allows potential employers to post jobs that freelancers can then bid to complete. Founded in 2019 powred by Epsilon group, its headquarters is located in ariana, Tunisia." textAlignment="CENTER" wrappingWidth="472.13671875">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Button fx:id="Baccueil" layoutX="307.0" layoutY="395.0" mnemonicParsing="false" onAction="#GoToAccueil" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #8B0000;" text="Back" textFill="WHITE" />
-      <ImageView layoutX="327.0" layoutY="68.0">
-         <image>
-            <Image url="@../image/Logo%20noir.png" />
-         </image>
-      </ImageView>
+      <BorderPane layoutY="-3.0" prefHeight="503.0" prefWidth="670.0">
+         <top>
+            <AnchorPane prefHeight="56.0" prefWidth="670.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="logout3" layoutX="576.0" layoutY="13.0" mnemonicParsing="false" onAction="#Connexion" style="-fx-background-color: #8B0000;" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Bprofile" layoutX="488.0" layoutY="13.0" mnemonicParsing="false" onAction="#Profile" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #8B0000;" text="Profile" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="30.0" layoutY="12.0" text="About Us" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="58.0" prefWidth="670.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="BcontactUs" layoutX="552.0" layoutY="14.0" mnemonicParsing="false" onAction="#ContactUs" style="-fx-background-color: #8B0000;" text="Contact Us" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="390.0" fitWidth="670.0">
+                     <image>
+                        <Image url="@../image/fond.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="243.0" layoutY="34.0">
+                     <image>
+                        <Image url="@../image/Logo%20blanc%20noir.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="62.0" layoutY="154.0" prefHeight="40.0" prefWidth="567.0" text="Find &amp; hire top freelancers, web developers &amp; designers inexpensively" textAlignment="CENTER" textFill="#3a5086">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fill="WHITE" layoutX="41.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smart Start is a Tunisian crowdsourcing marketplace application/website, which allows potential employers to post jobs that freelancers can then bid to complete. Founded in 2019 powred by Epsilon group, its headquarters is located in ariana, Tunisia." textAlignment="CENTER" wrappingWidth="588.13671875">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>
