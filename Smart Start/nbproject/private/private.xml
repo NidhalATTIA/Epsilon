@@ -3,38 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/ModifReclamationFFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilfreelancerFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AddSkillsFXML.fxml</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AddReclamationFFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Entite/Feed.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/ProfilFreelancerFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/ReclamationClientFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/RSSFeedWriter.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceCommentaire.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AnnonceClientFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AfficherReclamationAdminCFXML.fxml</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AddSkillsFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilForumFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilAdminFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/ModifReclamationCFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AddReclamationFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/SujetForumFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/ComplaintsFreelanecerFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/SkillsEditFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilAdminClientsFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/NewFXMain.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/modifierOrSupprimerSkillsFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AfficherReclamationAdminFFXML.fxml</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilAdminReclamationfFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AfficherReclamationAdminCFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceReclamation.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Entite/Reclamation.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Entite/FeedMessage.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AfficherReclamationAdminFFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilAdminReclamationFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilClientFXMLController.java</file>
+            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/Smart%20Start/src/GUI/AnnonceClientFXMLController.java</file>
+            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/Smart%20Start/src/GUI/ReclamationClientFXMLController.java</file>
+            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/Smart%20Start/src/GUI/AcceuilClientFXMLController.java</file>
         </group>
     </open-files>
 </project-private>
