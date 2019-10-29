@@ -73,11 +73,16 @@
                         <Font name="System Bold Italic" size="20.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="112.0" fitWidth="211.0" layoutX="412.0" layoutY="22.0">
+                  <ImageView fitHeight="112.0" fitWidth="211.0" layoutX="411.0" layoutY="48.0">
                      <image>
                         <Image url="@../image/Logo%20noir.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="Bmaps" layoutX="366.0" layoutY="229.0" mnemonicParsing="false" onAction="#Maps" text="Where are we ? Click here to find out">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
          </center>
