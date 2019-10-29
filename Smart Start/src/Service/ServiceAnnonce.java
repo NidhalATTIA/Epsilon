@@ -23,7 +23,7 @@ public class ServiceAnnonce {
 
     private Connection con = DataSource.getInstance().getConnection();
     private Statement ste;
-
+    public static int idan;
     public ServiceAnnonce() {
         try {
             ste=con.createStatement();
@@ -64,7 +64,7 @@ public class ServiceAnnonce {
     return list;
     } 
   public void ajouterAnnonce (Annonce A) throws SQLException{  
-  String req="INSERT INTO `annonce` ( `Titre`,`DESCRIPTION`,`id_client`,`Skills`) VALUES (?,?,?,?)";
+  String req="INSERT INTO `annonce` ( `Titre`,`DESCRIPTION`,`id_client`,`Skill`) VALUES (?,?,?,?)";
   PreparedStatement pres=con.prepareStatement(req);
   pres.setString(1, A.getTitre());
   pres.setString(2, A.getDESCRIPTION());

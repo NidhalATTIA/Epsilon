@@ -89,6 +89,8 @@ public class AnnonceClientFXMLController implements Initializable {
     ServiceSkills ss = new ServiceSkills();
     Skills s = new Skills();
      private final ObservableList<Annonce> data= FXCollections.observableArrayList();
+    @FXML
+    private Button btnadd;
      
     /**
      * Initializes the controller class.
@@ -214,6 +216,22 @@ public class AnnonceClientFXMLController implements Initializable {
             }
         });
         ListePra.setItems(data);
+        ListePra.setOnMouseClicked(e ->{
+        ServiceAnnonce.idan= ListePra.getSelectionModel().getSelectedItem().getID();
+         URL url2 = null;
+            try {
+                url2 = new File("src/gui/creerAnnonceFXML.fxml").toURI().toURL();
+            } catch (MalformedURLException ex) {
+                Logger.getLogger(AnnonceClientFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        Parent root = null;
+            try {
+                root = FXMLLoader.load(url2);
+            } catch (IOException ex) {
+                Logger.getLogger(AnnonceClientFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        Complaints.getScene().setRoot(root);
+        });
     }    
 
     @FXML
@@ -240,6 +258,13 @@ public class AnnonceClientFXMLController implements Initializable {
     @FXML
     private void ShowComplaints(ActionEvent event) throws MalformedURLException, IOException {
         URL url = new File("src/gui/ReclamationClientFXML.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        Complaints.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void Createad(ActionEvent event) throws IOException {
+        URL url = new File("src/gui/VuAnnonceClientFXML.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         Complaints.getScene().setRoot(root);
     }

@@ -232,6 +232,7 @@ public class JobsBySkillsFXMLController implements Initializable {
         });
         Listeview.setItems(data);
         
+        
     }    
 
      @FXML

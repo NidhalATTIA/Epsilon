@@ -229,6 +229,7 @@ public class SubscriptionFreelancerFXMLController implements Initializable {
         });
         Listeview.setItems(data);
         
+        
     }    
 
      @FXML

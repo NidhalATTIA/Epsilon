@@ -76,8 +76,6 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
     private Button adsbtn;
     @FXML
     private Button Complaintsbtn;
-    @FXML
-    private Button CreateC;
      Freelancer f  = new Freelancer();
       ServiceFreelancer sf = new ServiceFreelancer();
         ServiceAnnonce sj = new ServiceAnnonce();
@@ -216,6 +214,7 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
             }
         });
         Listeview.setItems(data);
+        
     }    
 
     @FXML
@@ -268,7 +267,6 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
         
     }
 
-    @FXML
     private void CreateComp(ActionEvent event) throws MalformedURLException, IOException {
           URL url = new File("src/gui/AddReclamationFFXML.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);

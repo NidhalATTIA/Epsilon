@@ -33,6 +33,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javax.imageio.ImageIO;
@@ -52,10 +53,6 @@ public class ProfilFreelancerFXMLController implements Initializable {
     @FXML
     private TextArea CVM;
     @FXML
-    private TextField nomM;
-    @FXML
-    private TextField PrenomM;
-    @FXML
     private TextField EmailM;
     final FileChooser fileChooser = new FileChooser();
     int s =0;
@@ -65,6 +62,18 @@ public class ProfilFreelancerFXMLController implements Initializable {
        Image card=null;
     @FXML
     private Button Skills;
+    @FXML
+    private Text nomUser;
+    @FXML
+    private ImageView imageUser;
+    @FXML
+    private Button btnsave;
+    @FXML
+    private Text nomM;
+    @FXML
+    private Text prenomM;
+    @FXML
+    private Button deletebtn;
     /**
      * Initializes the controller class.
      */
@@ -76,7 +85,7 @@ public class ProfilFreelancerFXMLController implements Initializable {
         try {
             f= sf.recherche(ServiceAuthentification.idf);
             nomM.setText(f.getNom());
-            PrenomM.setText(f.getPrenom());
+            prenomM.setText(f.getPrenom());
             EmailM.setText(f.getEmail());
             CVM.setText(f.getCv());
             DescriptionM.setText(f.getDescription());
@@ -131,6 +140,30 @@ public class ProfilFreelancerFXMLController implements Initializable {
     @FXML
     private void redirectionskills(ActionEvent event) throws MalformedURLException, IOException {
          URL url = new File("src/gui/SkillsEditFXML.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        Skills.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void saveChanges(ActionEvent event) throws SQLException, MalformedURLException, IOException {
+        f.setNom(nomM.getText());
+        f.setPrenom(prenomM.getText());
+            f.setEmail(EmailM.getText());
+            f.setCv(CVM.getText());
+            f.setDescription(DescriptionM.getText());
+            
+            sf.modifierFree(f);
+        URL url = new File("src/gui/ProfilFreelancerFXML.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        Skills.getScene().setRoot(root);
+            
+    }
+
+    @FXML
+    private void DeleteAccount(ActionEvent event) throws IOException, SQLException {
+        
+        sf.supprimerFree(f.getId());
+         URL url = new File("src/gui/AcceuilFXML.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         Skills.getScene().setRoot(root);
     }
