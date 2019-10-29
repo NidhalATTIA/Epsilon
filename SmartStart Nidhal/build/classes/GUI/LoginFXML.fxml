@@ -42,8 +42,8 @@
    <bottom>
       <AnchorPane prefHeight="49.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="bContactUs" layoutX="496.0" layoutY="6.0" mnemonicParsing="false" onAction="#ContactUs" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.rightAnchor="14.0" />
-            <Button fx:id="BaboutUs" layoutX="398.0" layoutY="6.0" mnemonicParsing="false" onAction="#AboutUs" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" />
+            <Button fx:id="BcontactUs1" layoutX="496.0" layoutY="6.0" mnemonicParsing="false" onAction="#ContactUs1" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.rightAnchor="14.0" />
+            <Button fx:id="BaboutUs1" layoutX="398.0" layoutY="6.0" mnemonicParsing="false" onAction="#AboutUs1" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" />
          </children>
       </AnchorPane>
    </bottom>

@@ -13,8 +13,11 @@
    <top>
       <AnchorPane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="logoutadmin" layoutX="497.0" layoutY="16.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Logout" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="16.0" />
-            <ImageView fx:id="imageA" fitHeight="51.0" fitWidth="84.0" layoutX="275.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="241.0" />
+            <Button fx:id="logoutadmin" layoutX="512.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Log Out" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <ImageView fx:id="imageA" fitHeight="51.0" fitWidth="84.0" layoutX="275.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="241.0" />
             <Text fx:id="nomAdmin" fill="WHITE" layoutX="383.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="89.0" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="20.63020896911621" />
          </children>
       </AnchorPane>
@@ -25,20 +28,20 @@
    <center>
       <AnchorPane prefHeight="295.0" prefWidth="229.0" BorderPane.alignment="CENTER">
          <children>
-            <Text layoutX="84.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject :" wrappingWidth="94.2060546875" AnchorPane.leftAnchor="62.0" AnchorPane.topAnchor="31.6640625">
+            <Text layoutX="83.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject :" wrappingWidth="94.2060546875" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="33.41796875">
                <font>
                   <Font size="20.0" />
                </font>
             </Text>
             <TextField fx:id="title" layoutX="178.0" layoutY="30.0" prefHeight="35.0" prefWidth="311.0" AnchorPane.leftAnchor="178.0" AnchorPane.rightAnchor="111.0" AnchorPane.topAnchor="30.0" />
             <TextArea fx:id="contenu" layoutX="178.0" layoutY="81.0" prefHeight="163.0" prefWidth="310.0" AnchorPane.leftAnchor="178.0" AnchorPane.rightAnchor="112.0" AnchorPane.topAnchor="81.0" />
-            <Text layoutX="62.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complaint :" AnchorPane.leftAnchor="62.0" AnchorPane.topAnchor="74.6640625">
+            <Text layoutX="59.0" layoutY="96.24609375" strokeType="OUTSIDE" strokeWidth="0.0" text="Complaint :" AnchorPane.leftAnchor="59.0" AnchorPane.topAnchor="74.6640625">
                <font>
                   <Font size="20.0" />
                </font>
             </Text>
-            <Button fx:id="btnCreate" layoutX="213.0" layoutY="250.0" mnemonicParsing="false" onAction="#Create" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #b80000;" text="Save" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="267.0" />
-            <Button fx:id="Deletbtn" layoutX="360.0" layoutY="250.0" mnemonicParsing="false" onAction="#Delete" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: #b80000;" text="Delete" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="139.0" />
+            <Button fx:id="btnCreate" layoutX="209.0" layoutY="250.0" mnemonicParsing="false" onAction="#Create" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: #8B0000;" text="Save" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="271.0" />
+            <Button fx:id="Deletbtn" layoutX="360.0" layoutY="250.0" mnemonicParsing="false" onAction="#Delete" prefHeight="31.0" prefWidth="116.0" style="-fx-background-color: #8B0000;" text="Delete" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="139.0" />
          </children>
       </AnchorPane>
    </center>
@@ -48,8 +51,14 @@
    <bottom>
       <AnchorPane prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="Aboutus" layoutX="393.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="136.0" />
-            <Button fx:id="Contactus" layoutX="504.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="14.0" />
+            <Button fx:id="Aboutus" layoutX="396.0" layoutY="7.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="122.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button fx:id="Contactus" layoutX="493.0" layoutY="7.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="14.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
          </children>
       </AnchorPane>
    </bottom>

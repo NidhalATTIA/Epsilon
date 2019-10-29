@@ -37,7 +37,7 @@
          <bottom>
             <AnchorPane prefHeight="69.0" prefWidth="675.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="BcontactUs" layoutX="568.0" layoutY="19.0" mnemonicParsing="false" onAction="#ContactUs" style="-fx-background-color: #8B0000;" text="About Us" textFill="WHITE">
+                  <Button fx:id="BaboutUs" layoutX="568.0" layoutY="19.0" mnemonicParsing="false" onAction="#AboutUs" style="-fx-background-color: #8B0000;" text="About Us" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>

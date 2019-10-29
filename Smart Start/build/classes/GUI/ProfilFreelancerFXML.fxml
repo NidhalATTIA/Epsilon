@@ -3,24 +3,40 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProfilFreelancerFXMLController">
    <top>
       <AnchorPane prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="497.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Logout" />
+            <Button layoutX="515.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Log Out">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <ImageView fitHeight="54.0" fitWidth="100.0" layoutX="20.0">
+               <image>
+                  <Image url="@../assets/images/Logo%20blanc.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </top>
    <bottom>
       <AnchorPane prefHeight="56.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="498.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact us" />
-            <Button layoutX="412.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" />
+            <Button layoutX="501.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact us">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button layoutX="410.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
          </children>
       </AnchorPane>
    </bottom>
@@ -28,17 +44,17 @@
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fx:id="imageFP" fitHeight="104.0" fitWidth="149.0" layoutX="372.0" layoutY="6.0" onMouseClicked="#changePP" pickOnBounds="true" preserveRatio="true" />
-            <Text layoutX="86.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" wrappingWidth="54.2060546875" />
+            <Text layoutX="100.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" wrappingWidth="54.2060546875" />
             <Text layoutX="86.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom :" />
-            <Text layoutX="86.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
-            <Text layoutX="86.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Intro :" />
+            <Text layoutX="99.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
+            <Text layoutX="103.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Intro :" />
             <TextArea fx:id="DescriptionM" layoutX="103.0" layoutY="154.0" prefHeight="127.0" prefWidth="187.0" />
-            <TextArea fx:id="CVM" layoutX="347.0" layoutY="154.0" prefHeight="128.0" prefWidth="198.0" />
-            <Text layoutX="319.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Professional Experiences :" />
+            <TextArea fx:id="CVM" layoutX="315.0" layoutY="153.0" prefHeight="128.0" prefWidth="198.0" />
+            <Text layoutX="321.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Professional Experiences :" />
             <TextField fx:id="nomM" layoutX="179.0" layoutY="22.0" />
             <TextField fx:id="PrenomM" layoutX="179.0" layoutY="53.0" />
             <TextField fx:id="EmailM" layoutX="179.0" layoutY="84.0" />
-            <Button fx:id="Skills" layoutX="521.0" layoutY="115.0" mnemonicParsing="false" onAction="#redirectionskills" prefHeight="29.0" prefWidth="66.0" style="-fx-background-color: #b80000;" text="Skills" textFill="WHITE" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="115.0" />
+            <Button fx:id="Skills" layoutX="521.0" layoutY="115.0" mnemonicParsing="false" onAction="#redirectionskills" prefHeight="29.0" prefWidth="66.0" style="-fx-background-color: #8B0000;" text="Skills" textFill="WHITE" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="115.0" />
          </children></AnchorPane>
    </center>
 </BorderPane>
