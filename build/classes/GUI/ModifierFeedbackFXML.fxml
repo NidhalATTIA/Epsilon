@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ModifierFeedbackFXMLController">
+   <children>
+      <AnchorPane layoutX="-9.0" prefHeight="50.0" prefWidth="851.0" style="-fx-background-color: ffffee;" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="Deconnexion" layoutX="713.0" layoutY="17.0" mnemonicParsing="false" onAction="#Deconnexion" prefHeight="31.0" prefWidth="111.0" style="-fx-background-color: #8B0000;" text="Deconnexion" textFill="WHITE" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="17.0" />
+            <Button fx:id="accueil" layoutX="579.0" layoutY="17.0" mnemonicParsing="false" onAction="#accueil" prefHeight="31.0" prefWidth="97.0" style="-fx-background-color: #8B0000;" text="Accueil" textFill="WHITE" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="17.0" />
+            <ImageView fitHeight="112.0" fitWidth="183.0" layoutX="29.0" layoutY="-23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Logo_noir.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="167.0" layoutY="212.0" prefHeight="62.0" prefWidth="600.0" style="-fx-background-color: ffffee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button layoutX="726.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #8B0000;" text="About us" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="35.0" />
+            <Button layoutX="574.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="111.0" style="-fx-background-color: #8B0000;" text="Contact us" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="166.0" />
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="modifcontenu" layoutX="249.0" layoutY="152.0" prefHeight="205.0" prefWidth="335.0" AnchorPane.leftAnchor="249.0" AnchorPane.topAnchor="152.0" />
+      <Label layoutX="48.0" layoutY="162.0" prefHeight="31.0" prefWidth="150.0" text="Modification" AnchorPane.leftAnchor="48.0" AnchorPane.topAnchor="162.0">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font></Label>
+      <Button fx:id="Suprimer" layoutX="315.0" layoutY="383.0" mnemonicParsing="false" onAction="#Suprimer" prefHeight="31.0" prefWidth="111.0" style="-fx-background-color: #8B0000;" text="Suprimer" textFill="WHITE" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="383.0" />
+      <Button fx:id="send" layoutX="452.0" layoutY="383.0" mnemonicParsing="false" onAction="#Modifie" prefHeight="31.0" prefWidth="97.0" style="-fx-background-color: #8B0000;" text="Send" textFill="WHITE" AnchorPane.leftAnchor="452.0" AnchorPane.topAnchor="383.0" />
+      <ImageView fitHeight="296.0" fitWidth="231.0" layoutX="606.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/al_copyrighter.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
