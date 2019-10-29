@@ -204,7 +204,9 @@ public class AcceuilAdminFXMLController implements Initializable {
     }
 
     @FXML
-    private void Connexion(ActionEvent event) {
+    private void Connexion(ActionEvent event) throws IOException {
+        Parent root1 = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));     
+        Bconnexion.getScene().setRoot(root1);
     }
 
     @FXML
