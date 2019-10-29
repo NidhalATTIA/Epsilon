@@ -18,11 +18,11 @@
             <Text layoutX="117.58447265625" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" text="Password" AnchorPane.rightAnchor="378.3505859375" AnchorPane.topAnchor="125.0" />
             <TextField fx:id="Email" layoutX="90.0" layoutY="82.0" prefHeight="32.0" prefWidth="163.0" AnchorPane.rightAnchor="347.0" AnchorPane.topAnchor="82.0" />
             <TextField fx:id="Password" layoutX="89.0" layoutY="163.0" prefHeight="33.0" prefWidth="165.0" AnchorPane.rightAnchor="346.0" AnchorPane.topAnchor="163.0" />
-            <Button fx:id="Login" layoutX="68.0" layoutY="222.0" mnemonicParsing="false" onAction="#Authentification" prefHeight="46.0" prefWidth="207.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Login" AnchorPane.rightAnchor="325.0" AnchorPane.topAnchor="222.0">
+            <Button layoutX="68.0" layoutY="222.0" mnemonicParsing="false" onAction="#Authentification" prefHeight="46.0" prefWidth="207.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Login" AnchorPane.rightAnchor="325.0" AnchorPane.topAnchor="222.0">
                <font>
                   <Font name="System Italic" size="22.0" />
                </font></Button>
-            <Text fx:id="indis" layoutX="216.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: red;" wrappingWidth="168.9830722808838" />
+            <Text fx:id="indis" layoutX="216.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: red;" wrappingWidth="168.9830722808838" />
             <ImageView fitHeight="130.0" fitWidth="270.0" layoutX="316.0" layoutY="66.0">
                <image>
                   <Image url="@../image/Logo%20noir.png" />

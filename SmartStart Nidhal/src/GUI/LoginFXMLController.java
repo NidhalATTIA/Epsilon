@@ -36,7 +36,6 @@ public class LoginFXMLController implements Initializable {
     private TextField Email;
     @FXML
     private TextField Password;
-    @FXML
     private Button Login;
     @FXML
     private Text indis;

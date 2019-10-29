@@ -13,11 +13,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import utils.DataSource;
+import DataSource.DataSource;
 
 /**
  *
- * @author houssembaazoug
+ * @author Arzack
  */
 public class ServiceJob {
     private Connection con = DataSource.getInstance().getConnection();
