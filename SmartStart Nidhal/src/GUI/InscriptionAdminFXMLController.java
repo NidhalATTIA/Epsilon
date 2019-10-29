@@ -68,18 +68,18 @@ public class InscriptionAdminFXMLController implements Initializable {
 
    @FXML
     private void AboutUs(ActionEvent event) throws IOException {
-               Parent root = FXMLLoader.load(getClass().getResource("AboutUSFXML.fxml"));
-       BaboutUs.getScene().setRoot(root);
+               Parent root2 = FXMLLoader.load(getClass().getResource("AboutUSFXML.fxml"));
+       BaboutUs.getScene().setRoot(root2);
     }
 
     @FXML
     private void ContactUs(ActionEvent event) throws IOException {
-               Parent root = FXMLLoader.load(getClass().getResource("ContactUSFXML.fxml"));
-       BcontactUs.getScene().setRoot(root);
+               Parent root3 = FXMLLoader.load(getClass().getResource("ContactUSFXML.fxml"));
+       BcontactUs.getScene().setRoot(root3);
     }
 
     @FXML
-    private void ajouterAdmin(ActionEvent event) {
+    private void ajouterAdmin(ActionEvent event) throws IOException {
             Admin a = new Admin();
         a.setNom(tfNom.getText());
         a.setPrenom(tfPrenom.getText());
@@ -95,12 +95,15 @@ public class InscriptionAdminFXMLController implements Initializable {
         } catch (SQLException ex) {
             Logger.getLogger(InscriptionAdminFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        Parent root5 = FXMLLoader.load(getClass().getResource("AccueilFXML.fxml"));     
+        BajouterAdmin.getScene().setRoot(root5);
+        
     }
 
     @FXML
     private void Back(ActionEvent event) throws IOException {
-        Parent root1 = FXMLLoader.load(getClass().getResource("AccueilFXML.fxml"));     
-        Bback.getScene().setRoot(root1);
+        Parent root4 = FXMLLoader.load(getClass().getResource("AccueilFXML.fxml"));     
+        Bback.getScene().setRoot(root4);
     }
     
 }

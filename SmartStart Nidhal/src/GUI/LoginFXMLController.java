@@ -97,7 +97,7 @@ public class LoginFXMLController implements Initializable {
 
     @FXML
     private void accueil(ActionEvent event) throws IOException {
-                   Parent root = FXMLLoader.load(getClass().getResource("src/GUI/AccueilFXML.fxml"));
+                   Parent root = FXMLLoader.load(getClass().getResource("AccueilFXML.fxml"));
       Baccueil.getScene().setRoot(root);
     }
 
