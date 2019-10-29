@@ -35,7 +35,7 @@
       <AnchorPane prefHeight="57.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="Baccueil" layoutX="464.0" layoutY="9.0" mnemonicParsing="false" onAction="#accueil" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Sign up" AnchorPane.rightAnchor="33.0" />
-            <Label layoutX="209.0" layoutY="20.0" text="Vous n'avez pas de compte ? Rejoignez-nous !" textFill="WHITE" />
+            <Label layoutX="246.0" layoutY="20.0" text="You do not have an account ? Join us !" textFill="WHITE" />
          </children>
       </AnchorPane>
    </top>

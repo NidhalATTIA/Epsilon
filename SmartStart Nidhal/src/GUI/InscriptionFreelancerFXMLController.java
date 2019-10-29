@@ -100,8 +100,8 @@ public class InscriptionFreelancerFXMLController implements Initializable {
 
     @FXML
     private void Back(ActionEvent event) throws IOException {
-        URL url = new File("src/gui/AccueilFXML.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(getClass().getResource("AccueilFXML.fxml"));
+               Parent root = FXMLLoader.load(getClass().getResource("AccueilFXML.fxml"));
+       BcontactUS.getScene().setRoot(root);
         Bback.getScene().setRoot(root);
     }
     
