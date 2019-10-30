@@ -53,7 +53,7 @@ public class ServiceAdmin {
         pres.setString(5, F.getEmail());
         pres.setString(6, F.getNationalite());
         pres.setString(7, F.getFonction());
-       pres.setBytes(8, F.getImage());
+        pres.setBytes(8, F.getImage());
 
         pres.executeUpdate();
         System.out.println("element inseré");

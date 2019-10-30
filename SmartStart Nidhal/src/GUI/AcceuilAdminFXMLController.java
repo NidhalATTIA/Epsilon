@@ -39,6 +39,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.effect.Reflection;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -55,12 +56,6 @@ public class AcceuilAdminFXMLController implements Initializable {
 
     @FXML
     private ImageView imageA;
-    @FXML
-    private Button logoutadmin;
-    @FXML
-    private Button Aboutus;
-    @FXML
-    private Button Contactus;
     @FXML
     private Button btnFreelancers;
     @FXML
@@ -81,7 +76,13 @@ public class AcceuilAdminFXMLController implements Initializable {
     @FXML
     private Text nomAdmin;
     @FXML
-    private Button Complaintsfree;
+    private Button Bconnexion;
+    @FXML
+    private ImageView logoAdmin;
+    @FXML
+    private Button BcontactUs;
+    @FXML
+    private Button BaboutUs;
     
     
   
@@ -202,10 +203,25 @@ public class AcceuilAdminFXMLController implements Initializable {
         Complaints.getScene().setRoot(root);
     }
 
-    @FXML
     private void ShowCpmplaintsf(ActionEvent event) throws MalformedURLException, IOException {
         URL url = new File("src/gui/AcceuilAdminReclamationfFXML.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         Complaints.getScene().setRoot(root);
     }   
+
+    @FXML
+    private void Connexion(ActionEvent event) {
+    }
+
+    @FXML
+    private void goprofilp(MouseEvent event) {
+    }
+
+    @FXML
+    private void ContactUs(ActionEvent event) {
+    }
+
+    @FXML
+    private void AboutUs(ActionEvent event) {
+    }
 }

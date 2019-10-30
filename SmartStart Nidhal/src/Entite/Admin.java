@@ -35,6 +35,16 @@ public class Admin {
         this.image= image;
     }
 
+    public Admin(int ID, String Nom, String Prenom, String Email, String MotDePass, String Nationalite, String Fonction) {
+        this.ID = ID;
+        this.Nom = Nom;
+        this.Prenom = Prenom;
+        this.Email = Email;
+        this.MotDePass = MotDePass;
+        this.Nationalite = Nationalite;
+        this.Fonction = Fonction;
+    }
+
     public int getID() {
         return ID;
     }

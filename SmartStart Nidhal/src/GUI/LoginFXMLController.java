@@ -20,6 +20,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.text.Text;
@@ -56,45 +58,61 @@ public class LoginFXMLController implements Initializable {
 
     @FXML
     private void Authentification(ActionEvent event) throws MalformedURLException, IOException, SQLException {
-        String e = Email.getText();
-        String lien = "";
-        String p = Password.getText();
-        Client c = null;
-        Freelancer f = null;
-        Admin a = null;
-        ServiceAuthentification sa = new ServiceAuthentification();
-        a = sa.rechercheAdminByName_Mdp(e, p);
-        if (a.getNom() != null) {
-            ServiceAuthentification.ida = a.getID();
-//         URL url = new File(lien).toURI().toURL();
-            //       Parent root = FXMLLoader.load(url);
-            Parent root = FXMLLoader.load(getClass().getResource("/AcceuilAdminFXML.fxml"));
-            Login.getScene().setRoot(root);
-
-            //     Login.getScene().setRoot(root);
-        } else {
-            f = sa.rechercheFreelancerByName_Mdp(e, p);
-            if (f.getNom() != null) {
-                lien = "AcceuilFreelancerFXML.fxml";
-                ServiceAuthentification.idf = f.getId();
-                URL url = new File(lien).toURI().toURL();
-                Parent root = FXMLLoader.load(url);
-                Login.getScene().setRoot(root);
-            } else {
-                c = sa.rechercheClientByName_Mdp(e, p);
-                if (c.getNom() != null) {
-                    lien = "AcceuilClientFXML.fxml";
-                    ServiceAuthentification.idc = c.getId();
-                    URL url = new File(lien).toURI().toURL();
-                    Parent root = FXMLLoader.load(url);
-                    Login.getScene().setRoot(root);
-                } else {
-                    indis.setText("Wrong Email or password ");
-                }
-            }
+            
+   try {
+      
+      ServiceAuthentification tache = new ServiceAuthentification();
+      Freelancer f1= new Freelancer() ;
+      Client c1= new Client() ;
+      Admin a1= new Admin() ;
+     a1 = tache.rechercheAdminByName_Mdp(Email.getText(),Password.getText());
+       c1 = tache.rechercheClientByName_Mdp(Email.getText(),Password.getText());
+        f1 = tache.rechercheFreelancerByName_Mdp(Email.getText(),Password.getText());
+        if (Email.getText().isEmpty() ) {
+            indis.setText("entrez vos donner");
         }
-
-    }
+       else if(f1.getMotDePass()== null && c1.getMotdepass()== null && a1.getMotDePass()== null )  {
+            indis.setText("error");
+        }  
+       else if(f1.getMotDePass()!= null && c1.getMotdepass()== null && a1.getMotDePass()== null )  {
+          //.reponce.setText("Freelancer");
+           ServiceAuthentification.idf=f1.getId();
+         
+            
+         URL url = new File("AcceuilFreelancerFXML.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        Login.getScene().setRoot(root);
+        
+        
+        
+       }
+       
+        else if(f1.getMotDePass() == null && c1.getMotdepass()!= null && a1.getMotDePass()== null )  {
+     
+             
+        
+            URL url = new File("AcceuilClientFXML.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        Login.getScene().setRoot(root);
+       //.reponce.setText("Client");
+         ServiceAuthentification.idc=c1.getId();
+      
+       }
+        else if(f1.getMotDePass() == null && c1.getMotdepass()== null && a1.getMotDePass()!= null )  {
+        
+             URL url = new File("C:/Users/Arzack/Documents/GitHub/Epsilon/SmartStart Nidhal/src/GUI/AcceuilAdminFXML.fxml").toURI().toURL();
+           Parent root = FXMLLoader.load(url);
+           Login.getScene().setRoot(root);
+           ServiceAuthentification.ida=a1.getID();
+         //.reponce.setText("Admin");
+       
+       
+        }
+       
+        
+          } catch (SQLException ex) {
+            Logger.getLogger(LoginFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+        } ;}
 
     @FXML
     private void accueil(ActionEvent event) throws IOException {
