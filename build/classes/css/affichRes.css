@@ -1,0 +1,37 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 févr. 2017, 21:04:17
+    Author     : Imen Rajhi
+*/
+
+#Refuser {
+    -fx-text-fill: white;
+    -fx-font: 11 'system';
+    -fx-background-radius: 5px;
+    -padding-left: 50px;
+   
+    -fx-background-color:#400000;
+    
+}
+
+#Acceptee {
+    -fx-text-fill: white;
+    -fx-font: 11 'system';
+    -fx-background-radius: 5px;
+    -padding-left: 50px;
+    -fx-background-color: #003333;
+}
+
+#Payer {
+    -fx-text-fill: white;
+    -fx-font: 11 'system';
+    -fx-background-radius: 5px;
+    -padding-left: 50px;
+   
+    -fx-background-color:#400000;
+    
+}

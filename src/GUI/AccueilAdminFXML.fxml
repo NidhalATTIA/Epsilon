@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AccueilAdminFXMLController">
+   <children>
+      <AnchorPane layoutX="212.0" layoutY="6.0" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: ffffee;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="deconnexion" layoutX="479.0" layoutY="15.0" mnemonicParsing="false" onAction="#deco" style="-fx-background-color: #8B0000;" text="Deconnexion" textFill="WHITE" />
+            <Button layoutX="396.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Profile" textFill="WHITE" />
+            <ImageView fitHeight="52.0" fitWidth="72.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Your-Logo-here.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="139.0" layoutY="19.0" prefHeight="23.0" prefWidth="183.0" text="Bienvenu Admin">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="133.0" layoutY="186.0" prefHeight="52.0" prefWidth="600.0" style="-fx-background-color: ffffee;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button layoutX="495.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Contact us" textFill="WHITE" />
+            <Button layoutX="405.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="About us" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <TableView layoutX="169.0" layoutY="87.0" prefHeight="226.0" prefWidth="401.0">
+        <columns>
+          <TableColumn prefWidth="108.0" text="Freelancer" />
+          <TableColumn prefWidth="292.0" text="Reclamation" />
+        </columns>
+      </TableView>
+      <Button layoutX="30.0" layoutY="206.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #8B0000;" text="Ajouter Skills" textFill="WHITE" />
+      <Button layoutX="31.0" layoutY="259.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #8B0000;" text="Liste annonce" textFill="WHITE" />
+   </children>
+</AnchorPane>
