@@ -7,6 +7,7 @@ package Service;
 
 import java.sql.*;
 import DataSource.DataSource;
+import Entite.Admin;
 import Entite.Client;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +65,17 @@ public class ServiceClient
     return list;
   }
 
+    public Client recherche(int id) throws SQLException
+    {
+    ResultSet res=ste.executeQuery("select * from Client  WHERE Client.ID ='"+id+"' ;");
+    Client clt=null;
+    while (res.next()) {
+      clt=new Client(res.getInt(1), res.getString(2),res.getString(3),res.getString(4),res.getString(5),res.getString(6),res.getString(7),res.getString(8));
+       }
+    return clt;
+  }
+    
+    
     public void Connexion_etat(Client c1) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

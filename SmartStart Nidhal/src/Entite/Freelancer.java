@@ -5,12 +5,13 @@
  */
 package Entite;
 
+import javafx.scene.image.Image;
+
 /**
  *
  * @author Arzack
  */
 public class Freelancer {
-    
     private int id ;
     private String nom ;
     private String prenom ;
@@ -18,12 +19,13 @@ public class Freelancer {
     private String nationalite ;
     private String cv ;
     private String motDePass ;
-    
+    private String description;
+    private byte[] image;
 
     public Freelancer() {
     }
 
-    public Freelancer(int id, String nom, String prenom, String email, String nationalite, String cv, String motDePass) {
+    public Freelancer(int id, String nom, String prenom, String email,String motDePass, String nationalite, String cv, String description, byte[] image) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -31,11 +33,8 @@ public class Freelancer {
         this.nationalite = nationalite;
         this.cv = cv;
         this.motDePass = motDePass;
-        
-    }
-
-    public Freelancer(int aInt, String string, String string0, String string1, String string2, String string3, String string4, String string5, byte[] bytes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.description = description;
+        this.image= image;
     }
 
     public int getId() {
@@ -53,8 +52,7 @@ public class Freelancer {
     public void setNom(String nom) {
         this.nom = nom;
     }
-
-    public String getPrenom() {
+public String getPrenom() {
         return prenom;
     }
 
@@ -94,28 +92,33 @@ public class Freelancer {
         this.motDePass = motDePass;
     }
 
- 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    public byte[] getImage() {
+        return image;
+    }
+    public void setImage(byte[] image){
+    this.image=image;
+    }
+
+    public void setDescription(byte[] image) {
+        this.image = image;
+    }
+
     @Override
     public String toString() {
-        return "Freelancer{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", nationalite=" + nationalite + ", cv=" + cv + ", motDePass=" + motDePass +  '}';
-    }
-
-    public void getId(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public String getDescription() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public byte[] getImage() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return "Freelancer{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", nationalite=" + nationalite + ", cv=" + cv + ", motDePass=" + motDePass + ", description=" + description + '}';
     }
 
     public void setMotdepass(String text) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-    
+
+
+
 }

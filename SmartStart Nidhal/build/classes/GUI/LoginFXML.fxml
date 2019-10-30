@@ -22,7 +22,7 @@
                <font>
                   <Font name="System Italic" size="22.0" />
                </font></Button>
-            <Text fx:id="indis" layoutX="216.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: red;" wrappingWidth="168.9830722808838" />
+            <Text fx:id="indis" layoutX="216.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: red;" wrappingWidth="168.9830722808838" />
             <ImageView fitHeight="130.0" fitWidth="270.0" layoutX="316.0" layoutY="66.0">
                <image>
                   <Image url="@../image/Logo%20noir.png" />
@@ -35,15 +35,15 @@
       <AnchorPane prefHeight="57.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="Baccueil" layoutX="464.0" layoutY="9.0" mnemonicParsing="false" onAction="#accueil" prefHeight="39.0" prefWidth="103.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Sign up" AnchorPane.rightAnchor="33.0" />
-            <Label layoutX="209.0" layoutY="20.0" text="Vous n'avez pas de compte ? Rejoignez-nous !" textFill="WHITE" />
+            <Label layoutX="246.0" layoutY="20.0" text="You do not have an account ? Join us !" textFill="WHITE" />
          </children>
       </AnchorPane>
    </top>
    <bottom>
       <AnchorPane prefHeight="49.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="bContactUs" layoutX="496.0" layoutY="6.0" mnemonicParsing="false" onAction="#ContactUs" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.rightAnchor="14.0" />
-            <Button fx:id="BaboutUs" layoutX="398.0" layoutY="6.0" mnemonicParsing="false" onAction="#AboutUs" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" />
+            <Button fx:id="BcontactUs1" layoutX="496.0" layoutY="6.0" mnemonicParsing="false" onAction="#ContactUs1" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.rightAnchor="14.0" />
+            <Button fx:id="BaboutUs1" layoutX="398.0" layoutY="6.0" mnemonicParsing="false" onAction="#AboutUs1" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" />
          </children>
       </AnchorPane>
    </bottom>

@@ -44,7 +44,7 @@ public class ServiceAdmin {
     }
 
     public void ajouterAdmin(Admin F) throws SQLException {
-        String req = "INSERT INTO `Admin` ( `ID`,`Nom`,`Prenom`,`MotDePasse`,`Email`,`Nationalite`,`Fonction`,`image`,) VALUES (?,?,?,?,?,?,?,?)";
+        String req = "INSERT INTO `Admin` ( `ID`,`Nom`,`Prenom`,`MotDePass`,`Email`,`Nationalite`,`Fonction`,`Image`) VALUES (?,?,?,?,?,?,?,?)";
         PreparedStatement pres = con.prepareStatement(req);
         pres.setInt(1, F.getID());
         pres.setString(2, F.getNom());
@@ -53,7 +53,7 @@ public class ServiceAdmin {
         pres.setString(5, F.getEmail());
         pres.setString(6, F.getNationalite());
         pres.setString(7, F.getFonction());
-    //    pres.setBytes(8, F.getImage());
+       pres.setBytes(8, F.getImage());
 
         pres.executeUpdate();
         System.out.println("element inseré");
