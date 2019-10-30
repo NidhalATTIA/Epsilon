@@ -25,39 +25,7 @@ public class Main
         public static void main(String[] args) 
         {
         // TODO code application logic here
-        Client c1=new Client(10, "attia2", "nidhal2","mail2","TN2","esprit2","123","test1");
-        ServiceClient service=new ServiceClient();
-        
-       
-        try {
-            service.ajouterClient(c1);
-        } catch (SQLException ex) {
-            System.out.println(ex);  
-        }
-
-        try {
-            service.supprimerClient(7);
-        } catch (SQLException ex) {
-            System.out.println(ex);
-        }
-              
-         try {
-            service.modifierClient(c1);
-        } catch (SQLException ex) {
-            System.out.println(ex);
-        }     
-    
-         List<Client> client1=null;
-         try
-         {
-            client1 = service.readAll();
- 
-         } 
-         catch (SQLException ex)
-         {
-             System.out.println(ex);
-         }
-         System.out.println(client1);
-         
+       // Client c1=new Client(10, "attia2", "nidhal2","mail2","TN2","esprit2","123","test1");
+      
     } 
 }
