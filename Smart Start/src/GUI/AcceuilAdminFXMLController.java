@@ -39,6 +39,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.effect.Reflection;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -170,7 +171,24 @@ public class AcceuilAdminFXMLController implements Initializable {
             }
         });
         ListePra.setItems(data);
+        ListePra.setOnMouseClicked(e->{
+            ServiceAdmin.idfselected=ListePra.getSelectionModel().getSelectedItem().getId();
+            System.out.println(ServiceAdmin.idfselected);
+        URL url2 = null;
+            try {
+                url2 = new File("src/gui/FreelancerPradminFXML.fxml").toURI().toURL();
+            } catch (MalformedURLException ex) {
+                Logger.getLogger(AcceuilAdminFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        Parent root = null;
+            try {
+                root = FXMLLoader.load(url2);
+            } catch (IOException ex) {
+                Logger.getLogger(AcceuilAdminFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        ListePra.getScene().setRoot(root);
         
+        });
  
     }   
 
@@ -206,7 +224,21 @@ public class AcceuilAdminFXMLController implements Initializable {
     private void ShowCpmplaintsf(ActionEvent event) throws MalformedURLException, IOException {
         URL url = new File("src/gui/AcceuilAdminReclamationfFXML.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
-        Complaints.getScene().setRoot(root);
+        Complaintsfree.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void profiladp(MouseEvent event) throws IOException {
+         URL url = new File("src/gui/ProfilAdminFXML.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        Complaintsfree.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void profilad(MouseEvent event) throws IOException {
+          URL url = new File("src/gui/ProfilAdminFXML.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        Complaintsfree.getScene().setRoot(root);
     }
     
     

@@ -77,6 +77,8 @@ public class AcceuilfreelancerFXMLController implements Initializable {
     private Button jobs;
     @FXML
     private Button Subscription;
+    @FXML
+    private Button fluxrss;
 
     /**
      * Initializes the controller class.
@@ -253,6 +255,13 @@ public class AcceuilfreelancerFXMLController implements Initializable {
     @FXML
     private void Subscriptionbtn(ActionEvent event) throws IOException {
         URL url = new File("src/gui/SubscribtionFreelancerFXML.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        nomAcceuil.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void showFluxRSS(ActionEvent event) throws IOException {
+         URL url = new File("/Users/houssembaazoug/sites/articles.rss").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         nomAcceuil.getScene().setRoot(root);
     }

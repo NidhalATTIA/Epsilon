@@ -44,10 +44,16 @@
             <Button fx:id="jobs" layoutY="-2.0" mnemonicParsing="false" onAction="#Jobsbtn" prefHeight="53.0" prefWidth="127.0" style="-fx-text-fill: white; -fx-background-color: #8B0000;" text="My jobs" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-2.0" />
             <Button fx:id="Subscriptionbtn" layoutY="52.0" mnemonicParsing="false" onAction="#subscriptionAction" prefHeight="59.0" prefWidth="127.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Subscribtions" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="52.0" />
             <Button fx:id="jobsforS" layoutY="112.0" mnemonicParsing="false" onAction="#jobsBySkill" prefHeight="59.0" prefWidth="127.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Jobs For Me" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="112.0" />
+<<<<<<< HEAD
+            <ListView fx:id="Listeview" layoutX="203.0" layoutY="-1.0" prefHeight="294.0" prefWidth="397.0" style="-fx-background-color: #B80000;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="adsbtn" layoutY="171.0" mnemonicParsing="false" onAction="#Adsbtn" prefHeight="58.0" prefWidth="127.0" style="-fx-background-color: #B80000; -fx-text-fill: White;" text="All Ads" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="171.0" />
+            <Button fx:id="Complaintsbtn" layoutY="229.0" mnemonicParsing="false" onAction="#Complaintsbtn" prefHeight="54.0" prefWidth="127.0" style="-fx-background-color: #b80000; -fx-text-fill: white;" text="Complaints" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="229.0" />
+=======
             <ListView fx:id="Listeview" layoutX="203.0" layoutY="-1.0" prefHeight="236.0" prefWidth="397.0" style="-fx-background-color: #8B0000;" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             <Button fx:id="adsbtn" layoutY="171.0" mnemonicParsing="false" onAction="#Adsbtn" prefHeight="58.0" prefWidth="127.0" style="-fx-background-color: #8B0000; -fx-text-fill: White;" text="All Ads" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="171.0" />
             <Button fx:id="Complaintsbtn" layoutY="229.0" mnemonicParsing="false" onAction="#Complaintsbtn" prefHeight="54.0" prefWidth="127.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Complaints" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="229.0" />
             <Button fx:id="CreateC" layoutX="338.0" layoutY="240.0" mnemonicParsing="false" onAction="#CreateComp" prefHeight="39.0" prefWidth="128.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Create Complaint" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="134.0" />
+>>>>>>> 781a40f54c3390575f2bd130c8fc3f3c1770e09d
          </children>
       </AnchorPane>
    </center>

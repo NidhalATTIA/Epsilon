@@ -13,6 +13,11 @@
    <top>
       <AnchorPane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
+<<<<<<< HEAD
+            <Button layoutX="497.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Logout" AnchorPane.rightAnchor="45.0" />
+            <Button fx:id="forumb" layoutX="110.0" layoutY="13.0" mnemonicParsing="false" onAction="#goforum" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Forum" AnchorPane.rightAnchor="435.0" />
+            <Button fx:id="fluxrss" layoutX="423.0" layoutY="14.0" mnemonicParsing="false" onAction="#showFluxRSS" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="RSS Feed" AnchorPane.rightAnchor="123.0" AnchorPane.topAnchor="14.0" />
+=======
             <Button layoutX="512.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Log Out" AnchorPane.rightAnchor="14.0">
                <font>
                   <Font size="15.0" />
@@ -22,6 +27,7 @@
                <font>
                   <Font size="15.0" />
                </font></Button>
+>>>>>>> 781a40f54c3390575f2bd130c8fc3f3c1770e09d
             <Text fx:id="nomAcceuil" fill="WHITE" layoutX="285.0" layoutY="37.0" onMouseClicked="#goprofiln" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" wrappingWidth="106.98307228088379" AnchorPane.rightAnchor="208.0169277191162" />
             <ImageView fx:id="ImageFreelancer" fitHeight="59.0" fitWidth="80.0" layoutX="184.0" layoutY="1.0" onMouseClicked="#goprofilp" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="336.0" />
             <ImageView fitHeight="50.0" fitWidth="93.0" layoutX="17.0" layoutY="5.0">

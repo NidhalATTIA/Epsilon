@@ -22,6 +22,7 @@ import utils.DataSource;
 public class ServiceJob {
     private Connection con = DataSource.getInstance().getConnection();
     private Statement ste;
+    public static int idjob;
 
     public ServiceJob() {
         try {
@@ -33,7 +34,7 @@ public class ServiceJob {
 
     public List<Job> readAllf(int idf) throws SQLException
     {List<Job> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from Job WHERE Job.id_freelancer ='"+idf+"'");
+    ResultSet res=ste.executeQuery("select * from Job WHERE Job.id_freelancer ='"+idf+"' ORDER BY dateAjout DESC");
     Job ann=null;
     while (res.next()) {            
       ann=new Job(res.getInt(1), res.getString(2),res.getString(3),res.getInt(4),res.getInt(5),res.getInt(6));
@@ -43,7 +44,7 @@ public class ServiceJob {
     }
     public List<Job> readAllc(int idf) throws SQLException
     {List<Job> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from Job WHERE Job.id_client ='"+idf+"'");
+    ResultSet res=ste.executeQuery("select * from Job WHERE Job.id_client ='"+idf+"'ORDER BY dateAjout DESC ;");
     Job ann=null;
     while (res.next()) {            
       ann=new Job(res.getInt(1), res.getString(2),res.getString(3),res.getInt(4),res.getInt(5),res.getInt(6));
@@ -80,7 +81,7 @@ public class ServiceJob {
     public Job recherche(int id) throws SQLException
     {
 
-    ResultSet res=ste.executeQuery("select * from Job  WHERE Annonce.ID ='"+id+"' ;");
+    ResultSet res=ste.executeQuery("select * from Job  WHERE Job.ID ='"+id+"' ;");
     Job sujet=null;
     while (res.next()) {
       sujet=new Job(res.getInt(1), res.getString(2),res.getString(3),res.getInt(4),res.getInt(5),res.getInt(6));

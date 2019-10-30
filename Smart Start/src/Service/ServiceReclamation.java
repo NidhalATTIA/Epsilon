@@ -67,7 +67,7 @@ public class ServiceReclamation {
     public List<Reclamation> readAll() throws SQLException
     {
         List<Reclamation> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from Reclamation");
+    ResultSet res=ste.executeQuery("select * from Reclamation ORDER BY dateAjout DESC");
     Reclamation per=null;
     while (res.next()) {            
       per=new Reclamation(res.getInt(1), res.getString(2),res.getString(3), res.getInt(4));
@@ -78,7 +78,7 @@ public class ServiceReclamation {
     public List<Reclamation> readAllf() throws SQLException
     {
         List<Reclamation> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from ReclamationF");
+    ResultSet res=ste.executeQuery("select * from ReclamationF ORDER BY dateAjout DESC");
     Reclamation per=null;
     while (res.next()) {            
       per=new Reclamation(res.getInt(1), res.getString(2),res.getString(3), res.getInt(4));
@@ -89,7 +89,7 @@ public class ServiceReclamation {
      public List<Reclamation> readAllc(int id) throws SQLException
     {
         List<Reclamation> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from Reclamation WHERE `Reclamation`.`idClient` ='"+id+"' ;");
+    ResultSet res=ste.executeQuery("select * from Reclamation WHERE `Reclamation`.`idClient` ='"+id+"' ORDER BY dateAjout DESC ;");
     Reclamation per=null;
     while (res.next()) {            
       per=new Reclamation(res.getInt(1), res.getString(2),res.getString(3), res.getInt(4));
@@ -100,7 +100,7 @@ public class ServiceReclamation {
       public List<Reclamation> readAllf(int id) throws SQLException
     {
         List<Reclamation> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from ReclamationF WHERE `ReclamationF`.`idFreelancer` ='"+id+"' ;");
+    ResultSet res=ste.executeQuery("select * from ReclamationF WHERE `ReclamationF`.`idFreelancer` ='"+id+"' ORDER BY dateAjout DESC;");
     Reclamation per=null;
     while (res.next()) {            
       per=new Reclamation(res.getInt(1), res.getString(2),res.getString(3), res.getInt(4));
