@@ -50,7 +50,7 @@
                <children>
                   <ImageView fitHeight="383.0" fitWidth="345.0" layoutX="14.0" layoutY="10.0">
                      <image>
-                        <Image url="@../assets/images/fond.jpg" />
+                        <Image url="@../image/fond.jpg" />
                      </image>
                   </ImageView>
                   <Button layoutX="110.0" layoutY="337.0" mnemonicParsing="false" onAction="#SendContactUs" prefHeight="44.0" prefWidth="149.0" style="-fx-background-color: #8B0000;" text="send" textFill="WHITE">
@@ -75,7 +75,7 @@
                   </Label>
                   <ImageView fitHeight="112.0" fitWidth="211.0" layoutX="411.0" layoutY="48.0">
                      <image>
-                        <Image url="@../assets/images/Logo%20noir.png" />
+                        <Image url="@../image/Logo%20noir.png" />
                      </image>
                   </ImageView>
                   <Button fx:id="Bmaps" layoutX="366.0" layoutY="229.0" mnemonicParsing="false" onAction="#Maps" text="Where are we ? Click here to find out">

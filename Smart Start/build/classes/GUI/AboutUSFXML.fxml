@@ -49,12 +49,12 @@
                <children>
                   <ImageView fitHeight="390.0" fitWidth="670.0">
                      <image>
-                        <Image url="@../assets/images/fond.jpg" />
+                        <Image url="@../image/fond.jpg" />
                      </image>
                   </ImageView>
                   <ImageView layoutX="243.0" layoutY="34.0">
                      <image>
-                        <Image url="@../assets/images/Logo%20blanc%20noir.png" />
+                        <Image url="@../image/Logo%20blanc%20noir.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="62.0" layoutY="154.0" prefHeight="40.0" prefWidth="567.0" text="Find &amp; hire top freelancers, web developers &amp; designers inexpensively" textAlignment="CENTER" textFill="#3a5086">

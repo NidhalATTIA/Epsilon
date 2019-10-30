@@ -2,51 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-<<<<<<< HEAD
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceAnnonce.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceClient.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilfreelancerFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/FreelancerPrClientFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Entite/Feed.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/JobsBySkillsFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/ProfilFreelancerFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceFreelancer.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AnnonceFreelancerAllFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/RSSFeedWriter.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceSkills.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceCommentaire.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AnnonceClientFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/FeedbackClientFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceFeedback.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/ProfilClientPrFreelancerFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilForumFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilAdminFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/SubmitControllerClientFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilAdminClientsFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/SkillsEditFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AddSubjectFFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/SubscriptionFreelancerFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/ProfilClientFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceAdmin.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/CreerAnnonceFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/NewFXMain.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/modifierOrSupprimerSkillsFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceJob.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServicePostulation.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/FreelancerPradminFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/JobPrClientFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/VuAnnonceClientFXMLController.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Entite/Freelancer.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceSubscription.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceReclamation.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceSkillsFreelancer.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/Service/ServiceSujet_forum.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/SingleService/src/GUI/AcceuilClientFXMLController.java</file>
-=======
-            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/Smart%20Start/src/GUI/AnnonceClientFXMLController.java</file>
-            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/Smart%20Start/src/GUI/AcceuilFXMLController.java</file>
->>>>>>> 781a40f54c3390575f2bd130c8fc3f3c1770e09d
-        </group>
+        <group/>
     </open-files>
 </project-private>

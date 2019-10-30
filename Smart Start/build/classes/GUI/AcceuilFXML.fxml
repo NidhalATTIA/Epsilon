@@ -10,7 +10,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AcceuilFXMLController">
    <center>
-      <ImageView fitHeight="298.0" fitWidth="598.0" pickOnBounds="true" smooth="false" BorderPane.alignment="CENTER">
+      <ImageView fitHeight="298.0" fitWidth="605.0" pickOnBounds="true" smooth="false" BorderPane.alignment="CENTER">
          <image>
             <Image url="@../assets/images/cover-ill.png" />
          </image>
@@ -22,36 +22,27 @@
    <bottom>
       <AnchorPane prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="BajouterAdmin" layoutX="84.0" layoutY="7.0" mnemonicParsing="false" onAction="#addAdmin" prefHeight="33.0" prefWidth="200.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="We are recruting moderators" AnchorPane.leftAnchor="84.0">
-               <font>
-                  <Font size="13.0" />
-               </font></Button>
-            <Button fx:id="BaboutUs" layoutX="399.0" layoutY="6.0" mnemonicParsing="false" onAction="#AboutUs" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" AnchorPane.rightAnchor="117.0">
-               <font>
-                  <Font size="14.0" />
-               </font></Button>
-            <Button fx:id="BcontactUs" layoutX="493.0" layoutY="6.0" mnemonicParsing="false" onAction="#ContactUs" prefHeight="34.0" prefWidth="93.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.rightAnchor="14.0">
-               <font>
-                  <Font size="15.0" />
-               </font></Button>
+            <Button layoutX="84.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="We are recruting moderators" AnchorPane.leftAnchor="84.0" />
+            <Button layoutX="406.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" AnchorPane.rightAnchor="121.0" />
+            <Button layoutX="494.0" layoutY="8.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.rightAnchor="25.0" />
          </children></AnchorPane>
    </bottom>
    <top>
-      <AnchorPane prefHeight="74.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="72.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="r" layoutX="518.0" layoutY="17.0" mnemonicParsing="false" onAction="#g" prefHeight="39.0" prefWidth="69.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Login" AnchorPane.rightAnchor="13.0">
-               <font>
-                  <Font size="18.0" />
-               </font></Button>
-            <Button fx:id="BajouterClient" layoutX="361.0" layoutY="17.0" mnemonicParsing="false" onAction="#addClient" prefHeight="40.0" prefWidth="145.0" style="-fx-text-fill: white; -fx-background-color: #8B0000;" text="Join to hire freelancer" AnchorPane.rightAnchor="94.0">
+            <Button fx:id="r" layoutX="500.0" layoutY="15.0" mnemonicParsing="false" onAction="#g" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Log in" AnchorPane.rightAnchor="20.0">
                <font>
                   <Font size="13.0" />
                </font></Button>
-            <Button fx:id="BajouterFreelancer" layoutX="214.0" layoutY="17.0" mnemonicParsing="false" onAction="#addFreelancer" prefHeight="41.0" prefWidth="133.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Join to work" AnchorPane.rightAnchor="253.0">
+            <Button layoutX="324.0" layoutY="16.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" style="-fx-text-fill: white; -fx-background-color: #8B0000;" text="Join to hire freelancer" AnchorPane.rightAnchor="131.0">
                <font>
-                  <Font size="15.0" />
+                  <Font size="13.0" />
                </font></Button>
-            <ImageView fitHeight="64.0" fitWidth="132.0" layoutX="24.0" layoutY="3.0">
+            <Button layoutX="161.0" layoutY="16.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="133.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Join to work" AnchorPane.rightAnchor="306.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <ImageView fitHeight="65.0" fitWidth="121.0" layoutX="19.0" layoutY="3.0">
                <image>
                   <Image url="@../assets/images/Logo%20blanc.png" />
                </image>

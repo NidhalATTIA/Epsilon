@@ -41,7 +41,6 @@ import javafx.scene.control.TextArea;
 import javafx.scene.effect.Reflection;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
@@ -199,24 +198,6 @@ public class AcceuilClientFXMLController implements Initializable {
             }
         });
         ListePra.setItems(data);
-        ListePra.setOnMouseClicked(e->{
-            ServiceJob.idjob=ListePra.getSelectionModel().getSelectedItem().getID();
-            System.out.println(ServiceAdmin.idfselected);
-        URL url2 = null;
-            try {
-                url2 = new File("src/gui/JobPrClientFXML.fxml").toURI().toURL();
-            } catch (MalformedURLException ex) {
-                Logger.getLogger(AcceuilAdminFXMLController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        Parent root = null;
-            try {
-                root = FXMLLoader.load(url2);
-            } catch (IOException ex) {
-                Logger.getLogger(AcceuilAdminFXMLController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        ListePra.getScene().setRoot(root);
-        
-        });
     }    
 
 
@@ -246,20 +227,6 @@ public class AcceuilClientFXMLController implements Initializable {
           URL url = new File("src/gui/FreelancersClientFXML.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         btnSkills.getScene().setRoot(root);
-    }
-
-    @FXML
-    private void goprofCp(MouseEvent event) throws IOException {
-          URL url = new File("src/gui/ProfilClientFXML.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(url);
-        imageA.getScene().setRoot(root);
-    }
-
-    @FXML
-    private void goprofC(MouseEvent event) throws IOException {
-         URL url = new File("src/gui/ProfilClientFXML.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(url);
-        imageA.getScene().setRoot(root);
     }
     
 }

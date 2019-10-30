@@ -23,7 +23,7 @@ public class ServiceAnnonce {
 
     private Connection con = DataSource.getInstance().getConnection();
     private Statement ste;
-    public static int idan;
+
     public ServiceAnnonce() {
         try {
             ste=con.createStatement();
@@ -34,7 +34,7 @@ public class ServiceAnnonce {
 
     public List<Annonce> readAll() throws SQLException
     {List<Annonce> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from annonce ORDER BY dateAjout DESC ");
+    ResultSet res=ste.executeQuery("select * from annonce");
     Annonce ann=null;
     while (res.next()) {            
       ann=new Annonce(res.getInt(1), res.getString(2),res.getString(3),res.getInt(4),res.getInt(5));
@@ -45,7 +45,7 @@ public class ServiceAnnonce {
     
     public List<Annonce> readAllc(int id) throws SQLException
     {List<Annonce> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from Annonce WHERE Annonce.id_client ='"+id+"' ORDER BY dateAjout DESC ;");
+    ResultSet res=ste.executeQuery("select * from Annonce WHERE Annonce.id_client ='"+id+"' ;");
     Annonce ann=null;
     while (res.next()) {            
       ann=new Annonce(res.getInt(1), res.getString(2),res.getString(3),res.getInt(4),res.getInt(5));
@@ -64,7 +64,7 @@ public class ServiceAnnonce {
     return list;
     } 
   public void ajouterAnnonce (Annonce A) throws SQLException{  
-  String req="INSERT INTO `annonce` ( `Titre`,`DESCRIPTION`,`id_client`,`Skill`) VALUES (?,?,?,?)";
+  String req="INSERT INTO `annonce` ( `Titre`,`DESCRIPTION`,`id_client`,`Skills`) VALUES (?,?,?,?)";
   PreparedStatement pres=con.prepareStatement(req);
   pres.setString(1, A.getTitre());
   pres.setString(2, A.getDESCRIPTION());

@@ -49,10 +49,10 @@ public class ServiceFeedback {
     ste.executeUpdate(requete);
         System.out.println("elment modifier");
     }
-    public List<Feedback> readAll(int id) throws SQLException
+    public List<Feedback> readAll() throws SQLException
     {
         List<Feedback> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from Review WHERE `Review`.`idfreelancer` ='"+id+"' ORDER BY dateAjout DESC");
+    ResultSet res=ste.executeQuery("select * from Feedback ORDER BY date DESC");
     Feedback per=null;
     while (res.next()) {            
       per=new Feedback(res.getInt(1), res.getInt(2),res.getInt(3), res.getString(4));

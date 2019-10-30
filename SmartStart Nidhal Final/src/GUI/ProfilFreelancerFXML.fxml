@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProfilFreelancerFXMLController">
+   <top>
+      <AnchorPane prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="497.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Logout" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="14.0" />
+            <Text fx:id="nomUser" fill="WHITE" layoutX="380.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="89.2060546875" AnchorPane.rightAnchor="130.7939453125" AnchorPane.topAnchor="17.498046875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="imageUser" fitHeight="49.0" fitWidth="64.0" layoutX="303.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="233.0" AnchorPane.topAnchor="10.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="56.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="498.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact us" />
+            <Button layoutX="412.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imageFP" fitHeight="104.0" fitWidth="149.0" layoutX="372.0" layoutY="6.0" onMouseClicked="#changePP" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="6.0" />
+            <Text layoutX="60.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" wrappingWidth="54.2060546875" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="26.0" />
+            <Text layoutX="45.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom :" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="57.431640625" />
+            <Text layoutX="60.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="89.0" />
+            <Text layoutX="60.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Intro :" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="129.0" />
+            <TextArea fx:id="DescriptionM" layoutX="72.0" layoutY="155.0" prefHeight="127.0" prefWidth="187.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="155.0" />
+            <TextArea fx:id="CVM" layoutX="301.0" layoutY="155.0" prefHeight="128.0" prefWidth="198.0" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="101.0" AnchorPane.topAnchor="155.0" />
+            <Text layoutX="273.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Professional Experiences :" AnchorPane.bottomAnchor="139.568359375" AnchorPane.rightAnchor="165.6806640625" AnchorPane.topAnchor="128.431640625" />
+            <TextField fx:id="EmailM" layoutX="165.0" layoutY="84.0" AnchorPane.leftAnchor="165.0" AnchorPane.topAnchor="84.0" />
+            <Button fx:id="Skills" layoutX="512.0" layoutY="155.0" mnemonicParsing="false" onAction="#redirectionskills" prefHeight="29.0" prefWidth="66.0" style="-fx-background-color: #b80000;" text="Skills" textFill="WHITE" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="155.0" />
+            <Text fx:id="nomM" layoutX="166.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="115.2060546875" AnchorPane.leftAnchor="166.0" AnchorPane.topAnchor="25.53125">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="prenomM" layoutX="165.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="108.0" AnchorPane.leftAnchor="165.0" AnchorPane.topAnchor="56.53125">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnsave" layoutX="521.0" layoutY="206.0" mnemonicParsing="false" onAction="#saveChanges" style="-fx-background-color: #b80000;" text="Save" textFill="WHITE" AnchorPane.bottomAnchor="53.0" AnchorPane.rightAnchor="31.0" />
+            <Button fx:id="deletebtn" layoutX="490.0" layoutY="116.0" mnemonicParsing="false" onAction="#DeleteAccount" style="-fx-background-color: #b80000;" text="Delete account" textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="116.0" />
+         </children></AnchorPane>
+   </center>
+</BorderPane>

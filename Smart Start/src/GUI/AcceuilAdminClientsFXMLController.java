@@ -169,24 +169,6 @@ public class AcceuilAdminClientsFXMLController implements Initializable {
             }
         });
         ListePra.setItems(data);
-        ListePra.setOnMouseClicked(e->{
-            ServiceAdmin.idcselected=ListePra.getSelectionModel().getSelectedItem().getId();
-            System.out.println(ServiceAdmin.idcselected);
-        URL url2 = null;
-            try {
-                url2 = new File("src/gui/ClientPradmin.fxml").toURI().toURL();
-            } catch (MalformedURLException ex) {
-                Logger.getLogger(AcceuilAdminFXMLController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        Parent root = null;
-            try {
-                root = FXMLLoader.load(url2);
-            } catch (IOException ex) {
-                Logger.getLogger(AcceuilAdminFXMLController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        ListePra.getScene().setRoot(root);
-        
-        });
         
     }    
 

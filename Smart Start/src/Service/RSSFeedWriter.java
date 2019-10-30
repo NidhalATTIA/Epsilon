@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Service;
 import java.io.FileOutputStream;
 
 import javax.xml.stream.XMLEventFactory;

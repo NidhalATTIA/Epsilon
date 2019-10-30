@@ -40,7 +40,7 @@ public class ServicePostulation {
     public List<Postulation> readAll() throws SQLException{
         
         List<Postulation> list=new ArrayList<>();
-        ResultSet res=ste.executeQuery("select * from postulation ORDER BY dateAjout DESC");
+        ResultSet res=ste.executeQuery("select * from postulation");
         Postulation pos=null;
         while (res.next()) {            
         pos=new Postulation(res.getInt(1),res.getInt(2), res.getInt(3),res.getString(4));

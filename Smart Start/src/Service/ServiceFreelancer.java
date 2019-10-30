@@ -34,8 +34,7 @@ public class ServiceFreelancer {
 
     private Connection con = DataSource.getInstance().getConnection();
     private Statement ste;
-    public static int selectedfr;
-    
+
     public ServiceFreelancer() {
         try {
             ste = con.createStatement();
