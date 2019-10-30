@@ -87,7 +87,7 @@ public class SujetForumFXMLController implements Initializable {
         try {
             // TODO
             sff= ssf.recherche(Sujet_forum.idsf);
-            
+            System.out.println(sff.getContenu());
         } catch (SQLException ex) {
             Logger.getLogger(SujetForumFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }

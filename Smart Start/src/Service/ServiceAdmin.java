@@ -20,8 +20,7 @@ import utils.DataSource;
  * @author houssembaazoug
  */
 public class ServiceAdmin {
-    public static int idfselected ;
-    public static int idcselected ;
+    
    private Connection con = DataSource.getInstance().getConnection();
     private Statement ste;
 
@@ -63,14 +62,14 @@ public class ServiceAdmin {
 
     public void supprimerFree(int id) throws SQLException {
 
-        String requete = "DELETE FROM Admin WHERE Admin.ID =" + id;
+        String requete = "DELETE FROM freelancer WHERE Freelancer.ID =" + id;
         ste.executeUpdate(requete);
         System.out.println("elment supprimmé");
     }
 
     public void modifierFree(Admin s) throws SQLException {
 
-        String requete = "UPDATE `Admin` SET `ID` = ?,`Nom` = ?, `Prenom` = ?, `Email` = ?, `MotDePass` = ?, `Nationalite` = ?, `Fonction` = ?,`Image` = ? WHERE Admin.ID ='" + s.getID()+ "';";
+        String requete = "UPDATE `Admin` SET `ID` = ?,`Nom` = ?, `Prenom` = ?, `Email` = ?, `MotDePass` = ?, `Nationalite` = ?, `CV` = ?, `Description` = ?, `ImageFreelancer` = ? WHERE Admin.ID ='" + s.getID()+ "';";
         PreparedStatement pres = con.prepareStatement(requete);
         pres.setInt(1, s.getID());
         pres.setString(2, s.getNom());

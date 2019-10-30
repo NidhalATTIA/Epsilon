@@ -7,11 +7,8 @@ package GUI;
 
 import Entite.Annonce;
 import Entite.Client;
-import Entite.Feed;
-import Entite.FeedMessage;
 import Entite.Freelancer;
 import Entite.Skills;
-import Entite.Sujet_forum;
 import Service.ServiceAnnonce;
 import Service.ServiceAuthentification;
 import Service.ServiceClient;
@@ -25,11 +22,6 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -60,7 +52,6 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
 import javax.imageio.ImageIO;
-import Service.RSSFeedWriter;
 
 /**
  * FXML Controller class
@@ -85,6 +76,8 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
     private Button adsbtn;
     @FXML
     private Button Complaintsbtn;
+    @FXML
+    private Button CreateC;
      Freelancer f  = new Freelancer();
       ServiceFreelancer sf = new ServiceFreelancer();
         ServiceAnnonce sj = new ServiceAnnonce();
@@ -102,8 +95,6 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-
         // TODO
          System.out.println(ServiceAuthentification.idf);
        
@@ -151,8 +142,7 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
                     
                    try {
                        b=sc.recherche(free.getId_client());
-                                          } 
-                   catch (SQLException ex) {
+                   } catch (SQLException ex) {
                        Logger.getLogger(AcceuilClientFXMLController.class.getName()).log(Level.SEVERE, null, ex);
                    }
                    try {
@@ -223,29 +213,9 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
                 
                 return res;
                 
-                
             }
-            
         });
         Listeview.setItems(data);
-        Listeview.setOnMouseClicked(e->{
-        ServiceAnnonce.idan = Listeview.getSelectionModel().getSelectedItem().getID();
-        
-         URL url2 = null;
-             try {
-                 url2 = new File("src/gui/PostulationFreelancerFXML.fxml").toURI().toURL();
-             } catch (MalformedURLException ex) {
-                 Logger.getLogger(AcceuilForumFXMLController.class.getName()).log(Level.SEVERE, null, ex);
-             }
-        Parent root = null;
-             try {
-                 root = FXMLLoader.load(url2);
-             } catch (IOException ex) {
-                 Logger.getLogger(AcceuilForumFXMLController.class.getName()).log(Level.SEVERE, null, ex);
-             }
-        Listeview.getScene().setRoot(root);
-        
-        });
     }    
 
     @FXML
@@ -298,6 +268,7 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
         
     }
 
+    @FXML
     private void CreateComp(ActionEvent event) throws MalformedURLException, IOException {
           URL url = new File("src/gui/AddReclamationFFXML.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);

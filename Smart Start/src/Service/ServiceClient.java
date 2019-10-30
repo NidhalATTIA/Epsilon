@@ -21,7 +21,7 @@ import utils.DataSource;
 public class ServiceClient {
      private Connection con = DataSource.getInstance().getConnection();
     private Statement ste;
-    public static int idcli;
+
     public ServiceClient() {
         try {
             ste = con.createStatement();

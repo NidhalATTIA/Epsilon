@@ -18,7 +18,7 @@ public class ServiceSujet_forum {
 
     private Connection con = DataSource.getInstance().getConnection();
     private Statement ste;
-    public static String s="";
+
     public ServiceSujet_forum() {
         try {
             ste=con.createStatement();
@@ -68,17 +68,6 @@ public class ServiceSujet_forum {
       
        }
     return sujet;
-  } 
-     public List<Sujet_forum> readAllr(String s) throws SQLException
-    {
-        List<Sujet_forum> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from Sujet_forum WHERE `Sujet_forum`.`Titre` LIKE '%"+s+"%' ORDER BY date DESC");
-    Sujet_forum per=null;
-    while (res.next()) {            
-      per=new Sujet_forum(res.getInt(1), res.getInt(4),res.getString(2), res.getString(3));
-      list.add(per);
-       }
-    return list;
   } 
 
 }

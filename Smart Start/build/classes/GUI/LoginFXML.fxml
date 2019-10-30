@@ -31,7 +31,7 @@
    <top>
       <AnchorPane prefHeight="97.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="Baccueil" layoutX="480.0" layoutY="29.0" mnemonicParsing="false" onAction="#accueil" prefHeight="39.0" prefWidth="94.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Sign up" AnchorPane.rightAnchor="26.0">
+            <Button layoutX="480.0" layoutY="29.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="94.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Sign up" AnchorPane.rightAnchor="26.0">
                <font>
                   <Font size="18.0" />
                </font></Button>
@@ -47,11 +47,11 @@
    <bottom>
       <AnchorPane prefHeight="49.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="BcontactUs1" layoutX="498.0" layoutY="9.0" mnemonicParsing="false" onAction="#ContactUs1" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.rightAnchor="21.0">
+            <Button layoutX="498.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.rightAnchor="21.0">
                <font>
                   <Font size="13.0" />
                </font></Button>
-            <Button fx:id="BaboutUs1" layoutX="407.0" layoutY="9.0" mnemonicParsing="false" onAction="#AboutUs1" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" AnchorPane.rightAnchor="115.0">
+            <Button layoutX="407.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" AnchorPane.rightAnchor="115.0">
                <font>
                   <Font size="14.0" />
                </font></Button>

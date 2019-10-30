@@ -101,7 +101,7 @@ public class Client {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public void setDescription_company(byte[] image) {
         this.image = image;
     }
     
