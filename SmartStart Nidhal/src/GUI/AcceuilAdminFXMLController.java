@@ -39,7 +39,6 @@ import javafx.scene.Parent;
 import javafx.scene.control.ListCell;
 import javafx.scene.effect.Reflection;
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -56,6 +55,12 @@ public class AcceuilAdminFXMLController implements Initializable {
 
     @FXML
     private ImageView imageA;
+    @FXML
+    private Button logoutadmin;
+    @FXML
+    private Button Aboutus;
+    @FXML
+    private Button Contactus;
     @FXML
     private Button btnFreelancers;
     @FXML
@@ -76,13 +81,7 @@ public class AcceuilAdminFXMLController implements Initializable {
     @FXML
     private Text nomAdmin;
     @FXML
-    private Button Bconnexion;
-    @FXML
-    private ImageView logoAdmin;
-    @FXML
-    private Button BcontactUs;
-    @FXML
-    private Button BaboutUs;
+    private Button Complaintsfree;
     
     
   
@@ -204,26 +203,9 @@ public class AcceuilAdminFXMLController implements Initializable {
     }
 
     @FXML
-    private void Connexion(ActionEvent event) throws IOException {
-        Parent root1 = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));     
-        Bconnexion.getScene().setRoot(root1);
-    }
-
-    @FXML
-    private void goprofilp(MouseEvent event) {
-    }
-
-    @FXML
-    private void AboutUs(ActionEvent event) throws IOException {
-               Parent root = FXMLLoader.load(getClass().getResource("src/GUI/AboutUSFXML.fxml"));
-       BaboutUs.getScene().setRoot(root);
-    }
-
-    @FXML
-    private void ContactUs(ActionEvent event) throws IOException {
-               Parent root = FXMLLoader.load(getClass().getResource("src/GUI/ContactUSFXML.fxml"));
-       BcontactUs.getScene().setRoot(root);
-    }
-    
-    
+    private void ShowCpmplaintsf(ActionEvent event) throws MalformedURLException, IOException {
+        URL url = new File("src/gui/AcceuilAdminReclamationfFXML.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        Complaints.getScene().setRoot(root);
+    }   
 }

@@ -24,7 +24,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.text.Text;
 
-
 /**
  * FXML Controller class
  *
@@ -36,86 +35,83 @@ public class LoginFXMLController implements Initializable {
     private TextField Email;
     @FXML
     private TextField Password;
-    private Button Login;
     @FXML
     private Text indis;
     @FXML
     private Button Baccueil;
-    private Button bContactUs;
-    private Button BaboutUs;
-    private Button BcontactUs;
     @FXML
     private Button BcontactUs1;
     @FXML
     private Button BaboutUs1;
-  
+    @FXML
+    private Button Login;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void Authentification(ActionEvent event) throws MalformedURLException, IOException, SQLException {
-        String e =Email.getText();
+        String e = Email.getText();
         String lien = "";
         String p = Password.getText();
-        Client c= null;
+        Client c = null;
         Freelancer f = null;
         Admin a = null;
         ServiceAuthentification sa = new ServiceAuthentification();
         a = sa.rechercheAdminByName_Mdp(e, p);
-        if (a.getNom()!= null){lien = "AcceuilAdminFXML.fxml";
-        ServiceAuthentification.ida= a.getID();
-         URL url = new File(lien).toURI().toURL();
-        Parent root = FXMLLoader.load(url);
-        Login.getScene().setRoot(root);
-        }
-        else {
+        if (a.getNom() != null) {
+            ServiceAuthentification.ida = a.getID();
+//         URL url = new File(lien).toURI().toURL();
+            //       Parent root = FXMLLoader.load(url);
+            Parent root = FXMLLoader.load(getClass().getResource("/AcceuilAdminFXML.fxml"));
+            Login.getScene().setRoot(root);
+
+            //     Login.getScene().setRoot(root);
+        } else {
             f = sa.rechercheFreelancerByName_Mdp(e, p);
-            if (f.getNom()!= null){
+            if (f.getNom() != null) {
                 lien = "AcceuilFreelancerFXML.fxml";
-                ServiceAuthentification.idf= f.getId();
-                 URL url = new File(lien).toURI().toURL();
-        Parent root = FXMLLoader.load(url);
-        Login.getScene().setRoot(root);
-            }else {
-            c =sa.rechercheClientByName_Mdp(e, p);
-                if (c.getNom()!= null){
-                       lien ="AcceuilClientFXML.fxml";
-                       ServiceAuthentification.idc= c.getId();
-                        URL url = new File(lien).toURI().toURL();
-        Parent root = FXMLLoader.load(url);
-        Login.getScene().setRoot(root);
-                     }
-                else {
-                        indis.setText("Wrong Email or password ");
-                            }
-                 }
+                ServiceAuthentification.idf = f.getId();
+                URL url = new File(lien).toURI().toURL();
+                Parent root = FXMLLoader.load(url);
+                Login.getScene().setRoot(root);
+            } else {
+                c = sa.rechercheClientByName_Mdp(e, p);
+                if (c.getNom() != null) {
+                    lien = "AcceuilClientFXML.fxml";
+                    ServiceAuthentification.idc = c.getId();
+                    URL url = new File(lien).toURI().toURL();
+                    Parent root = FXMLLoader.load(url);
+                    Login.getScene().setRoot(root);
+                } else {
+                    indis.setText("Wrong Email or password ");
+                }
+            }
         }
-           
+
     }
 
     @FXML
     private void accueil(ActionEvent event) throws IOException {
-                   Parent root = FXMLLoader.load(getClass().getResource("AccueilFXML.fxml"));
-      Baccueil.getScene().setRoot(root);
+        Parent root = FXMLLoader.load(getClass().getResource("AcceuilFXML.fxml"));
+        Baccueil.getScene().setRoot(root);
     }
-
 
     @FXML
     private void ContactUs1(ActionEvent event) throws IOException {
-                       Parent root = FXMLLoader.load(getClass().getResource("ContactUSFXML.fxml"));
-       BcontactUs1.getScene().setRoot(root);
+        Parent root = FXMLLoader.load(getClass().getResource("ContactUSFXML.fxml"));
+        BcontactUs1.getScene().setRoot(root);
     }
-    
 
     @FXML
     private void AboutUs1(ActionEvent event) throws IOException {
-               Parent root = FXMLLoader.load(getClass().getResource("/src/GUI/AboutUSFXML.fxml"));
-       BaboutUs1.getScene().setRoot(root);
+        Parent root = FXMLLoader.load(getClass().getResource("/src/GUI/AboutUSFXML.fxml"));
+        BaboutUs1.getScene().setRoot(root);
     }
-    
+
 }

@@ -18,19 +18,22 @@ import java.sql.Statement;
  * @author Arzack
  */
 public class ServiceAuthentification {
-
     public static int idf;
-    public static int ida;
     public static int idc;
-    
-    
-
+    public static int ida;
+     private Connection con = DataSource.getInstance().getConnection();
     private Statement ste;
 
-    
-     public Freelancer rechercheFreelancerByName_Mdp(String email ,String mdp)throws SQLException{
-     
-     String requete = "SELECT * FROM  `freelancer` WHERE Email='" +email+"' and MotDePass='"+mdp+"'" ;
+    public ServiceAuthentification() {
+        try {
+            ste=con.createStatement();
+        } catch (SQLException ex) {
+            System.out.println(ex);
+        }
+    }
+public Freelancer rechercheFreelancerByName_Mdp(String email ,String mdp)throws SQLException{
+
+     String requete = "SELECT * FROM  Freelancer WHERE Email='" +email+"' and MotDePass='"+mdp+"'" ;
      Freelancer f = new Freelancer ();
       ResultSet res =ste.executeQuery (requete);
        while (res.next()) { 
@@ -38,37 +41,35 @@ public class ServiceAuthentification {
       f.setMotDePass(res.getString("MotDePass"));
       f.setId(res.getInt("ID"));
       f.setCv(res.getString("Cv"));
+      f.setDescription(res.getString("Description"));
       f.setNationalite(res.getString("Nationalite"));
       f.setNom(res.getString("Nom"));
       f.setPrenom(res.getString("Prenom"));
        }
          System.out.println(f.toString()); 
       return f ;}
-     
-     public Client rechercheClientByName_Mdp(String email ,String mdp)throws SQLException{
-     
-     String requete = "SELECT * FROM  `client` WHERE Email='" +email+"' and MotDePass='"+mdp+"'" ;
+public Client rechercheClientByName_Mdp(String email ,String mdp)throws SQLException{
+
+     String requete = "SELECT * FROM  Client WHERE Email='" +email+"' and MotDePass='"+mdp+"'" ;
      Client c = new Client ();
       ResultSet res =ste.executeQuery (requete);
        while (res.next()) { 
       c.setEmail(res.getString("Email"));
-      c.setMotDePass(res.getString("MotDePass"));
+      c.setMotdepass(res.getString("MotDePass"));
       c.setId(res.getInt("ID"));
       c.setNationalite(res.getString("Nationalite"));
       c.setNom_company(res.getString("Nom_Company"));
       c.setPrenom(res.getString("Prenom"));
       c.setDescription_company(res.getString("Description_company"));
       c.setNom(res.getString("Nom"));
- 
+
        }
-       ServiceClient modif = new ServiceClient();
-        modif.Connexion_etat(c);
          System.out.println(c.toString()); 
       return c ;}
-     
-     public Admin rechercheAdminByName_Mdp(String email ,String mdp)throws SQLException{
-     
-     String requete = "SELECT * FROM  `admin` WHERE Email='" +email+"' and MotDePass='"+mdp+"'" ;
+      
+    public Admin rechercheAdminByName_Mdp(String email ,String mdp)throws SQLException{
+
+     String requete = "SELECT * FROM  Admin WHERE Email='" +email+"' and MotDePass='"+mdp+"'" ;
      Admin a = new Admin ();
       ResultSet res =ste.executeQuery (requete);
        while (res.next()) { 
@@ -83,10 +84,6 @@ public class ServiceAuthentification {
        }
          System.out.println(a.toString()); 
       return a ;}
-
-    
-
-    
-    
     
 }
+

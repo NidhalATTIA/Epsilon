@@ -7,19 +7,19 @@ package Entite;
 
 /**
  *
- * @author Nidhal
+ * @author Arzack
  */
-
 public class Client {
     private int ID;
     private String Nom, Prenom, Email, Nationalite, Nom_company, MotDePass, Description_company;
+    byte[]image;
 
     public Client() 
     {
         
     }
 
-    public Client(int id, String nom, String prenom, String email, String nationalite, String nom_company, String motdepass, String description_company) {
+    public Client(int id, String nom, String prenom, String email, String nationalite, String nom_company, String motdepass, String description_company, byte[] image) {
         this.ID = id;
         this.Nom = nom;
         this.Prenom = prenom;
@@ -28,6 +28,7 @@ public class Client {
         this.Nom_company = nom_company;
         this.MotDePass = motdepass;
         this.Description_company = description_company;
+        this.image= image;
     }
 
 
@@ -96,22 +97,17 @@ public class Client {
     public void setDescription_company(String description_company) {
         this.Description_company = description_company;
     }
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setDescription_company(byte[] image) {
+        this.image = image;
+    }
     
     @Override
     public String toString() {
         return "Client{" + "id=" + ID + ", nom=" + Nom + ", prenom=" + Prenom + ", email=" + Email + ", nationalite=" + Nationalite + ", nom_company=" + Nom_company + ", motdepass=" + MotDePass + ", description_company=" + Description_company + '}';
-    }
-
-    public Object getMotDePass() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setMotDePass(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public byte[] getImage() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

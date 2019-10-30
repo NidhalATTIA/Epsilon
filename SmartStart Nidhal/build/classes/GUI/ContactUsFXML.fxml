@@ -21,7 +21,7 @@
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="Bprofile" layoutX="499.0" layoutY="19.0" mnemonicParsing="false" onAction="#Profile" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #8B0000;" text="Profile" textFill="WHITE">
+                  <Button fx:id="BHome" layoutX="499.0" layoutY="19.0" mnemonicParsing="false" onAction="#Home" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #8B0000;" text="Home" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -53,7 +53,7 @@
                         <Image url="@../image/fond.jpg" />
                      </image>
                   </ImageView>
-                  <Button layoutX="110.0" layoutY="337.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="149.0" style="-fx-background-color: #8B0000;" text="send" textFill="WHITE">
+                  <Button layoutX="110.0" layoutY="337.0" mnemonicParsing="false" onAction="#SendContactUs" prefHeight="44.0" prefWidth="149.0" style="-fx-background-color: #8B0000;" text="send" textFill="WHITE">
                      <font>
                         <Font name="System Italic" size="20.0" />
                      </font>

@@ -20,7 +20,7 @@
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="Bprofile" layoutX="488.0" layoutY="13.0" mnemonicParsing="false" onAction="#Profile" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #8B0000;" text="Profile" textFill="WHITE">
+                  <Button fx:id="BHome" layoutX="488.0" layoutY="13.0" mnemonicParsing="false" onAction="#Home" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: #8B0000;" text="Home" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>

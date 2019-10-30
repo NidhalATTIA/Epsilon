@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/SmartStart%20Nidhal/src/GUI/AcceuilFXMLController.java</file>
-            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/SmartStart%20Nidhal/src/DataSource/DataSource.java</file>
-            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/SmartStart%20Nidhal/src/DataSource/NewMain.java</file>
+            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/SmartStart%20Nidhal/src/GUI/InscriptionClientFXMLController.java</file>
+            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/SmartStart%20Nidhal/src/GUI/InscriptionAdminFXMLController.java</file>
+            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/SmartStart%20Nidhal/src/Entite/Admin.java</file>
+            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/SmartStart%20Nidhal/src/Service/ServiceAdmin.java</file>
+            <file>file:/C:/Users/Arzack/Documents/GitHub/Epsilon/SmartStart%20Nidhal/src/GUI/InscriptionFreelancerFXMLController.java</file>
         </group>
     </open-files>
 </project-private>
