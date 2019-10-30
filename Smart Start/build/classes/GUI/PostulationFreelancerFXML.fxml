@@ -48,6 +48,17 @@
             <TextField fx:id="titletext" editable="false" layoutX="111.0" layoutY="23.0" prefHeight="25.0" prefWidth="332.0" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="23.0" />
             <TextArea fx:id="textposs" layoutX="111.0" layoutY="171.0" prefHeight="100.0" prefWidth="332.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="171.0" />
             <Button fx:id="btnSubmit" layoutX="459.0" layoutY="208.0" mnemonicParsing="false" onAction="#submitapp" style="-fx-background-color: #8b0000;" text="Submit Application" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="9.0" />
+            <ImageView fx:id="imageClient" fitHeight="86.0" fitWidth="118.0" layoutX="465.0" layoutY="30.0" onMouseClicked="#goprofilClient" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="30.0" />
+            <Text fx:id="textclientup" layoutX="460.0" layoutY="148.0" onMouseClicked="#goprofilClient" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="131.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="132.53125">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="Skill" layoutX="468.0" layoutY="175.568359375" onMouseClicked="#goprofilClient" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="122.2060546875" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="163.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
          </children></AnchorPane>
    </center>
 </BorderPane>

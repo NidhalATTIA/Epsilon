@@ -7,6 +7,7 @@ package GUI;
 
 import Entite.Annonce;
 import Entite.Client;
+import Entite.FeedMessage;
 import Entite.Skills;
 import Service.ServiceAnnonce;
 import Service.ServiceAuthentification;
@@ -45,6 +46,16 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
 import javax.imageio.ImageIO;
+import Entite.Feed;
+import Service.RSSFeedWriter;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
+import java.util.Locale;
+
 
 /**
  * FXML Controller class
@@ -72,7 +83,7 @@ public class VuAnnonceClientFXMLController implements Initializable {
     ServiceClient sc = new ServiceClient();
     ServiceSkills sff = new ServiceSkills();
     int selected;
-    
+    List<Annonce> annonces = null;
     /**
      * Initializes the controller class.
      */
@@ -149,7 +160,36 @@ public class VuAnnonceClientFXMLController implements Initializable {
         an.setId_client(a.getId());
         an.setSkills(selected);
         san.ajouterAnnonce(an);
-         URL url = new File("src/gui/AnnonceClientFXML.fxml").toURI().toURL();
+        annonces = san.readAll();
+        String copyright = "Copyright hold by SmartStart";
+        String title = "Ads Rss Feed for freelancers";
+        String description = "This is an rss feed for ads";
+        String language = "en";
+        String link = "https://www.SmartStart/";
+        Calendar cal = new GregorianCalendar();
+        Date creationDate = cal.getTime();
+        SimpleDateFormat date_format = new SimpleDateFormat(
+                "EEE', 'dd' 'MMM' 'yyyy' 'HH:mm:ss' 'Z", Locale.US);
+        String pubdate = date_format.format(creationDate);
+        Feed rssFeeder = new Feed(title, link, description, language,
+                copyright, pubdate);
+        for(Annonce i:annonces){
+        FeedMessage feed = new FeedMessage();
+                    feed.setTitle(i.getTitre());
+                    feed.setDescription(i.getDESCRIPTION());
+                        Client w = new Client();
+                        w = sc.recherche(i.getId_client());
+                       feed.setAuthor(w.getNom_company());
+                       feed.setGuid("https://www.SmartStart/RSSFeed");
+                        feed.setLink("https://www.SmartStart/RSSFeed");
+                        rssFeeder.getMessages().add(feed);
+                        RSSFeedWriter writer = new RSSFeedWriter(rssFeeder, "/Users/houssembaazoug/sites/articles.rss");
+                        try {
+                          writer.write();
+                   } catch (Exception e) {
+                          e.printStackTrace();
+                     }}
+        URL url = new File("src/gui/AnnonceClientFXML.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         btnadd.getScene().setRoot(root);
     }

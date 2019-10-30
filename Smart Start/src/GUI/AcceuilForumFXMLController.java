@@ -75,6 +75,10 @@ public class AcceuilForumFXMLController implements Initializable {
       BufferedImage image2;
     @FXML
     private Button AddnewSubject;
+    @FXML
+    private TextField searchf;
+    @FXML
+    private Button btnSearch;
     /**
      * Initializes the controller class.
      */
@@ -102,7 +106,9 @@ public class AcceuilForumFXMLController implements Initializable {
         }
          data.clear();
         try {
-            data.addAll(ssf.readAll());
+            if (ServiceSujet_forum.s.isEmpty()){
+                data.addAll(ssf.readAll());}else{
+            data.addAll(ssf.readAllr(ServiceSujet_forum.s));}
         } catch (SQLException ex) {
             Logger.getLogger(AcceuilfreelancerFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -213,6 +219,14 @@ public class AcceuilForumFXMLController implements Initializable {
            URL url = new File("src/gui/AddSubjectFFXML.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         AddnewSubject.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void search(ActionEvent event) throws IOException {
+        ServiceSujet_forum.s = searchf.getText();
+        URL url = new File("src/gui/AcceuilForumFXML.fxml").toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        btnSearch.getScene().setRoot(root);
     }
     
 }

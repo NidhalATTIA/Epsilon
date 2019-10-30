@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+	<title>Ads Rss Feed for freelancers</title>
+	<link>https://www.vogella.com/</link>
+	<description>This is an rss feed for ads</description>
+	<language>en</language>
+	<copyright>Copyright hold by SmartStart</copyright>
+	<pubdate>Tue, 29 Oct 2019 22:43:49 +0100</pubdate>
+<item>
+	<title>test</title>
+	<description>drgthyjmu</description>
+	<link>https://www.vogella.com/tutorials/RSSFeed/article.html</link>
+	<author>nidhal</author>
+	<guid>https://www.vogella.com/tutorials/RSSFeed/article.html</guid>
+
+</item>
+<item>
+	<title>test</title>
+	<description>drgthyjmu</description>
+	<link>https://www.vogella.com/tutorials/RSSFeed/article.html</link>
+	<author>nidhal</author>
+	<guid>https://www.vogella.com/tutorials/RSSFeed/article.html</guid>
+
+</item>
+<item>
+	<title>java</title>
+	<description>java</description>
+	<link>https://www.vogella.com/tutorials/RSSFeed/article.html</link>
+	<author>nidhal</author>
+	<guid>https://www.vogella.com/tutorials/RSSFeed/article.html</guid>
+
+</item>
+<item>
+	<title>ekhranonce</title>
+	<description>ekhranonce</description>
+	<link>https://www.vogella.com/tutorials/RSSFeed/article.html</link>
+	<author>nidhal</author>
+	<guid>https://www.vogella.com/tutorials/RSSFeed/article.html</guid>
+
+</item>
+
+</channel>
+</rss>

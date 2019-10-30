@@ -231,7 +231,24 @@ public class JobsBySkillsFXMLController implements Initializable {
             }
         });
         Listeview.setItems(data);
+         Listeview.setOnMouseClicked(e->{
+        ServiceAnnonce.idan = Listeview.getSelectionModel().getSelectedItem().getID();
         
+         URL url2 = null;
+             try {
+                 url2 = new File("src/gui/PostulationFreelancerFXML.fxml").toURI().toURL();
+             } catch (MalformedURLException ex) {
+                 Logger.getLogger(AcceuilForumFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+             }
+        Parent root = null;
+             try {
+                 root = FXMLLoader.load(url2);
+             } catch (IOException ex) {
+                 Logger.getLogger(AcceuilForumFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+             }
+        Listeview.getScene().setRoot(root);
+        
+        });
         
     }    
 

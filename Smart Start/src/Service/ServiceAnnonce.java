@@ -34,7 +34,7 @@ public class ServiceAnnonce {
 
     public List<Annonce> readAll() throws SQLException
     {List<Annonce> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from annonce");
+    ResultSet res=ste.executeQuery("select * from annonce ORDER BY dateAjout DESC ");
     Annonce ann=null;
     while (res.next()) {            
       ann=new Annonce(res.getInt(1), res.getString(2),res.getString(3),res.getInt(4),res.getInt(5));
@@ -45,7 +45,7 @@ public class ServiceAnnonce {
     
     public List<Annonce> readAllc(int id) throws SQLException
     {List<Annonce> list=new ArrayList<>();
-    ResultSet res=ste.executeQuery("select * from Annonce WHERE Annonce.id_client ='"+id+"' ;");
+    ResultSet res=ste.executeQuery("select * from Annonce WHERE Annonce.id_client ='"+id+"' ORDER BY dateAjout DESC ;");
     Annonce ann=null;
     while (res.next()) {            
       ann=new Annonce(res.getInt(1), res.getString(2),res.getString(3),res.getInt(4),res.getInt(5));
