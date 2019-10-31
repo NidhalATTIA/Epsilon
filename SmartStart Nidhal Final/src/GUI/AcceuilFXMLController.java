@@ -20,7 +20,7 @@ import javafx.scene.control.Button;
 /**
  * FXML Controller class
  *
- * @author houssembaazoug
+ * @author Arzack
  */
 public class AcceuilFXMLController implements Initializable {
 

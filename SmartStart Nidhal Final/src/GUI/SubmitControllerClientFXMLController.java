@@ -44,7 +44,7 @@ import javax.imageio.ImageIO;
 /**
  * FXML Controller class
  *
- * @author houssembaazoug
+ * @author Arzack
  */
 public class SubmitControllerClientFXMLController implements Initializable {
 

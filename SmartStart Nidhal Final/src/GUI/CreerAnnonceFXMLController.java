@@ -58,7 +58,7 @@ import javax.imageio.ImageIO;
 /**
  * FXML Controller class
  *
- * @author houssembaazoug
+ * @author Arzack
  */
 public class CreerAnnonceFXMLController implements Initializable {
 

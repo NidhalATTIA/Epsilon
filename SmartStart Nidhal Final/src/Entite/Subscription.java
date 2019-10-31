@@ -7,7 +7,7 @@ package Entite;
 
 /**
  *
- * @author houssembaazoug
+ * @author Arzack
  */
 public class Subscription {
     private int ID,ID_client,ID_Freelancer;

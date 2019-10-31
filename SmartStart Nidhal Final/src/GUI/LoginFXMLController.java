@@ -28,7 +28,7 @@ import javafx.scene.text.Text;
 /**
  * FXML Controller class
  *
- * @author houssembaazoug
+ * @author Arzack
  */
 public class LoginFXMLController implements Initializable {
 
@@ -40,6 +40,12 @@ public class LoginFXMLController implements Initializable {
     private Button Login;
     @FXML
     private Text indis;
+    @FXML
+    private Button Bhome;
+    @FXML
+    private Button cu;
+    @FXML
+    private Button au;
   
     /**
      * Initializes the controller class.
@@ -86,11 +92,26 @@ public class LoginFXMLController implements Initializable {
                         indis.setText("Wrong Email and password ");
                             }
                  }
-        }
+        }    
         
-        
-         
-        
+    }
+
+    @FXML
+    private void Home(ActionEvent event) throws IOException {
+       Parent root3 = FXMLLoader.load(getClass().getResource("AcceuilFXML.fxml"));
+       Bhome.getScene().setRoot(root3);
+    }
+
+    @FXML
+    private void Cu(ActionEvent event) throws IOException {
+       Parent root3 = FXMLLoader.load(getClass().getResource("ContactUsFXML.fxml"));
+       cu.getScene().setRoot(root3);
+    }
+
+    @FXML
+    private void Au(ActionEvent event) throws IOException {
+       Parent root2 = FXMLLoader.load(getClass().getResource("AboutUsFXML.fxml"));
+       au.getScene().setRoot(root2);
     }
     
 }

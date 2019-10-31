@@ -16,7 +16,7 @@ import utils.DataSource;
 
 /**
  *
- * @author houssembaazoug
+ * @author Arzack
  */
 public class ServiceClient {
      private Connection con = DataSource.getInstance().getConnection();

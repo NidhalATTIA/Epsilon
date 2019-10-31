@@ -11,8 +11,8 @@
    <top>
       <AnchorPane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="logoutadmin" layoutX="497.0" layoutY="16.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Logout" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="16.0" />
-            <ImageView fx:id="imageA" fitHeight="51.0" fitWidth="84.0" layoutX="275.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="241.0" />
+            <Button fx:id="logoutadmin" layoutX="522.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Logout" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="17.0" />
+            <ImageView fx:id="imageA" fitHeight="51.0" fitWidth="84.0" layoutX="275.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="241.0" />
             <Text fx:id="nomAdmin" fill="WHITE" layoutX="383.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="89.0" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="20.63020896911621" />
          </children>
       </AnchorPane>
@@ -38,8 +38,8 @@
    <bottom>
       <AnchorPane prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="Aboutus" layoutX="393.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="136.0" />
-            <Button fx:id="Contactus" layoutX="504.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="14.0" />
+            <Button fx:id="au" layoutX="393.0" layoutY="8.0" mnemonicParsing="false" onAction="#Au" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="136.0" />
+            <Button fx:id="cu" layoutX="504.0" layoutY="8.0" mnemonicParsing="false" onAction="#Cu" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="14.0" />
          </children>
       </AnchorPane>
    </bottom>

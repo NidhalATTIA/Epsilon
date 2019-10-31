@@ -9,7 +9,7 @@ import javafx.scene.image.Image;
 
 /**
  *
- * @author Yasser Bel Haj Ali
+ * @author Arzack
  */
 public class Freelancer {
     private int id ;

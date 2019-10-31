@@ -7,7 +7,7 @@ package Entite;
 
 /**
  *
- * @author MED HOUSSEM KAFFEL
+ * @author Arzack
  */
 public class Annonce implements Comparable<Annonce>{
 

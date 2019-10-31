@@ -38,7 +38,7 @@ import javax.imageio.ImageIO;
 /**
  * FXML Controller class
  *
- * @author houssembaazoug
+ * @author Arzack
  */
 public class JobPrClientFXMLController implements Initializable {
 

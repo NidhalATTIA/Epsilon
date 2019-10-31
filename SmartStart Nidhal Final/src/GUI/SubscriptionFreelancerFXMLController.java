@@ -62,7 +62,7 @@ import javax.imageio.ImageIO;
 /**
  * FXML Controller class
  *
- * @author houssembaazoug
+ * @author Arzack
  */
 public class SubscriptionFreelancerFXMLController implements Initializable {
 
