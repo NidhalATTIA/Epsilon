@@ -7,15 +7,12 @@ package utils;
 
 import java.sql.*;
 
-/**
- *
- * 
- */
+
 public class DataSource {
 
     private static DataSource data;
     private Connection con;
-    String url = "jdbc:mysql://localhost:3306/projetpi";
+    String url = "jdbc:mysql://localhost:3306/PI";
     String login = "root";
     String pwd = "";
 

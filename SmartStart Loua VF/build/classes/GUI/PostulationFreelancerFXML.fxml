@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.PostulationFreelancerFXMLController">
+   <top>
+      <AnchorPane prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="497.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Logout" AnchorPane.rightAnchor="42.0" />
+             <Text fx:id="nomUser" fill="WHITE" layoutX="380.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="89.2060546875" AnchorPane.rightAnchor="130.7939453125" AnchorPane.topAnchor="17.498046875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="imageUser" fitHeight="49.0" fitWidth="64.0" layoutX="303.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="233.0" AnchorPane.topAnchor="10.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="56.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="498.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact us" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="17.0" />
+            <Button layoutX="412.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="113.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="55.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title :" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="27.53125">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="Descriptiontext" editable="false" layoutX="111.0" layoutY="64.0" prefHeight="103.0" prefWidth="331.0" AnchorPane.bottomAnchor="118.0" AnchorPane.rightAnchor="158.0" AnchorPane.topAnchor="64.0" />
+            <Text layoutX="5.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="63.53125">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <TextField fx:id="titletext" editable="false" layoutX="111.0" layoutY="23.0" prefHeight="25.0" prefWidth="332.0" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="23.0" />
+            <TextArea fx:id="textposs" layoutX="111.0" layoutY="171.0" prefHeight="100.0" prefWidth="332.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="171.0" />
+            <Button fx:id="btnSubmit" layoutX="459.0" layoutY="208.0" mnemonicParsing="false" onAction="#submitapp" style="-fx-background-color: #8b0000;" text="Submit Application" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="9.0" />
+            <Button fx:id="btnDelete" layoutX="474.0" layoutY="246.0" mnemonicParsing="false" onAction="#deleteapp" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #8b0000;" text="Delete Application" textFill="WHITE" />
+            <ImageView fx:id="imageClient" fitHeight="86.0" fitWidth="118.0" layoutX="465.0" layoutY="30.0" onMouseClicked="#goprofilClient" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="30.0" />
+            <Text fx:id="textclientup" layoutX="460.0" layoutY="148.0" onMouseClicked="#goprofilClient" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="131.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="132.53125">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="Skill" layoutX="468.0" layoutY="175.568359375" onMouseClicked="#goprofilClient" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="122.2060546875" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="163.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

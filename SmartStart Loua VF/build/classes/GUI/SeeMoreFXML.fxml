@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SeeMoreFXMLController">
+   <top>
+      <AnchorPane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="497.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Logout" AnchorPane.rightAnchor="45.0" />
+            <Button fx:id="forumb" layoutX="110.0" layoutY="13.0" mnemonicParsing="false" onAction="#goforum" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Forum" AnchorPane.rightAnchor="435.0" />
+            <Button fx:id="fluxrss" layoutX="423.0" layoutY="14.0" mnemonicParsing="false" onAction="#showFluxRSS" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="RSS Feed" AnchorPane.rightAnchor="123.0" AnchorPane.topAnchor="14.0" />
+            <Text fx:id="nomAcceuil" fill="WHITE" layoutX="285.0" layoutY="37.0" onMouseClicked="#goprofiln" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25;" wrappingWidth="106.98307228088379" AnchorPane.rightAnchor="208.0169277191162" />
+            <ImageView fx:id="ImageFreelancer" fitHeight="59.0" fitWidth="80.0" layoutX="178.0" layoutY="1.0" onMouseClicked="#goprofilp" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="342.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="295.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <AnchorPane prefHeight="295.0" prefWidth="229.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="jobs" layoutY="-2.0" mnemonicParsing="false" onAction="#Jobsbtn" prefHeight="53.0" prefWidth="127.0" style="-fx-text-fill: white; -fx-background-color: #8B0000;" text="My jobs" AnchorPane.leftAnchor="0.0" />
+            <Button fx:id="Subscription" layoutY="52.0" mnemonicParsing="false" onAction="#Subscriptionbtn" prefHeight="59.0" prefWidth="127.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Subscribtions" AnchorPane.leftAnchor="0.0" />
+            <Button fx:id="jobsforS" layoutY="112.0" mnemonicParsing="false" onAction="#jobsBySkill" prefHeight="59.0" prefWidth="127.0" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Jobs For Me" AnchorPane.leftAnchor="0.0" />
+            <Button fx:id="adsbtn" layoutY="171.0" mnemonicParsing="false" onAction="#Adsbtn" prefHeight="58.0" prefWidth="127.0" style="-fx-background-color: B80000; -fx-text-fill: White;" text="All Ads" />
+            <Button fx:id="Complaintsbtn" layoutY="229.0" mnemonicParsing="false" onAction="#Complaintsbtn" prefHeight="54.0" prefWidth="127.0" style="-fx-background-color: #b80000; -fx-text-fill: white;" text="Complaints" />
+            <Button fx:id="more" layoutY="281.0" mnemonicParsing="false" onAction="#seeMore" prefHeight="25.0" prefWidth="127.0" style="-fx-background-color: #b80000;" text="See More" textFill="WHITE" />
+            <Label layoutX="246.0" layoutY="34.0" prefHeight="17.0" prefWidth="187.0" text="See More" />
+            <Label layoutX="163.0" layoutY="125.0" text="Number of Applications" />
+            <TextField fx:id="aa" layoutX="340.0" layoutY="121.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="295.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="6.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="393.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="About Us" AnchorPane.rightAnchor="136.0" />
+            <Button layoutX="504.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: #8B0000; -fx-text-fill: white;" text="Contact Us" AnchorPane.rightAnchor="14.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

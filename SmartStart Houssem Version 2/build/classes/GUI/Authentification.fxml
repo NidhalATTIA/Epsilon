@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AuthentificationFXMLController">
+   <children>
+      <ButtonBar prefHeight="46.0" prefWidth="657.0" style="-fx-background-color: black;">
+         <buttons>
+            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Sign in as Client" textFill="WHITE" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Sign in as a Freelancer" textFill="#fffcfc" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Login" textFill="WHITE" textOverrun="CLIP" />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutY="468.0" prefHeight="46.0" prefWidth="658.0" style="-fx-background-color: black;">
+         <buttons>
+            <Button fx:id="aboutus1" mnemonicParsing="false" onAction="#GoToAboutus1" style="-fx-background-color: #8B0000;" text="Become a moderator" textFill="WHITE" />
+            <Button fx:id="contactus1" mnemonicParsing="false" onAction="#GoToAContactus1" style="-fx-background-color: #8B0000;" text="About us" textFill="WHITE" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #8B0000;" text="Contact us" textFill="WHITE" />
+         </buttons>
+      </ButtonBar>
+      <Label layoutX="188.0" layoutY="173.0" text="Email">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfemail" layoutX="230.0" layoutY="203.0" prefHeight="25.0" prefWidth="205.0" />
+      <Label layoutX="176.0" layoutY="263.0" text="Password">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="85.0" text="SIGN IN" textFill="#cd8484">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="270.0" layoutY="412.0" text="Forgot your password ?" textFill="#756b6b" />
+      <Button layoutX="303.0" layoutY="358.0" mnemonicParsing="false" onAction="#Login" style="-fx-background-color: #8B0000;" text="ok" textFill="WHITE" />
+      <PasswordField fx:id="tfpwd" layoutX="229.0" layoutY="296.0" prefHeight="25.0" prefWidth="205.0" />
+   </children>
+</AnchorPane>
