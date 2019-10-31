@@ -69,6 +69,8 @@ public class ProfilClientPrFreelancerFXMLController implements Initializable {
        ServiceFreelancer sf = new ServiceFreelancer();
        Subscription sb= new Subscription();
        ServiceSubscription ssb = new ServiceSubscription();
+    @FXML
+    private ImageView logo;
        
     /**
      * Initializes the controller class.
@@ -132,6 +134,12 @@ public class ProfilClientPrFreelancerFXMLController implements Initializable {
         Parent root = FXMLLoader.load(url);
         Subscribebtn.getScene().setRoot(root);
                 }   
+    }
+
+    @FXML
+    private void Logo(MouseEvent event) throws IOException {
+       Parent root3 = FXMLLoader.load(getClass().getResource("AcceuilfreelancerFXML.fxml"));
+       logo.getScene().setRoot(root3);
     }
 
     

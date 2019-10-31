@@ -79,6 +79,12 @@ public class AcceuilfreelancerFXMLController implements Initializable {
     private Button Subscription;
     @FXML
     private Button fluxrss;
+    @FXML
+    private Button out;
+    @FXML
+    private Button au;
+    @FXML
+    private Button cu;
 
     /**
      * Initializes the controller class.
@@ -264,6 +270,18 @@ public class AcceuilfreelancerFXMLController implements Initializable {
          URL url = new File("/Users/houssembaazoug/sites/articles.rss").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         nomAcceuil.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void Out(ActionEvent event) {
+    }
+
+    @FXML
+    private void Au(ActionEvent event) {
+    }
+
+    @FXML
+    private void Cu(ActionEvent event) {
     }
     
 }

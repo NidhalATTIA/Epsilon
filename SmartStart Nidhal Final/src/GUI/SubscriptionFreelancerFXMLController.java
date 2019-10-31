@@ -97,6 +97,14 @@ public class SubscriptionFreelancerFXMLController implements Initializable {
         BufferedImage image2;
        Image card2=null;
        private List <Subscription> l = null;
+    @FXML
+    private Button out;
+    @FXML
+    private ImageView logo;
+    @FXML
+    private Button au;
+    @FXML
+    private Button cu;
       
     /**
      * Initializes the controller class.
@@ -304,6 +312,22 @@ public class SubscriptionFreelancerFXMLController implements Initializable {
         URL url = new File("src/gui/SubscribtionFreelancerFXML.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         nomAcceuil.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void Out(ActionEvent event) {
+    }
+
+    @FXML
+    private void Logo(MouseEvent event) {
+    }
+
+    @FXML
+    private void Au(ActionEvent event) {
+    }
+
+    @FXML
+    private void Cu(ActionEvent event) {
     }
     
 }
