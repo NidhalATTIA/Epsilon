@@ -29,25 +29,7 @@ public class ServiceSkills {
             System.out.println(ex);  
         }
     }
-    public void ajouterSkill(Skills c) throws SQLException{
-      String requete = "INSERT INTO `Skills` (`ID`, `Skill`) "
-              + "VALUES (NULL,'"+c.getContenu()+"');";
-   ste.executeUpdate(requete);
-        System.out.println("elment inseree");
-    }
-    
-    public void supprimerSkill(int id)throws SQLException{
-   
-    String requete ="DELETE FROM `Skills` WHERE `Skills`.`ID` ="+id;
-    ste.executeUpdate(requete);
-        System.out.println("elment supprimmee");
-    }
-    public void modifierSkill(Skills c)throws SQLException{
-   
-    String requete ="UPDATE `Skills` SET `Skill` = '"+c.getContenu()+"' WHERE `Skills`.`ID` ='"+c.getId()+"' ;";
-    ste.executeUpdate(requete);
-        System.out.println("elment modifier");
-    }
+
     public List<Skills> readAll() throws SQLException
     {
         List<Skills> list=new ArrayList<>();

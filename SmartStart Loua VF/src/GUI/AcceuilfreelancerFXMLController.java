@@ -99,7 +99,7 @@ public class AcceuilfreelancerFXMLController implements Initializable {
         try {
             f= sf.recherche(ServiceAuthentification.idf);
             System.out.println(f.getNom());
-            nomAcceuil.setText(f.getNom());
+            nomAcceuil.setText(f.getNom()); //affichage du nom en haut
             
             try {
                  image=ImageIO.read(new ByteArrayInputStream(f.getImage()));
@@ -107,17 +107,18 @@ public class AcceuilfreelancerFXMLController implements Initializable {
             } catch (IOException ex) {
                 Logger.getLogger(AcceuilfreelancerFXMLController.class.getName()).log(Level.SEVERE, null, ex);
             }
-            ImageFreelancer.setImage(card);
+            ImageFreelancer.setImage(card); //affichage imageFreelancer
         } catch (SQLException ex) {
             Logger.getLogger(AcceuilfreelancerFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         data.clear();
         try {
-            data.addAll(sj.readAllf(f.getId()));
+            data.addAll(sj.readAllf(f.getId())); 
         } catch (SQLException ex) {
             Logger.getLogger(AcceuilfreelancerFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         Listeview.setCellFactory(new Callback<ListView<Job>,ListCell<Job>>(){
             @Override
             public ListCell<Job> call(ListView<Job> param) {
@@ -186,6 +187,7 @@ public class AcceuilfreelancerFXMLController implements Initializable {
                   StackPane.setMargin(st2,new Insets(0,0,0,5));
                   StackPane.setAlignment(st3, Pos.BOTTOM_LEFT);
                   StackPane.setMargin(st3,new Insets(0,0,0,5));
+                  
                   st.getChildren().addAll(st2,stack_pane,name_txt,st3);
                   setGraphic(st);
        
@@ -208,9 +210,7 @@ public class AcceuilfreelancerFXMLController implements Initializable {
 
     @FXML
     private void goforum(ActionEvent event) throws MalformedURLException, IOException {
-            URL url = new File("src/gui/AcceuilForumFXML.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(url);
-        forumb.getScene().setRoot(root);
+            
     }
 
     @FXML
@@ -266,9 +266,6 @@ public class AcceuilfreelancerFXMLController implements Initializable {
 
     @FXML
     private void showFluxRSS(ActionEvent event) throws IOException {
-         URL url = new File("/Users/houssembaazoug/sites/articles.rss").toURI().toURL();
-        Parent root = FXMLLoader.load(url);
-        nomAcceuil.getScene().setRoot(root);
     }
 
     @FXML

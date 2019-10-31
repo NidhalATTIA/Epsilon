@@ -40,47 +40,6 @@ public class ServiceClient {
         return list;
     }
 
-    public void ajouterFree(Client F) throws SQLException {
-        String req = "INSERT INTO `Client` ( `ID`,`Nom`,`Prenom`,``Email``,`Nationalite`,`Nom_company`,`MotDePass`,`Description_company`,`ImageClient`,) VALUES (?,?,?,?,?,?,?,?,?)";
-        PreparedStatement pres = con.prepareStatement(req);
-        pres.setInt(1, F.getId());
-        pres.setString(2, F.getNom());
-        pres.setString(3, F.getPrenom());
-        pres.setString(4, F.getEmail());
-        pres.setString(5, F.getNationalite());
-        pres.setString(6, F.getNom_company());
-        pres.setString(7, F.getMotdepass());
-        pres.setString(8, F.getDescription_company());
-        pres.setBytes(9, F.getImage());
-
-        pres.executeUpdate();
-        System.out.println("element inseré");
-
-    }
-
-    public void supprimerFree(int id) throws SQLException {
-
-        String requete = "DELETE FROM Client WHERE Client.ID =" + id;
-        ste.executeUpdate(requete);
-        System.out.println("elment supprimmé");
-    }
-
-    public void modifierFree(Client s) throws SQLException {
-
-        String requete = "UPDATE `Client` SET `ID` = ?,`Nom` = ?, `Prenom` = ?, `Email` = ?, `Nationalite` = ?, `Nom_company` = ?, `MotDePass` = ?, `Description_company` = ?, `ImageClient` = ? WHERE Client.ID ='" + s.getId()+ "';";
-        PreparedStatement pres = con.prepareStatement(requete);
-       pres.setInt(1, s.getId());
-        pres.setString(2, s.getNom());
-        pres.setString(3, s.getPrenom());
-        pres.setString(4, s.getEmail());
-        pres.setString(5, s.getNationalite());
-        pres.setString(6, s.getNom_company());
-        pres.setString(7, s.getMotdepass());
-        pres.setString(8, s.getDescription_company());
-        pres.setBytes(9, s.getImage());
-        System.out.println("done");
-        pres.executeUpdate();
-    }
 
       public Client recherche(int id) throws SQLException
     {

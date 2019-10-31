@@ -52,31 +52,6 @@ public class ServiceJob {
         }
     return list;
     }
-  public void ajouterAnnonce (Job A) throws SQLException{  
-  String req="INSERT INTO `Job` ( `Titre`,`DESCRIPTION`,`id_client`,`skill`,`id_freelancer`) VALUES (?,?,?,?,?)";
-  PreparedStatement pres=con.prepareStatement(req);
-  pres.setString(1, A.getTitre());
-  pres.setString(2, A.getDESCRIPTION());
-  pres.setInt(3, A.getId_client());
-  pres.setInt(4, A.getSkill());
-  pres.setInt(5, A.getIdFreelancer());
-
-   pres.executeUpdate();
-      System.out.println("element inserer");
-  
-  }
-  public void supprimerAnnonce(int id)throws SQLException{
-
-    String requete ="DELETE FROM Job WHERE Job.ID ="+id;
-    ste.executeUpdate(requete);
-        System.out.println("elment supprimmee");
-    }
-    public void modifierAnnonce(Job s)throws SQLException{
-
-    String requete ="UPDATE Job SET Titre = '"+s.getTitre()+"' ,DESCRIPTION = '"+s.getDESCRIPTION()+"' WHERE Job.ID ='"+s.getID()+"' ;";
-    ste.executeUpdate(requete);
-        System.out.println("elmente modifier");
-    }
     
     public Job recherche(int id) throws SQLException
     {

@@ -59,6 +59,7 @@ public class PostulationFreelancerFXMLController implements Initializable {
     private TextField titletext;
     @FXML
     private Button btnSubmit;
+    
     ServiceFreelancer sf = new ServiceFreelancer();
     Freelancer f = new Freelancer();
     ServiceAnnonce sa = new ServiceAnnonce();
@@ -100,7 +101,8 @@ public class PostulationFreelancerFXMLController implements Initializable {
        ServiceJob sj = new ServiceJob();
        BufferedImage image;
        Image card=null;
-        try {
+       
+       try {
             
             f= sf.recherche(ServiceAuthentification.idf);
             System.out.println(f.getNom());
@@ -119,6 +121,7 @@ public class PostulationFreelancerFXMLController implements Initializable {
         } catch (SQLException ex) {
             Logger.getLogger(AcceuilfreelancerFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
+       
         textclientup.setText(c.getNom_company());
         Descriptiontext.setText(a.getDESCRIPTION());
         titletext.setText(a.getTitre());
@@ -171,7 +174,7 @@ public class PostulationFreelancerFXMLController implements Initializable {
     @FXML
     private void goprofilClient(MouseEvent event) throws IOException {
         ServiceClient.idcli=c.getId();
-         URL url = new File("src/gui/AfficherClientPrFreelancerFXML.fxml").toURI().toURL();
+         URL url = new File("src/gui/ProfilClientPrFreelancerFXML.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
         btnSubmit.getScene().setRoot(root);
     }

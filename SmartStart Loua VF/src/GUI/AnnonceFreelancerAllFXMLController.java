@@ -84,7 +84,10 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
     private Button adsbtn;
     @FXML
     private Button Complaintsbtn;
-     Freelancer f  = new Freelancer();
+    @FXML
+    private Button jobs;
+    
+    Freelancer f  = new Freelancer();
       ServiceFreelancer sf = new ServiceFreelancer();
         ServiceAnnonce sj = new ServiceAnnonce();
         Skills s = new Skills();
@@ -94,8 +97,7 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
         private final ObservableList<Annonce> data= FXCollections.observableArrayList();
         BufferedImage image2;
        Image card2=null;
-    @FXML
-    private Button jobs;
+    
     /**
      * Initializes the controller class.
      */
@@ -108,7 +110,8 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
        
        BufferedImage image;
        Image card=null;
-        try {
+        
+       try {
             f= sf.recherche(ServiceAuthentification.idf);
             System.out.println(f.getNom());
             nomAcceuil.setText(f.getNom());
@@ -123,12 +126,14 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
         } catch (SQLException ex) {
             Logger.getLogger(AcceuilfreelancerFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         data.clear();
          try {
             data.addAll(sj.readAll());
         } catch (SQLException ex) {
             Logger.getLogger(AcceuilfreelancerFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }
+         
         Listeview.setCellFactory(new Callback<ListView<Annonce>,ListCell<Annonce>>(){
             @Override
             public ListCell<Annonce> call(ListView<Annonce> param) {
@@ -212,6 +217,7 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
                   StackPane.setMargin(st3,new Insets(0,0,0,5));
                   StackPane.setAlignment(st4, Pos.BOTTOM_LEFT);
                   StackPane.setMargin(st4,new Insets(0,0,0,60));
+                  
                   st.getChildren().addAll(st2,stack_pane,name_txt,st3,st4);
                   setGraphic(st);
        
@@ -222,8 +228,7 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
                 
                 return res;
                 
-                
-            }
+             }
             
         });
         Listeview.setItems(data);
@@ -249,9 +254,7 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
 
     @FXML
     private void goforum(ActionEvent event) throws MalformedURLException, IOException {
-          URL url = new File("src/gui/AcceuilForumFXML.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(url);
-        forumb.getScene().setRoot(root);
+        
     }
 
     @FXML
@@ -270,9 +273,7 @@ public class AnnonceFreelancerAllFXMLController implements Initializable {
 
     @FXML
     private void subscriptionAction(ActionEvent event) throws IOException {
-        URL url = new File("src/gui/SubscribtionFreelancerFXML.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(url);
-        nomAcceuil.getScene().setRoot(root);
+       
     }
 
     @FXML

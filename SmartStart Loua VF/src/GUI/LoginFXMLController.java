@@ -21,6 +21,7 @@ import java.sql.SQLException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.text.Text;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -69,6 +70,7 @@ public class LoginFXMLController implements Initializable {
         Login.getScene().setRoot(root);
            
         }
+            else{ JOptionPane.showMessageDialog(null, "Attention ! Email ou mot de passe incorrecte !");}
     }}
         
         

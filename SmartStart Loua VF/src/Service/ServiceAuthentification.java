@@ -31,7 +31,8 @@ public Freelancer rechercheFreelancerByName_Mdp(String email ,String mdp)throws 
      String requete = "SELECT * FROM  Freelancer WHERE Email='" +email+"' and MotDePass='"+mdp+"'" ;
      Freelancer f = new Freelancer ();
       ResultSet res =ste.executeQuery (requete);
-       while (res.next()) { 
+    
+      while (res.next()) { 
       f.setEmail(res.getString("Email"));
       f.setMotDePass(res.getString("MotDePass"));
       f.setId(res.getInt("ID"));

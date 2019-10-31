@@ -63,31 +63,7 @@ public class ServiceAnnonce {
         }
     return list;
     } 
-  public void ajouterAnnonce (Annonce A) throws SQLException{  
-  String req="INSERT INTO `annonce` ( `Titre`,`DESCRIPTION`,`id_client`,`Skill`) VALUES (?,?,?,?)";
-  PreparedStatement pres=con.prepareStatement(req);
-  pres.setString(1, A.getTitre());
-  pres.setString(2, A.getDESCRIPTION());
-  pres.setInt(3, A.getId_client());
-  pres.setInt(4, A.getSkills());
-
-   pres.executeUpdate();
-      System.out.println("element inserer");
   
-  }
-  public void supprimerAnnonce(int id)throws SQLException{
-
-    String requete ="DELETE FROM annonce WHERE Annonce.ID ="+id;
-    ste.executeUpdate(requete);
-        System.out.println("elment supprimmee");
-    }
-    public void modifierAnnonce(Annonce s)throws SQLException{
-
-    String requete ="UPDATE annonce SET Titre = '"+s.getTitre()+"' ,DESCRIPTION = '"+s.getDESCRIPTION()+"' WHERE Annonce.ID ='"+s.getID()+"' ;";
-    ste.executeUpdate(requete);
-        System.out.println("elmente modifier");
-    }
-    
     public Annonce recherche(int id) throws SQLException
     {
 
