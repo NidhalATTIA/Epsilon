@@ -13,7 +13,7 @@ public class DataSource {
     private static DataSource data;
     private Connection con;
     String url = "jdbc:mysql://localhost:3306/SmartStart";
-    String login = "sahsi";
+    String login = "root";
     String pwd = "";
 
     private DataSource() {
