@@ -1,0 +1,7 @@
+smart_start:
+    resource: "@SmartStartBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
