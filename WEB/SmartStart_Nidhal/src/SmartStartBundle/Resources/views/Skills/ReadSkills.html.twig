@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+    {% block content %}
+
+        <table border="1">
+            <tr>
+                <td>ID</td>
+                <td>Skill</td>
+                <td>id_categorie</td>
+
+            </tr>
+            {% for entity in s   %}
+                <tr>
+                    <td>{{ entity.ID }}</td>
+                    <td>{{ entity.Skill }}</td>
+                    <td>{{ entity.idCategorie.categorie }}</td>
+                    <td> <a href="{{ path('SkillsDelete',{'id':entity.ID}) }}"><button>Delete</button></a> </td>
+                    <td> <a href="{{ path('SkillsUpdate',{'id':entity.ID}) }}"><button>Update</button></a> </td>
+
+                </tr>
+            {% endfor %}
+        </table>
+
+        <td> <a href="{{ path('SkillsCreate') }}"><button>Add</button></a> </td>
+
+    {% endblock %}
+
+
