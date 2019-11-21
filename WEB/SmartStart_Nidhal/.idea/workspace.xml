@@ -55,12 +55,13 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1TTL3AM66PbEshZm3dEBZ2zb5CT" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/SmartStartBundle/Controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
@@ -69,6 +70,7 @@
       <recent name="C:\wamp64\www\SmartStart_Nidhal\src\SmartStartBundle" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\SmartStart_Nidhal\app\Resources\views" />
       <recent name="C:\wamp64\www\SmartStart_Nidhal\src\SmartStartBundle\Controller" />
       <recent name="C:\wamp64\www\SmartStart_Nidhal\src\SmartStartBundle\Entity" />
     </key>
@@ -83,8 +85,6 @@
       <command value="c dump-autoload" />
       <command value="php bin/console doctrine:mapping:import &quot;App\Entity&quot; annotation --path=src/Entity" />
       <command value="php composer.phar friendsofsymfony/user-bundle &quot;" />
-      <command value="php composer.phar friendsofsymfony/user-bundle" />
-      <command value="composer require friendsofsymfony/user-bundle" />
       <command value="composer require friendsofsymfony/user-bundle &quot;~2.0@dev&quot;" />
       <command value="php composer.phar friendsofsymfony/user-bundle  &quot;~2.0&quot;" />
       <command value="php composer.phar friendsofsymfony/user-bundle &quot;~2.1&quot;" />
@@ -100,6 +100,11 @@
       <command value="c show" />
       <command value="c friendsofsymfony/ca-bundle &quot;~2.0&quot;" />
       <command value="php composer.phar friendsofsymfony/user-bundle &quot;~2.0&quot;" />
+      <command value="php composer.phar friendsofsymfony/user-bundle" />
+      <command value="composer require friendsofsymfony/user-bundle" />
+      <command value="$ composer require friendsofsymfony/user-bundle" />
+      <command value="php -d memory_limit=-1 composer.phar update" />
+      <command value="c require friendsofsymfony/user-bundle" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -130,6 +135,9 @@
       <workItem from="1574162737128" duration="3305000" />
       <workItem from="1574166076400" duration="1286000" />
       <workItem from="1574167383006" duration="3151000" />
+      <workItem from="1574277383406" duration="1839000" />
+      <workItem from="1574279636136" duration="381000" />
+      <workItem from="1574323933553" duration="2951000" />
     </task>
     <servers />
   </component>
