@@ -1,0 +1,32 @@
+
+{% extends 'base3.html.twig' %}
+
+{% block content %}
+    Titre :* <h>{{ Titre }}</h> <br>
+    Client :* <h>{{ id_client.Nom }}</h> <br>
+    Skills :* <h>{{ Skill.skill }}</h> <br>
+    Categorie :* <h>{{ idCategorieA.categorieA }}</h> <br>
+    Description :* <h>{{ DESCRIPTION }}</h> <br>
+    <div class="card my-4">
+        <h5 class="card-header">Postuler:</h5>
+        <div class="card-body">
+            <form action="{{ path('Addp') }}" method="post" id="comment">
+                <div class="form-group">
+
+                    <textarea class="form-control" rows="3" name="comment" placeholder="Apply here"></textarea>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

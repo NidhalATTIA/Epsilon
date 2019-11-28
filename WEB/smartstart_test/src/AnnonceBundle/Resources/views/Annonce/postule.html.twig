@@ -1,0 +1,50 @@
+
+{% extends 'base3.html.twig' %}
+
+{% block content %}
+{% if Postulation == NULL %}
+    <h3>Pas de Postule</h3>
+{% else %}
+    <div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Data Table Example</div>
+    <div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="200%" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>date D ajout</th>
+            <th>Contenu </th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in Postulation  %}
+            <tr>
+                <td>{{ entity.idAnnonce.titre|upper }}</td>
+                <td>{{ entity.idAnnonce.Description }}</td>
+                <td>{{ entity.dateajout|date }}</td>
+                <td>{{ entity.Contenu}}</td>
+
+                <td> <a href="{{ path('update2',{'id':entity.id})  }}"class="modal-view button" >Update</a> </td>
+                <td> <a href="{{ path('delete2',{'id':entity.id}) }}"class="modal-view button"  >Supprimer</a> </td>
+
+
+
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+        <h3>Le nombre de Postulation est {{ Postulation|length }}</h3>
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+{%  endif %}
+{% endblock %}

@@ -1,0 +1,17 @@
+
+{% extends 'base3.html.twig' %}
+
+{% block content %}
+    <h>Modifier une postulation</h>
+
+
+
+
+    {{ form_start(f) }}
+    Contenu:*  {{ form_widget(f.Contenu) }}</br>
+   </br>
+
+
+  {{ form_widget(f.save) }}
+    {{ form_end(f) }}</br>
+{% endblock %}

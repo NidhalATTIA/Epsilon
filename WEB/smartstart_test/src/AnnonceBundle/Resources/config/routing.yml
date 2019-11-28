@@ -1,0 +1,83 @@
+annonce_homepage:
+    path:     /
+    defaults: { _controller: AnnonceBundle:Default:index }
+
+Annonce_home:
+    path:     /Affiche
+    defaults: { _controller: AnnonceBundle:Annonce:Affiche }
+
+Annonce_home1:
+    path:     /Affiche1
+    defaults: { _controller: AnnonceBundle:Annonce:home }
+
+Annonce_read:
+    path:     /Read/{nom}
+    defaults: { _controller: AnnonceBundle:Annonce:read }
+
+Annonce_list:
+    path:     /List
+    defaults: { _controller: AnnonceBundle:Annonce:List }
+
+Annonce_show:
+    path:     /Show/{id}
+    defaults: { _controller: AnnonceBundle:Annonce:showDetail }
+
+Annonce_read1:
+    path:     /Read1
+    defaults: { _controller: AnnonceBundle:Annonce:read1 }
+
+delete:
+    path:     /delete/{id}
+    defaults: { _controller: AnnonceBundle:Annonce:delete }
+
+modifier:
+    path:   /modif/{id}
+    defaults: { _controller: AnnonceBundle:Annonce:modifier }
+
+Add:
+    path:   /Add
+    defaults: { _controller: AnnonceBundle:Annonce:create }
+
+ajouter1:
+    path:   /Add1
+    defaults: { _controller: AnnonceBundle:Annonce:ajouter1 }
+
+update:
+    path:   /Up/{id}
+    defaults: { _controller: AnnonceBundle:Annonce:update }
+
+Annonce_read2:
+    path:     /Read2
+    defaults: { _controller: AnnonceBundle:Annonce:read2 }
+
+Addp:
+  path:   /Addp
+  defaults: { _controller: AnnonceBundle:Annonce:Addp }
+
+Annonce_read3:
+    path:     /Read3
+    defaults: { _controller: AnnonceBundle:Annonce:read3 }
+
+update2:
+    path:   /Up2/{id}
+    defaults: { _controller: AnnonceBundle:Annonce:update2 }
+
+delete2:
+    path:     /delete/{id}
+    defaults: { _controller: AnnonceBundle:Annonce:delete2 }
+
+SkillsRead:
+  path:     /Skills
+  defaults: { _controller: AnnonceBundle:Skills:ReadSkills }
+
+SkillsCreate:
+  path:     /Skills/Create
+  defaults: { _controller: AnnonceBundle:Skills:CreateSkills }
+
+SkillsDelete:
+  path:     /Skills/Delete/{id}
+  defaults: { _controller: AnnonceBundle:Skills:DeleteSkills }
+
+SkillsUpdate:
+  path:     /Skills/Update/{id}
+  defaults: { _controller: AnnonceBundle:Skills:UpdateSkills }
