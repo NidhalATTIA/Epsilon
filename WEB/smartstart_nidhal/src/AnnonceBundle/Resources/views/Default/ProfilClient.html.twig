@@ -1,0 +1,29 @@
+{% extends 'baseClient.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+    {% block content %}
+
+
+<div class="card mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="http://localhost/SmartStart_test/web/app_dev.php/AccueilClient">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Profile</li>
+    </ol>
+    <div class="card-header">
+
+
+        {% for entity in Postulation %}
+
+            <p>First Name : </p><h3>{{ entity.idC.nom }}</h3></br>
+            <p>Last Name : </p><h3>{{ entity.idC.prenom }}</h3></br>
+            <p> Your Email : </p><h3>{{ entity.idC.email }}</h3></br>
+
+        {% endfor %}
+
+
+
+    {% endblock %}
+
+

@@ -1,0 +1,578 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Smart Start</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block stylesheets %}
+        <!-- favicon
+        ============================================ -->
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('template/images/favicon.ico') }}">
+
+        <!-- Google Fonts
+        ============================================ -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+        <!-- All css files are included here
+        ============================================ -->
+        <!-- Bootstrap CSS
+        ============================================ -->
+        <link rel="stylesheet" href="{{ asset ('template/css/bootstrap.min.css') }}">
+
+        <!-- This core.css file contents all plugins css file
+        ============================================ -->
+        <link rel="stylesheet" href="{{ asset('template/css/core.css') }}">
+
+        <!-- Theme shortcodes/elements style
+        ============================================ -->
+        <link rel="stylesheet" href="{{ asset ('template/css/shortcode/shortcodes.css') }}">
+
+        <!-- Color Swithcer CSS
+        ============================================ -->
+        <link rel="stylesheet" href="{{ asset ('template/css/plugins/color-switcher.css') }}">
+
+        <!--  Theme main style
+        ============================================ -->
+        <link rel="stylesheet" href="{{ asset ('template/style.css') }}">
+
+        <!-- Color CSS
+        ============================================ -->
+        <link rel="stylesheet" href="{{ asset ('template/css/plugins/color.css') }}">
+
+        <!-- Responsive CSS
+        ============================================ -->
+        <link rel="stylesheet" href="{{ asset ('template/css/responsive.css') }}">
+
+        <!-- Modernizr JS -->
+        <script src="{{ asset('template/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+
+        <!-- Color Css Files
+        ============================================ -->
+    {% endblock %}
+</head>
+
+<body>
+{% block body %}
+    {%  block bar %}
+
+        <!--Main Wrapper Start-->
+        <div class="as-mainwrapper">
+        <!--Bg White Start-->
+        <div class="bg-white">
+        <!--Header Area Start-->
+        <header id="sticky-header" class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-xs-12">
+                        <div class="logo"><a href="http://localhost/SmartStart_test/web/app_dev.php/AccueilFreelancer"><img src="{{ asset ('template/images/logo/Logonoir3.png') }}" alt="JobHelp"></a></div>
+                    </div>
+                    <div class="col-md-9 hidden-sm hidden-xs">
+                        <div class="pull-right">
+                            <nav id="primary-menu">
+                                <ul class="main-menu text-right">
+                                    <li><a href="http://localhost/SmartStart_test/web/app_dev.php/AccueilFreelancer">Home</a></li>
+                                    <li><a href="http://localhost/SmartStart_test/web/app_dev.php/Jobs" >Jobs</a></li>
+                                    <li><a href="http://localhost/SmartStart_test/web/app_dev.php/Annonces">Ads</a></li>
+                                    <li><a href="http://localhost/SmartStart_test/web/app_dev.php/afficheFormationFreelancer">Trainings</a></li>
+                                    <li><a href="http://localhost/SmartStart_test/web/app_dev.php/Forum">Forum</a></li>
+                                    <li><a href="http://localhost/SmartStart_test/web/app_dev.php/ProfilFreelancer">Profile</a></li>
+                                </ul>
+                            </nav>
+                            <div class="login-btn pt-36">
+                                <a class="modal-view button" href="http://localhost/SmartStart_test/web/app_dev.php/logout" data-toggle="modal">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu Area start -->
+            <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="mobile-menu">
+                                <nav id="dropdown">
+                                    <ul>
+                                        <li><a href="http://localhost/SmartStart_test/web/app_dev.php/AccueilFreelancer">HOME</a>
+
+                                        </li>
+                                        <li><a href="http://localhost/SmartStart_test/web/app_dev.php/AnnonceFreelancer">Ads</a>
+
+                                        </li>
+                                        <li><a href="http://localhost/SmartStart_test/web/app_dev.php/Forum">Forum</a>
+
+                                        </li>
+                                        <li><a href="http://localhost/SmartStart_test/web/app_dev.php/ProfilFreelancer" target="_blank">Profile</a></li>
+
+                                        <div class="login-btn pt-36">
+                                            <a class="modal-view button" href="http://localhost/SmartStart_test/web/app_dev.php/logout" data-toggle="modal" data-target="#productModal">Logout</a>
+                                        </div>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu Area end -->
+        </header>
+    {% endblock bar %}
+    <!-- End of Header Area -->
+    {% block content %}
+        <!--Start of Slider Area-->
+        {% block slider %}
+            <div class="slider-area">
+                <div class="preview-2">
+                    <div id="nivoslider" class="slides">
+                        <img src="{{ asset('template/images/slider/1.jpg') }}" alt="" title="#slider-1-caption1"/>
+                        <img src="{{ asset ('template/images/slider/2.jpg') }}" alt="" title="#slider-1-caption2"/>
+                    </div>
+                    <div id="slider-1-caption1" class="nivo-html-caption nivo-caption">
+                        <div class="banner-content slider-1">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content-wrapper">
+                                            <div class="text-content">
+                                                <h1 class="title1 wow bounceInDown text-uppercase text-white mb-16" data-wow-duration="10s" data-wow-delay="0s">WELCOME FREELANCER !</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slider-1-caption2" class="nivo-html-caption nivo-caption">
+                        <div class="banner-content slider-2">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content-wrapper">
+                                            <div class="text-content slide-2">
+                                                <h1 class="title1 wow bounceInDown text-uppercase text-white mb-16" data-wow-duration="10s" data-wow-delay="0s">WELCOME FREELANCER !</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of Slider Area-->
+        {% endblock slider %}
+{#
+        <!--Start of Job Post Area-->
+        <div class="job-post-area ptb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center ">
+                            <h2 class="uppercase">Recent Jobs</h2>
+                            <div class="separator mt-35 mb-77">
+                                <span><img src="images/icons/1.png" alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="job-post-container fix mb-70">
+                            <div class="single-job-post fix">
+                                <div class="job-title col-4 pl-30">
+                                            <span class="pull-left block mtb-17">
+                                                <a href="#"><img src="images/company-logo/1.png" alt=""></a>
+                                            </span>
+                                    <div class="fix pl-30 mt-29">
+                                        <h4 class="mb-5">Graphic Designer</h4>
+                                        <h5><a href="#">Devitems</a></h5>
+                                    </div>
+                                </div>
+                                <div class="address col-4 pl-50">
+                                            <span class="mtb-30 block">2020 Willshire Glen,<br>
+                                            Alpharetta, GA-30009</span>
+                                </div>
+                                <div class="time-payment col-2 pl-60 text-center pt-22">
+                                    <span class="block mb-6">€ 200.00</span>
+                                    <a href="#" class="button button-red">Full Time</a>
+                                </div>
+                            </div>
+                            <div class="single-job-post fix">
+                                <div class="job-title col-4 pl-30">
+                                            <span class="pull-left block mtb-17">
+                                                <a href="#"><img src="images/company-logo/2.png" alt=""></a>
+                                            </span>
+                                    <div class="fix pl-30 mt-29">
+                                        <h4 class="mb-5">Web Designer</h4>
+                                        <h5><a href="#">Hastech</a></h5>
+                                    </div>
+                                </div>
+                                <div class="address col-4 pl-50">
+                                            <span class="mtb-30 block">2020 Willshire Glen,<br>
+                                            Alpharetta, GA-30009</span>
+                                </div>
+                                <div class="time-payment col-2 pl-60 text-center pt-22">
+                                    <span class="block mb-6">€ 450.00</span>
+                                    <a href="#" class="button button-red">Full Time</a>
+                                </div>
+                            </div>
+                            <div class="single-job-post fix">
+                                <div class="job-title col-4 pl-30">
+                                            <span class="pull-left block mtb-17">
+                                                <a href="#"><img src="images/company-logo/3.png" alt=""></a>
+                                            </span>
+                                    <div class="fix pl-30 mt-29">
+                                        <h4 class="mb-5">Print Designer</h4>
+                                        <h5><a href="#">Bootexperts</a></h5>
+                                    </div>
+                                </div>
+                                <div class="address col-4 pl-50">
+                                            <span class="mtb-30 block">2020 Willshire Glen,<br>
+                                            Alpharetta, GA-30009</span>
+                                </div>
+                                <div class="time-payment col-2 pl-60 text-center pt-22">
+                                    <span class="block mb-6">€ 500.00</span>
+                                    <a href="#" class="button button-dark-blue">Internship</a>
+                                </div>
+                            </div>
+                            <div class="single-job-post fix">
+                                <div class="job-title col-4 pl-30">
+                                            <span class="pull-left block mtb-17">
+                                                <a href="#"><img src="images/company-logo/4.png" alt=""></a>
+                                            </span>
+                                    <div class="fix pl-30 mt-29">
+                                        <h4 class="mb-5">UI/UX Designer</h4>
+                                        <h5><a href="#">CodeCarnival</a></h5>
+                                    </div>
+                                </div>
+                                <div class="address col-4 pl-50">
+                                            <span class="mtb-30 block">2020 Willshire Glen,<br>
+                                            Alpharetta, GA-30009</span>
+                                </div>
+                                <div class="time-payment col-2 pl-60 text-center pt-22">
+                                    <span class="block mb-6">€ 500.00</span>
+                                    <a href="#" class="button button-red">Full Time</a>
+                                </div>
+                            </div>
+                            <div class="single-job-post fix">
+                                <div class="job-title col-4 pl-30">
+                                            <span class="pull-left block mtb-17">
+                                                <a href="#"><img src="images/company-logo/2.png" alt=""></a>
+                                            </span>
+                                    <div class="fix pl-30 mt-29">
+                                        <h4 class="mb-5">Web Development</h4>
+                                        <h5><a href="#">PowerBoosts</a></h5>
+                                    </div>
+                                </div>
+                                <div class="address col-4 pl-50">
+                                            <span class="mtb-30 block">2020 Willshire Glen,<br>
+                                            Alpharetta, GA-30009</span>
+                                </div>
+                                <div class="time-payment col-2 pl-60 text-center pt-22">
+                                    <span class="block mb-6">€ 500.00</span>
+                                    <a href="#" class="button">Part Time</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="button large-button">Browse all jobs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Job Post Area -->
+        <!--Start of Job Post Area-->
+        <div class="job-post-area pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center ">
+                            <h2 class="uppercase">Featured Jobs</h2>
+                            <div class="separator mt-35 mb-77">
+                                <span><img src="images/icons/1.png" alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="job-post-container fix">
+                            <div class="single-job-post fix">
+                                <div class="job-title col-4 pl-30">
+                                            <span class="pull-left block mtb-17">
+                                                <a href="#"><img src="images/company-logo/1.png" alt=""></a>
+                                            </span>
+                                    <div class="fix pl-30 mt-29">
+                                        <h4 class="mb-5">Graphic Designer</h4>
+                                        <h5><a href="#">Devitems</a></h5>
+                                    </div>
+                                </div>
+                                <div class="address col-4 pl-50">
+                                            <span class="mtb-30 block">2020 Willshire Glen,<br>
+                                            Alpharetta, GA-30009</span>
+                                </div>
+                                <div class="time-payment col-2 pl-60 text-center pt-22">
+                                    <span class="block mb-6">€ 200.00</span>
+                                    <a href="#" class="button button-red">Full Time</a>
+                                </div>
+                            </div>
+                            <div class="single-job-post fix">
+                                <div class="job-title col-4 pl-30">
+                                            <span class="pull-left block mtb-17">
+                                                <a href="#"><img src="images/company-logo/2.png" alt=""></a>
+                                            </span>
+                                    <div class="fix pl-30 mt-29">
+                                        <h4 class="mb-5">Web Designer</h4>
+                                        <h5><a href="#">Hastech</a></h5>
+                                    </div>
+                                </div>
+                                <div class="address col-4 pl-50">
+                                            <span class="mtb-30 block">2020 Willshire Glen,<br>
+                                            Alpharetta, GA-30009</span>
+                                </div>
+                                <div class="time-payment col-2 pl-60 text-center pt-22">
+                                    <span class="block mb-6">€ 450.00</span>
+                                    <a href="#" class="button button-red">Full Time</a>
+                                </div>
+                            </div>
+                            <div class="single-job-post fix">
+                                <div class="job-title col-4 pl-30">
+                                            <span class="pull-left block mtb-17">
+                                                <a href="#"><img src="images/company-logo/3.png" alt=""></a>
+                                            </span>
+                                    <div class="fix pl-30 mt-29">
+                                        <h4 class="mb-5">Print Designer</h4>
+                                        <h5><a href="#">Bootexperts</a></h5>
+                                    </div>
+                                </div>
+                                <div class="address col-4 pl-50">
+                                            <span class="mtb-30 block">2020 Willshire Glen,<br>
+                                            Alpharetta, GA-30009</span>
+                                </div>
+                                <div class="time-payment col-2 pl-60 text-center pt-22">
+                                    <span class="block mb-6">€ 500.00</span>
+                                    <a href="#" class="button">Part Time</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Job Post Area -->\
+        <!--Start of Fun Factor Area-->
+        <div class="fun-factor-area bg-1 text-center fix bg-opacity-blue-10 ptb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3">
+                        <div class="single-fun-factor">
+                            <h3 class="pb-15 mb-23">Jobs</h3>
+                            <h1><span class="counter">1250</span></h1>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="single-fun-factor">
+                            <h3 class="pb-15 mb-23">Members</h3>
+                            <h1><span class="counter">500</span></h1>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="single-fun-factor">
+                            <h3 class="pb-15 mb-23">Resume</h3>
+                            <h1><span class="counter">700</span></h1>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="single-fun-factor">
+                            <h3 class="pb-15 mb-23">Company</h3>
+                            <h1><span class="counter">1250</span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>#}
+
+        <!--End of Fun Factor Area-->
+        <!--Start of Social Link Area-->
+        <div class="social-link-area ptb-40 dark-blue-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 fix col-xs-12 col-sm-6">
+                        <div class="footer-logo pull-left">
+                            <a href="AccueilFreelancer" class="block"><img src="{{ asset('template/images/logo/logoblanc.png') }}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 fix col-xs-12 col-sm-6">
+                        <div class="social-links pull-right">
+                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                            <a href="#"><i class="zmdi zmdi-rss"></i></a>
+                            <a href="#"><i class="zmdi zmdi-google-plus"></i></a>
+                            <a href="#"><i class="zmdi zmdi-pinterest"></i></a>
+                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of Social Link Area-->
+
+        <!--Start of Footer Widget-area-->
+        <div class="footer-widget-area black-bg pt-120 pb-110">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <div class="single-footer-widget">
+                            <h3 class="text-white mb-22">About Us</h3>
+                            <p class="text-white pr-10">
+                                SmartStart is a free application to help freelancers find a job. Our team has developed the application on any type of platform for your comfort.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="single-footer-widget">
+                            <h3 class="text-white mb-26">GET IN TOUCH</h3>
+                            <span class="text-white mb-9"><i class="fa fa-phone"></i>+216 58 222 222</span>
+                            <span class="text-white mb-9"><i class="fa fa-envelope"></i>Epsilon@contact.tn</span>
+                            <span class="text-white mb-9"><i class="fa fa-globe"></i>www.epsilon-team.tn</span>
+                            <span class="text-white mb-9"><i class="fa fa-map-marker"></i>Z.I. Chotrana II B.P. 160 Pôle Technologique El Ghazela - Ariana 2083</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="single-footer-widget">
+                            <h3 class="text-white mb-21">Helpful Links</h3>
+                            <ul class="footer-list">
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 hidden-sm">
+                        <div class="single-footer-widget">
+                            <h3 class="text-white mb-21">Trending Jobs</h3>
+                            <ul class="footer-list">
+                                <li><a href="#">Designer</a></li>
+                                <li><a href="#">Developer</a></li>
+                                <li><a href="#">Journalist</a></li>
+                                <li><a href="#">Traductor</a></li>
+                                <li><a href="#">Editor</a></li>
+                                <li><a href="#">Architect</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock content %}
+    <!--End of Footer Widget-area-->
+    <!-- Start of Footer area -->
+    <footer class="footer-area blue-bg text-center ptb-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-text">
+                        <span class="text-white block">Copyright&copy; <span>PIDEV</span> 2019.All right reserved.Created by Team <a href="https://github.com/NidhalATTIA/Epsilon" class="text-white">Epsilon</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer area -->
+    </div>
+    <!--End of Bg White-->
+    </div>
+    <!--End of Main Wrapper Area-->
+
+    <!--Start of Login Form-->
+    <div id="quickview-login">
+        <!-- Modal -->
+        <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="zmdi zmdi-close"></i></span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-pop-up-content ptb-60 pl-60 pr-60">
+                            <div class="area-title text-center mb-43">
+                                <h2 class="pt-7 pb-7 pl-40 pr-40">Login</h2>
+                            </div>
+                            <form method="post" action="{{ path("fos_user_security_check") }}">
+                                <div class="form-box">
+                                    <label for="username"> </label>
+                                    <input type="text" name="_username" id="username" placeholder="UserName" class="mb-14">
+
+                                    <label for="password"> </label>
+                                    <input type="password" id="password" name="password" placeholder="Password">
+
+                                </div>
+                                <div class="fix ptb-30">
+                                <span class="remember pull-left">
+                                        <input class="p-0 pull-left" type="checkbox" id="remember_me" name="_remember_me" value="on">
+                                       <label for="remember_me"> </label>Remember Me</span>
+                                    <span class="pull-right"><a href="#">Forget Password?</a></span>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" id="_submit" name="_submit" class="text-uppercase" style="color: white"  value="{{ 'security.login.submit'|trans }}">SignIn</button>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Login Form-->
+{% endblock body %}
+{% block script %}
+    <!-- jquery latest version
+    ========================================================= -->
+    <script src="{{ asset('template/js/vendor/jquery-1.12.4.min.js') }}"></script>
+
+    <!-- Bootstrap framework js
+    ========================================================= -->
+    <script src="{{ asset('template/js/bootstrap.min.js') }}"></script>
+
+    <!-- Owl Carousel js
+    ========================================================= -->
+    <script src="{{ asset('template/js/owl.carousel.min.js') }}"></script>
+
+    <!-- nivo slider js
+    ========================================================= -->
+    <script src="{{ asset ('template/lib/nivo-slider/js/jquery.nivo.slider.js') }}" type="text/javascript"></script>
+    <script src="{{ asset ('template/lib/nivo-slider/home.js') }}" type="text/javascript"></script>
+
+    <!-- Js plugins included in this file
+    ========================================================= -->
+    <script src="{{ asset ('template/js/plugins.js') }}"></script>
+
+    <!-- Video Player JS
+    ========================================================= -->
+    <script src="{{ asset ('template/js/jquery.mb.YTPlayer.js') }}"></script>
+
+    <!-- AJax Mail JS
+    ========================================================= -->
+    <script src="{{ asset('template/js/ajax-mail.js') }}"></script>
+
+    <!-- Mail Chimp JS
+    ========================================================= -->
+    <script src="{{ asset ('template/js/jquery.ajaxchimp.min.js') }}"></script>
+
+    <!-- StyleSwitch JS
+    ========================================================= -->
+    <script src="{{ asset ('template/js/styleswitch.js') }}"></script>
+
+    <!-- Waypoint Js
+    ========================================================= -->
+    <script src="{{ asset ('template/js/waypoints.min.js') }}"></script>
+
+    <!-- Main js file contents all jQuery plugins activation
+    ========================================================= -->
+    <script src="{{ asset ('template/js/main.js') }}"></script>
+{% endblock script %}
+</body>
+
+</html>

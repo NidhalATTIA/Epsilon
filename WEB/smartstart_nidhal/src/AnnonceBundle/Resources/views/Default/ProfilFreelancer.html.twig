@@ -1,0 +1,27 @@
+{% extends 'baseFreelancer.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+    {% block content %}
+
+
+                {% for entity in Postulation %}
+
+
+
+                    <p>First Name : </p><h3>{{ entity.idF.nom  }}</h3></br>
+                    <p>Last Name : </p><h3>{{ entity.idF.prenom   }}</h3></br>
+                    <p> Your Email : </p><h3>{{ entity.idF.email }}</h3></br>
+                    <p> Your Skill : </p><h3>{{ entity.Skill.Skill }}</h3></br>
+
+
+                    <a href="{{ path('AddSkill',{'idF':entity.idF}) }}" class="button large-button">Add your Skill</a></br></br>
+
+                {% endfor %}
+
+
+
+
+
+                {% endblock %}
+
+

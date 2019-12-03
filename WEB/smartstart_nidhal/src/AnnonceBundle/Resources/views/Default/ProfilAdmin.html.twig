@@ -1,0 +1,26 @@
+{% extends 'baseAdmin.html.twig' %}
+
+    {% block body %}
+        <!-- Breadcrumbs-->
+        <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="http://localhost/SmartStart_test/web/app_dev.php/AccueilAdmin">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Profile</li>
+        </ol>
+
+
+            {% for entity in Postulation %}
+
+            <p>First Name : </p><h3>{{ entity.idA.nom }}</h3></br>
+            <p>Last Name : </p><h3>{{ entity.idA.prenom }}</h3></br>
+            <p> Your Email : </p><h3>{{ entity.idA.email }}</h3></br>
+
+            {% endfor %}
+
+
+
+            {% endblock %}
+
+
