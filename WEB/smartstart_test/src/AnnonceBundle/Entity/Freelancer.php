@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Freelancer
  *
- * @ORM\Table(name="freelancer", uniqueConstraints={@ORM\UniqueConstraint(name="Email", columns={"Email"})})
+ * @ORM\Table(name="freelancer")
  * @ORM\Entity
  */
 class Freelancer
@@ -21,47 +21,6 @@ class Freelancer
      */
     private $id;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Nom", type="string", length=20, nullable=false)
-     */
-    private $nom;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Prenom", type="string", length=20, nullable=false)
-     */
-    private $prenom;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Email", type="string", length=20, nullable=false)
-     */
-    private $email;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="MotDePass", type="string", length=20, nullable=false)
-     */
-    private $motdepass;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Nationalite", type="string", length=20, nullable=false)
-     */
-    private $nationalite;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="CV", type="string", length=20, nullable=false)
-     */
-    private $cv;
 
     /**
      * @var string
@@ -69,20 +28,6 @@ class Freelancer
      * @ORM\Column(name="Description", type="text", length=65535, nullable=false)
      */
     private $description;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="ImageFreelancer", type="blob", nullable=false)
-     */
-    private $imagefreelancer;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="Date_inscri", type="datetime", nullable=false)
-     */
-    private $dateInscri = 'CURRENT_TIMESTAMP';
 
 
     /**
@@ -96,26 +41,14 @@ class Freelancer
     private $skill;
 
     /**
-     * @return \idSkills
+     * @var \idF
+     *
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="Freelancer", referencedColumnName="id")
+     * })
      */
-    public function getSkill()
-    {
-        return $this->skill;
-    }
-
-    /**
-     * @param \idSkills $skill
-     */
-    public function setSkill($skill)
-    {
-        $this->skill = $skill;
-    }
-
-
-
-
-
-
+    private $idF;
 
     /**
      * @return int
@@ -136,102 +69,6 @@ class Freelancer
     /**
      * @return string
      */
-    public function getNom()
-    {
-        return $this->nom;
-    }
-
-    /**
-     * @param string $nom
-     */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPrenom()
-    {
-        return $this->prenom;
-    }
-
-    /**
-     * @param string $prenom
-     */
-    public function setPrenom($prenom)
-    {
-        $this->prenom = $prenom;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param string $email
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-    }
-
-    /**
-     * @return string
-     */
-    public function getMotdepass()
-    {
-        return $this->motdepass;
-    }
-
-    /**
-     * @param string $motdepass
-     */
-    public function setMotdepass($motdepass)
-    {
-        $this->motdepass = $motdepass;
-    }
-
-    /**
-     * @return string
-     */
-    public function getNationalite()
-    {
-        return $this->nationalite;
-    }
-
-    /**
-     * @param string $nationalite
-     */
-    public function setNationalite($nationalite)
-    {
-        $this->nationalite = $nationalite;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCv()
-    {
-        return $this->cv;
-    }
-
-    /**
-     * @param string $cv
-     */
-    public function setCv($cv)
-    {
-        $this->cv = $cv;
-    }
-
-    /**
-     * @return string
-     */
     public function getDescription()
     {
         return $this->description;
@@ -245,37 +82,40 @@ class Freelancer
         $this->description = $description;
     }
 
+
+
     /**
-     * @return string
+     * @return \idSkills
      */
-    public function getImagefreelancer()
+    public function getSkill()
     {
-        return $this->imagefreelancer;
+        return $this->skill;
     }
 
     /**
-     * @param string $imagefreelancer
+     * @param \idSkills $skill
      */
-    public function setImagefreelancer($imagefreelancer)
+    public function setSkill($skill)
     {
-        $this->imagefreelancer = $imagefreelancer;
+        $this->skill = $skill;
     }
 
     /**
-     * @return \DateTime
+     * @return \idF
      */
-    public function getDateInscri()
+    public function getIdF()
     {
-        return $this->dateInscri;
+        return $this->idF;
     }
 
     /**
-     * @param \DateTime $dateInscri
+     * @param \idF $idF
      */
-    public function setDateInscri($dateInscri)
+    public function setIdF($idF)
     {
-        $this->dateInscri = $dateInscri;
+        $this->idF = $idF;
     }
+
 
 
 }

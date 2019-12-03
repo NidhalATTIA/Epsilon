@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+    {% block content %}
+
+        <center><h1> Contact Us ! </h1></br></br></br>
+        <h5>Smart Start is a website for freelancer and companies. If you are seeking for a job</br> you can find one
+            in any category. This project was developed by Team Epsilon.</br> If you wanna contact us, please insert your Email
+        below and send us your request. We would love to hear from you !</h5></br></br></br></br></center>
+
+
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            #map {
+                height: 500px;
+                width: 100%;
+            }
+        </style>
+
+        <div id="map"></div>
+
+
+        <script>
+            function initMap()
+            {
+                var location = {lat: 36.899277235546144, lng: 10.189694317581143};
+                var map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 15,
+                    center: location
+                });
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+            }
+
+        </script>
+
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_UlXxSBIY19mcOeFQR64Ninblhy2Jdl4&callback=initMap"
+                type="text/javascript"></script>
+
+
+
+
+
+
+
+
+    {% endblock %}
+
+

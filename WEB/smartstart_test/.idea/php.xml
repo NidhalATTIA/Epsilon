@@ -42,6 +42,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/.github" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/lib" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/doc" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/tests" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.5.0" />

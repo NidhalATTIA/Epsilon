@@ -66,23 +66,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-xs-12">
-                        <div class="logo"><a href="{{ path('homepage') }}"><img src="{{ asset ('template/images/logo/Logonoir3.png') }}" alt="JobHelp"></a></div>
+                        <div class="logo"><a href="AccueilClient"><img src="{{ asset ('template/images/logo/Logonoir3.png') }}" alt="JobHelp"></a></div>
                     </div>
                     <div class="col-md-9 hidden-sm hidden-xs">
                         <div class="pull-right">
                             <nav id="primary-menu">
                                 <ul class="main-menu text-right">
-                                    <li><a href="{{ path('homepage') }}">Home</a>
+                                    <li><a href="AccueilClient">Home</a>
                                     </li>
-                                    <li><a href="register" target="_blank">Join Us</a>
+                                    <li><a href="Jobs" target="_blank">Jobs</a>
 
                                     </li>
 
-                                    <li><a href="ContactUs" target="_blank">Contact Us</a></li>
+                                    <li><a href="Annonce" target="_blank">Ads</a></li>
+                                    <li><a href="ProfilClient" target="_blank">Profile</a></li>
                                 </ul>
                             </nav>
                             <div class="login-btn pt-36">
-                                <a class="modal-view button" href="login">Login</a>
+                                <a class="modal-view button" href="{{ path('homepage') }}" data-toggle="modal">Logout</a>
                             </div>
                         </div>
                     </div>
@@ -96,21 +97,12 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul>
-                                        <li><a href="{{ path('homepage') }}">HOME</a>
+                                        <li><a href="Jobs">Jobs</a></li>
+                                        <li><a href="Annonce">Ads</a></li>
+                                        <li><a href="ProfileClient">Profile</a></li>
 
-                                        </li>
-                                        <li><a href="job-board.html">Join To Work</a>
-
-                                        </li>
-                                        <li><a href="#">Join To hire freelancers</a>
-
-                                        </li>
-                                        <li><a href="resume.html" target="_blank">We are recruiting</a></li>
-
-
-                                        <li><a href="contact.html">Contact Us</a></li>
                                         <div class="login-btn pt-36">
-                                            <a class="modal-view button" href="#" data-toggle="modal" data-target="#productModal">Login</a>
+                                            <a class="modal-view button" href="AccueilClient" data-toggle="modal" data-target="#productModal">Logout</a>
                                         </div>
                                     </ul>
                                 </nav>
@@ -139,11 +131,7 @@
                                     <div class="col-md-12">
                                         <div class="text-content-wrapper">
                                             <div class="text-content">
-                                                <h1 class="title1 wow bounceInDown text-uppercase text-white mb-16" data-wow-duration="3s" data-wow-delay="0s">LOOKING FOR A JOB?</h1>
-                                                <p class="sub-title wow bounceInRight hidden-xs" data-wow-duration="5s" data-wow-delay="1s"> There are many jobs available here, if you are interested check them !<br> From architecture to web development, you can find what ever you want here.<br> Try it, Smart Start is the best way to boost your career !</p>
-                                                <div class="banner-readmore wow bounceInUp mt-35" data-wow-duration="1s" data-wow-delay="1s">
-                                                    <a class="button slider-btn" href="login">Find a job</a>
-                                                </div>
+                                                <h1 class="title1 wow bounceInDown text-uppercase text-white mb-16" data-wow-duration="10s" data-wow-delay="0s">WELCOME FREELANCER !</h1>
                                             </div>
                                         </div>
                                     </div>
@@ -158,11 +146,7 @@
                                     <div class="col-md-12">
                                         <div class="text-content-wrapper">
                                             <div class="text-content slide-2">
-                                                <h1 class="title1 wow flipInX text-uppercase text-white mb-16" data-wow-duration="1s" data-wow-delay="0s">LOOKING FOR A JOB?</h1>
-                                                <p class="sub-title wow lightSpeedIn hidden-xs" data-wow-duration="1s" data-wow-delay=".4s"> There are many jobs available here, if you are interested check them !<br> From architecture to web development, you can find what ever you want here.<br> Try it, Smart Start is the best way to boost your career !</p>
-                                                <div class="banner-readmore wow bounceInUp mt-35" data-wow-duration="1s" data-wow-delay=".6s">
-                                                    <a class="button slider-btn" href="register">Find a job</a>
-                                                </div>
+                                                <h1 class="title1 wow bounceInDown text-uppercase text-white mb-16" data-wow-duration="10s" data-wow-delay="0s">WELCOME FREELANCER !</h1>
                                             </div>
                                         </div>
                                     </div>
@@ -414,7 +398,7 @@
                 <div class="row">
                     <div class="col-md-6 fix col-xs-12 col-sm-6">
                         <div class="footer-logo pull-left">
-                            <a href="{{ path ('homepage')}}" class="block"><img src="{{ asset('template/images/logo/logoblanc.png') }}" alt=""></a>
+                            <a href="AccueilClient" class="block"><img src="{{ asset('template/images/logo/logoblanc.png') }}" alt=""></a>
                         </div>
                     </div>
                     <div class="col-md-6 fix col-xs-12 col-sm-6">
@@ -495,7 +479,6 @@
     <!--End of Bg White-->
     </div>
     <!--End of Main Wrapper Area-->
-
 
 
 {% endblock body %}

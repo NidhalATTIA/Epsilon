@@ -2,7 +2,9 @@
 
 namespace AnnonceBundle\Controller;
 
+use AnnonceBundle\Entity\Freelancer;
 use AnnonceBundle\Entity\Skills;
+use AnnonceBundle\Form\ProfilType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use AnnonceBundle\Form\SkillsType;
@@ -61,4 +63,35 @@ class SkillsController extends Controller
         return $this->render('@Annonce/Skills/UpdateSkills.html.twig', array('f' => $form->createView()));
     }
 
+
+    public function showDetailAction(Request $request, $id){
+        $em = $this->getDoctrine()->getManager();
+        $Freelancer=$em->getRepository(Freelancer::class)->find($id);   //recuperer el ligne ta3 el id
+        return $this->render('@Annonce/Skills/ProfilFreelancer.html.twig',array(
+
+            'Email'=>$Freelancer->getEmail(),
+            'Skills'=>$Freelancer->getSkill(),
+
+
+        ));
+
+    }
+
+    public function AddSkillAction(Request $request )
+    {
+
+        $Freelancer= new Freelancer;
+        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+        $user->getId();
+        $form = $this->createForm(ProfilType::class, $Freelancer);
+        $form = $form->handleRequest($request);
+        if ($form->isValid()){
+            $em = $this->getDoctrine()->getManager();
+            $Freelancer->setIdF($user);
+            $em->persist($Freelancer);
+            $em->flush();
+            return $this->redirectToRoute('FreelancerProfil');
+        }
+        return $this->render('@Annonce/Skills/AddSkills.html.twig',array('f'=> $form->createView()));
+    }
 }

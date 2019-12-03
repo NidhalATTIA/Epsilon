@@ -81,3 +81,39 @@ SkillsDelete:
 SkillsUpdate:
   path:     /Skills/Update/{id}
   defaults: { _controller: AnnonceBundle:Skills:UpdateSkills }
+
+Addp:
+  path:   /Addp
+  defaults: { _controller: AnnonceBundle:Annonce:Addp }
+
+UsContact :
+  path:     /ContactUs
+  defaults: { _controller: AnnonceBundle:Default:ContactUs }
+
+AdminAccueil :
+  path:     /AccueilAdmin
+  defaults: { _controller: AnnonceBundle:Default:AccueilAdmin }
+
+ClientAccueil :
+  path:     /AccueilClient
+  defaults: { _controller: AnnonceBundle:Default:AccueilClient }
+
+FreelancerAccueil :
+  path:     /AccueilFreelancer
+  defaults: { _controller: AnnonceBundle:Default:AccueilFreelancer }
+
+AdminProfil :
+  path:     /ProfilAdmin
+  defaults: { _controller: AnnonceBundle:Default:ProfilAdmin }
+
+ClientProfil :
+  path:     /ProfilClient
+  defaults: { _controller: AnnonceBundle:Default:ProfilClient }
+
+FreelancerProfil :
+  path:     /ProfilFreelancer
+  defaults: { _controller: AnnonceBundle:Default:ProfilFreelancer }
+
+AddSkill :
+  path:     Skills/AddSkills
+  defaults: { _controller: AnnonceBundle:Skills:AddSkill }

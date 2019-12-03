@@ -3,62 +3,31 @@
 namespace AnnonceBundle\Controller;
 
 use AnnonceBundle\Entity\Freelancer;
+use AnnonceBundle\Entity\User;
+use AnnonceBundle\Entity\Skills;
+use AnnonceBundle\Entity\CategorieSkills;
+//use http\Client\Curl\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use AnnonceBundle\Form\FreelancerType;
+use AnnonceBundle\Form\ProfilType;
 
-class SkillsController extends Controller
+class ProfilController extends Controller
 {
-    public function ShowSkillsAction($ref)
+    public function ProfilAction($ref)
     {
-        return $this->render('@Annonce/Skills/ShowSkills.html.twig',array('r'=>$ref));
+        return $this->render('@Annonce/Default/ProfilClient.html.twig',array('r'=>$ref));
     }
 
-    public function ReadSkillsAction(){
+    public function ReadProfilAction(){
+        $user=$this->getDoctrine()->getRepository(User::class)->findAll();
+        $categorie_skills=$this->getDoctrine()->getRepository(CategorieSkills::class)->findAll();
         $skills=$this->getDoctrine()->getRepository(Skills::class)->findAll();
+        $freelancer=$this->getDoctrine()->getRepository(Freelancer::class)->findAll();
         //add the list of clubs to the render function as input to base
-        return $this->render('@Annonce/Skills/ReadSkills.html.twig',array('s'=>$skills));
+        return $this->render('@Annonce/Default/ProfilFreelancer.html.twig',array('a'=>$user,'b'=>$categorie_skills,'c'=>$skills,'d'=>$freelancer));
     }
 
 
-    public function CreateProfilAction(Request $request){
-        $Freelancer = new Freelancer();
-        $form = $this->createForm(FreelancerType::class, $Freelancer);
-        $form = $form->handleRequest($request);
-        if ($form->isValid()){
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($Freelancer);
-            $em->flush();
-            return $this->redirectToRoute('Profil');
-        }
-        return $this->render('@Annonce/Skills/CreateProfil.html.twig',array('f'=> $form->createView()));
-    }
 
-
-    public function DeleteSkillsAction($id){
-        $em = $this->getDoctrine()->getManager();
-        $skills=$em->getRepository(Skills::class)->find($id);
-        $em->remove($skills);
-        $em->flush();
-        return $this->redirectToRoute("SkillsRead");
-    }
-
-
-    public function UpdateSkillsAction(Request $request, $id)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $skills = $em->getRepository(Skills::class)->find($id);
-        $form = $this->createForm(SkillsType::class, $skills);
-        $form = $form->handleRequest($request);
-
-        if ($form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($skills);
-            $em->flush();
-            return $this->redirectToRoute('SkillsRead');
-        }
-
-        return $this->render('@Annonce/Skills/UpdateSkills.html.twig', array('f' => $form->createView()));
-    }
 
 }

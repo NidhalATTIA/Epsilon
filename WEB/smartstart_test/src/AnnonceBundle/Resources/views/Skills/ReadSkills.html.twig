@@ -1,10 +1,18 @@
-{% extends 'base3.html.twig' %}
-    {% block content %}
+{% extends 'baseAdmin.html.twig' %}
+    {% block body %}
+
 
 <div class="card mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="AccueilAdmin">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Skills</li>
+    </ol>
     <div class="card-header">
         <i class="fas fa-table"></i>
-        Data Table Example</div>
+
+        List of the skills</div>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
