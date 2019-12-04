@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0519307c-c14c-459d-9c7e-27333c82f867" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="83d3bf71-cbdf-4b8f-adae-57470abfd64c" />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/blackknight467/star-rating-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1TtAFxtnzMxJKrpLFJeU8iSTJSm" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\smarttest\src\SmartBundle\Form" />
+      <recent name="C:\wamp64\www\smarttest\src\SmartBundle\Resources\views\Security" />
+      <recent name="C:\wamp64\www\smarttest\src\SmartBundle\Resources\views\Default" />
+      <recent name="C:\wamp64\www\smarttest\app\Resources\views" />
+      <recent name="C:\wamp64\www\smarttest\app\Resources\views\default" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\smarttest\src\SmartBundle\Form" />
+      <recent name="C:\wamp64\www\smarttest\src\SmartBundle\Entity" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="doctrine:mapping:import --force SmartBundle annotation" />
+      <command value="s doctrine:mapping:import --force SmartBundle annotation" />
+      <command value="s doctrine:generate:form SmartBundle:Feedback" />
+      <command value="s doctrine:generate:form SmartBundle:Feedbackc" />
+      <command value="c dump-autoload" />
+      <command value="s composer.phar require php endsofsymfony/user-bundle &quot;.~20&quot;" />
+      <command value="composer.phar require friendsofsymfony/user-bundle &quot;.~20&quot;" />
+      <command value="composer.phar require php endsofsymfony/user-bundle &quot;.~20&quot;" />
+      <command value="c require php friendsofsymfony/user-bundle &quot;.~20&quot;" />
+      <command value="php composer.phar require friendsofsymfony/user-bundle &quot;~2.0&quot;" />
+      <command value="s generate:bundle" />
+      <command value="s doctrine:schema:update --force " />
+      <command value="s cache:clear" />
+      <command value="s debug:router" />
+      <command value="fos:user:promote codereview ROLE_Admin" />
+      <command value="fos:user:create" />
+      <command value="$ php bin/console fos:user:promote testuser ROLE_ADMIN " />
+      <command value="php bin/console fos:user:promote testuser ROLE_ADMIN " />
+      <command value="fos:user:promote ahmed ROLE_ADMIN " />
+      <command value="php app/console fos:user:create" />
+      <command value="php bin/console fos:user:create testuser" />
+      <command value="s fos:user:create testuser" />
+      <command value="s fos:user:promote testuser ROLE_ADMIN" />
+      <command value=" php bin/console fos:user:promote yasser ROLE_ADMIN" />
+      <command value="s generate:controller" />
+      <command value="s doctrine:generate:form User" />
+      <command value="s  doctrine:mapping:import &quot;App\Entity&quot; annotation --path=src/Entity" />
+      <command value="php composer.phar require &quot;blackknight467/star-rating-bundle&quot;: &quot;2.*&quot;" />
+      <command value="php composer.json require &quot;blackknight467/star-rating-bundle&quot;: &quot;2.*&quot;" />
+      <command value="composer.jison require &quot;blackknight467/star-rating-bundle&quot;: &quot;2.*&quot;" />
+      <command value="php composer.require &quot;blackknight467/star-rating-bundle&quot;: &quot;2.*&quot;" />
+      <command value="php composer require &quot;blackknight467/star-rating-bundle&quot;: &quot;2.*&quot;" />
+      <command value="composer require oachoor/rating-bundle" />
+      <command value="&quot;blackknight467/star-rating-bundle&quot;: &quot;2.*&quot;" />
+      <command value="composer &quot;blackknight467/star-rating-bundle&quot;: &quot;2.*&quot;" />
+      <command value="c require &quot;blackknight467/star-rating-bundle&quot;" />
+      <command value="s doctrine:generate:form" />
+      <command value="s doctrine:generate:form Note" />
+      <command value="s doctrine:generate:form note" />
+      <command value="s doctrine:generate:form SmartBundle:note" />
+      <command value="s doctrine:generate:form SmartBundle:Note" />
+      <command value="s composer.phar update nurikabe/star-rating-bundle" />
+      <command value="c phar update nurikabe/star-rating-bundle" />
+      <command value="c update nurikabe/star-rating-bundle" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s composer.phar update nurikabe/star-rating-bundle " />
+      <command value="s composer.phar install nurikabe/star-rating-bundle " />
+      <command value="s require knplabs/knp-paginator-bundle" />
+      <command value="composer require knplabs/knp-paginator-bundle" />
+      <command value="s composer require knplabs/knp-paginator-bundle" />
+      <command value="c require knplabs/knp-paginator-bundle" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0519307c-c14c-459d-9c7e-27333c82f867" name="Default Changelist" comment="" />
+      <created>1574268917398</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574268917398</updated>
+      <workItem from="1574268918677" duration="15138000" />
+      <workItem from="1574322515811" duration="7790000" />
+      <workItem from="1574585378655" duration="20052000" />
+      <workItem from="1574701776454" duration="9506000" />
+      <workItem from="1574775244063" duration="2400000" />
+      <workItem from="1574800877673" duration="9249000" />
+      <workItem from="1574835853382" duration="44285000" />
+      <workItem from="1574920823750" duration="1998000" />
+      <workItem from="1574926820391" duration="5273000" />
+      <workItem from="1574973349184" duration="5421000" />
+      <workItem from="1575039391387" duration="2750000" />
+      <workItem from="1575050044933" duration="5746000" />
+      <workItem from="1575071878728" duration="3208000" />
+      <workItem from="1575136980250" duration="1180000" />
+      <workItem from="1575203483047" duration="3288000" />
+      <workItem from="1575213663878" duration="13090000" />
+      <workItem from="1575238387692" duration="5317000" />
+      <workItem from="1575272240382" duration="6686000" />
+      <workItem from="1575281647986" duration="8415000" />
+      <workItem from="1575297594771" duration="16876000" />
+      <workItem from="1575358229118" duration="28024000" />
+      <workItem from="1575402787236" duration="10316000" />
+      <workItem from="1575442104664" duration="1624000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Resources/views/base.html.twig</url>
+          <line>198</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

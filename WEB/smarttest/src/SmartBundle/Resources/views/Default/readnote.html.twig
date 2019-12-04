@@ -1,0 +1,93 @@
+{%  extends 'base.html.twig' %}
+     {% block content%}
+         {{ form(form) }}
+         <table id="mytable" class="table table-bordred table-striped">
+             <thead>
+             <th>Freelancer</th>
+             <th>Moyenne</th>
+             </thead>
+         {% for non in note %}
+                {% set erreur = 0 %}
+                     {% set somme = 0 %}
+                        {% set nbr = 0 %}
+                {% for n in note %}
+                 {% if non.idFreelancer == n.idFreelancer %}
+                     {% set erreur = 1 + erreur %}
+                     {% set  somme = somme + n.note %}
+                     {% set nbr = nbr + 1 %}
+
+                 {% endif %}
+
+             {% endfor %}
+
+
+             {{non.idFreelancer}}
+             {{ somme/nbr }}
+             </thead>
+             <tbody>
+             <tr>
+             <td>{{non.idFreelancer}} </td>
+             <td>{{ somme/nbr }}</td>
+             </tr>
+             </tbody>
+
+         {% endfor %}
+
+         </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <div style="margin-top: 111px" class="container">
+             <div class="row">
+                 <table id="mytable" class="table table-bordred table-striped">
+                     <thead>
+                     <th>note</th>
+                     <th> Client</th>
+                     <th>Freelancer</th>
+                     <th>Score</th>
+                     </thead>
+
+                     {% for no in note %}
+
+
+                         <tbody>
+                         <tr>
+                             <td>{{ no.note}}</td>
+                             <td>{{ no.idClient}}</td>
+                             <td>{{ no.idFreelancer}}</td>
+
+                             {% if app.user.username == no.idClient or app.user.TypeUser == "admin" %}
+
+                                 <td> <a href ="{{ path('supprimer_note', {'id':no.id}) }}"><button style="color: white">supprimer</button> </a></td>
+
+                             {% endif %}
+
+                         </tr>
+                         </tbody>
+
+                         {% endfor %}
+                 </table>
+             </div>
+             <a href ="{{ path('creat_note')}}"><button style="color: white; margin: 20px;">ajouter</button> </a>
+         </div>
+
+         <thead>
+         <th>score</th>
+         </thead>
+
+
+
+
+
+     {% endblock %}
