@@ -1,0 +1,31 @@
+{% extends 'baseAdmin.html.twig' %}
+{%  block body %}
+<h>Rechercher</h>
+
+ {#{{ form_start(f) }}#}
+
+<table border="1">
+    {{ form(form) }}
+    <tr>
+        <td>id</td>
+        <td>attribution</td>
+        <td>motif</td>
+        <td>gsm</td>
+        <td>datecreation</td>
+        <td>etat</td>
+
+    </tr>
+    {% for entity in ticket   %}
+        <tr>
+            <td>{{ entity.Id }}</td>
+            <td>{{ entity.Attribution }}</td>
+            <td>{{ entity.Motifreclamation.Motifreclamation }}</td>
+            <td>{{ entity.Gsm }}</td>
+            <td>{{ entity.Datecreation|date}}</td>
+            <td>{{ entity.Etat }}</td>
+
+        </tr>
+    {% endfor %}
+</table>
+<td> <a href="{{ path('createH') }}"><button>ajouter</button></a> </td>
+{% endblock %}

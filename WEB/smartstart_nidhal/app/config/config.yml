@@ -82,3 +82,8 @@ fos_user:
     from_email:
         address: "badiaa.bouhdid@esprit.tn"
         sender_name: "badi3a"
+
+knp_paginator:
+    template:
+        pagination: '@KnpPaginator/Pagination/sliding.html.twig'     # sliding pagination controls template
+

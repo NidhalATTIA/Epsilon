@@ -1,5 +1,5 @@
 
-{% extends 'base.html.twig' %}
+{% extends 'baseFreelancer.html.twig' %}
 
 {% block content %}
 {% if Postulation == NULL %}
@@ -24,8 +24,8 @@
         <tbody>
         {% for entity in Postulation  %}
             <tr>
-                <td>{{ entity.idAnnonce.titre|upper }}</td>
-                <td>{{ entity.idAnnonce.Description }}</td>
+                <td>{{ entity.idannonce.titre|upper }}</td>
+                <td>{{ entity.idannonce.Description }}</td>
                 <td>{{ entity.dateajout|date }}</td>
                 <td>{{ entity.Contenu}}</td>
 

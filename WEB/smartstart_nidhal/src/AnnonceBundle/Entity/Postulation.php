@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Postulation
  *
  * @ORM\Table(name="postulation", indexes={@ORM\Index(name="idFreelancer", columns={"idFreelancer"}), @ORM\Index(name="idAnnonce", columns={"idAnnonce"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AnnonceBundle\Repository\AnnonceRepository")
  */
 class Postulation
 {
@@ -48,12 +48,22 @@ class Postulation
     /**
      * @var \Freelancer
      *
-     * @ORM\ManyToOne(targetEntity="Freelancer")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idFreelancer", referencedColumnName="ID")
+     *   @ORM\JoinColumn(name="idFreelancer", referencedColumnName="id")
      * })
      */
     private $idfreelancer;
+
+    /**
+     * Postulation constructor.
+     * @param \DateTime $dateajout
+     */
+
+    public function __construct()
+    {
+        $this->dateajout = new \DateTime ();
+    }
 
     /**
      * @return int
@@ -137,4 +147,3 @@ class Postulation
 
 
 }
-

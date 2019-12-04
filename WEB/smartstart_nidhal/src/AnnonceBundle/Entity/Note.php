@@ -29,25 +29,86 @@ class Note
     private $note;
 
     /**
-     * @var \Client
+     * @var \User
      *
-     * @ORM\ManyToOne(targetEntity="Client")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idClient", referencedColumnName="ID")
+     *   @ORM\JoinColumn(name="idClient", referencedColumnName="id", nullable=false)
      * })
      */
     private $idclient;
-
     /**
-     * @var \Freelancer
+     * @var \User
      *
-     * @ORM\ManyToOne(targetEntity="Freelancer")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="IdFreelancer", referencedColumnName="ID")
+     *   @ORM\JoinColumn(name="idfreelancer", referencedColumnName="id", nullable=false)
      * })
      */
     private $idfreelancer;
 
+    /**
+     * @return \User
+     */
+    public function getIdfreelancer()
+    {
+        return $this->idfreelancer;
+    }
 
+    /**
+     * @param \User $idfreelancer
+     */
+    public function setIdfreelancer($idfreelancer)
+    {
+        $this->idfreelancer = $idfreelancer;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNote()
+    {
+        return $this->note;
+    }
+
+    /**
+     * @param int $note
+     */
+    public function setNote($note)
+    {
+        $this->note = $note;
+    }
+
+    /**
+     * @return \User
+     */
+    public function getIdclient()
+    {
+        return $this->idclient;
+    }
+
+    /**
+     * @param \User $idclient
+     */
+    public function setIdclient($idclient)
+    {
+        $this->idclient = $idclient;
+    }
 }
 

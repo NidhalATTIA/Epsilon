@@ -60,26 +60,28 @@
       <path value="$PROJECT_DIR$/vendor/swiftmailer/lib" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/doc" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/tests" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
     </include_path>
   </component>
   <component name="ProjectId" id="1TZ7ZjtQ2ws3QYLxWV8fBgyk2hI" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AnnonceBundle/Resources/views/Skills" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AnnonceBundle/Resources/views/API" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\smartstart_test\src\AnnonceBundle\Resources\views\API" />
+      <recent name="C:\wamp64\www\smartstart_test\src\AnnonceBundle\Controller" />
+      <recent name="C:\wamp64\www\smartstart_test\src\AnnonceBundle\Resources\views\Ticket" />
+      <recent name="C:\wamp64\www\smartstart_test\src\AnnonceBundle\Entity" />
+      <recent name="C:\wamp64\www\smartstart_test\src\AnnonceBundle\Form" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\smartstart_test\src\AnnonceBundle\Resources\views\Default" />
       <recent name="C:\wamp64\www\smartstart\src\AnnonceBundle\Resources\views\Annonce" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\smartstart_test\src\AnnonceBundle\Resources\views\Skills" />
-      <recent name="C:\wamp64\www\smartstart_test\src\AppBundle\Controller" />
-      <recent name="C:\wamp64\www\smartstart_test\app\Resources\views" />
-      <recent name="C:\wamp64\www\smartstart_test\app\Resources\views\default" />
-      <recent name="C:\wamp64\www\smartstart_test\src\AnnonceBundle\Form" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -106,10 +108,11 @@
       <command value="composer require symfony/swiftmailer-bundle" />
       <command value="c require symfony/swiftmailer-bundle" />
       <command value="c require swiftmailer/swiftmailer" />
-      <command value="s doctrine:schema:update --force " />
       <command value="s debug:swiftmailer" />
       <command value="c require &quot;swiftmailer/swiftmailer&quot;" />
+      <command value="c require knplabs/knp-paginator-bundle" />
       <command value="s swiftmailer:email:send" />
+      <command value="s doctrine:schema:update --force " />
     </option>
   </component>
   <component name="RunDashboard">
@@ -171,7 +174,8 @@
       <workItem from="1575297691045" duration="344000" />
       <workItem from="1575298170825" duration="528000" />
       <workItem from="1575298736082" duration="31640000" />
-      <workItem from="1575390883264" duration="7567000" />
+      <workItem from="1575390883264" duration="8249000" />
+      <workItem from="1575444537831" duration="31642000" />
     </task>
     <servers />
   </component>

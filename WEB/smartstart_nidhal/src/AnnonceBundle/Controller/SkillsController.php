@@ -94,4 +94,21 @@ class SkillsController extends Controller
         }
         return $this->render('@Annonce/Skills/AddSkills.html.twig',array('f'=> $form->createView()));
     }
+
+    public function updateSkillAction(Request $request, $id){
+        $em = $this->getDoctrine()->getManager();
+        $freelancer=$em->getRepository(Freelancer::class)->find($id);   //recuperer el ligne ta3 el id
+        $form = $this->createForm(ProfilType::class, $freelancer);  //taffichi el ligne ta3 el id
+        $form = $form->handleRequest($request);
+
+        if ($form->isValid()){
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($freelancer);
+            $em->flush();
+            return $this->redirectToRoute('FreelancerProfil');
+        }
+
+        return $this->render('@Annonce/Skills/UpdateSkillF.html.twig',array('f'=> $form->createView()));
+
+    }
 }

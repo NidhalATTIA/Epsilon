@@ -1,0 +1,50 @@
+
+{% extends 'baseFreelancer.html.twig' %}
+
+{% block content %}
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Data Table Example</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="200%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Email</th>
+                        <th>Contenu </th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for entity in Annonce   %}
+                        <tr>
+                            <td>{{ entity.idFreelancer.nom  }}</td>
+                            <td>{{ entity.idFreelancer.prenom   }}</td>
+                            <td>{{ entity.idFreelancer.email }}</td>
+                            <td>{{ entity.contenu }}</td>
+
+                            <td> <a href="{{ path('Postulationok',{'id':entity.idAnnonce.ID}) }}"><button>Update</button></a> </td>
+
+
+
+
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+                <h3>Le nombre de Postulation est {{ Annonce|length }}</h3>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+{% endblock %}

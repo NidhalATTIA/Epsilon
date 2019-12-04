@@ -2,69 +2,85 @@ annonce_homepage:
     path:     /
     defaults: { _controller: AnnonceBundle:Default:index }
 
+#### Kaffel
+
 Annonce_home:
-    path:     /Affiche
-    defaults: { _controller: AnnonceBundle:Annonce:Affiche }
+  path:     /Affiche
+  defaults: { _controller: AnnonceBundle:Annonce:Affiche }
 
 Annonce_home1:
-    path:     /Affiche1
-    defaults: { _controller: AnnonceBundle:Annonce:home }
+  path:     /Affiche1
+  defaults: { _controller: AnnonceBundle:Annonce:home }
 
 Annonce_read:
-    path:     /Read/{nom}
-    defaults: { _controller: AnnonceBundle:Annonce:read }
+  path:     /Read/{nom}
+  defaults: { _controller: AnnonceBundle:Annonce:read }
 
 Annonce_list:
-    path:     /List
-    defaults: { _controller: AnnonceBundle:Annonce:List }
+  path:     /List
+  defaults: { _controller: AnnonceBundle:Annonce:List }
 
 Annonce_show:
-    path:     /Show/{id}
-    defaults: { _controller: AnnonceBundle:Annonce:showDetail }
+  path:     /Show/{id}
+  defaults: { _controller: AnnonceBundle:Annonce:showDetail }
 
 Annonce_read1:
-    path:     /Read1
-    defaults: { _controller: AnnonceBundle:Annonce:read1 }
+  path:     /Read1
+  defaults: { _controller: AnnonceBundle:Annonce:read1 }
 
 delete:
-    path:     /delete/{id}
-    defaults: { _controller: AnnonceBundle:Annonce:delete }
+  path:     /delete/{id}
+  defaults: { _controller: AnnonceBundle:Annonce:delete }
 
 modifier:
-    path:   /modif/{id}
-    defaults: { _controller: AnnonceBundle:Annonce:modifier }
+  path:   /modif/{id}
+  defaults: { _controller: AnnonceBundle:Annonce:modifier }
 
 Add:
-    path:   /Add
-    defaults: { _controller: AnnonceBundle:Annonce:create }
+  path:   /Add
+  defaults: { _controller: AnnonceBundle:Annonce:create }
 
 ajouter1:
-    path:   /Add1
-    defaults: { _controller: AnnonceBundle:Annonce:ajouter1 }
+  path:   /Add1
+  defaults: { _controller: AnnonceBundle:Annonce:ajouter1 }
 
 update:
-    path:   /Up/{id}
-    defaults: { _controller: AnnonceBundle:Annonce:update }
+  path:   /Up/{id}
+  defaults: { _controller: AnnonceBundle:Annonce:update }
 
 Annonce_read2:
-    path:     /Read2
-    defaults: { _controller: AnnonceBundle:Annonce:read2 }
+  path:     /Read2
+  defaults: { _controller: AnnonceBundle:Annonce:read2 }
 
 Addp:
-  path:   /Addp
-  defaults: { _controller: AnnonceBundle:Annonce:Addp }
+  path:   /Addp/{idannonce}
+  defaults: { _controller: AnnonceBundle:Annonce:create4 }
 
 Annonce_read3:
-    path:     /Read3
-    defaults: { _controller: AnnonceBundle:Annonce:read3 }
+  path:     /Read3
+  defaults: { _controller: AnnonceBundle:Annonce:read3 }
 
 update2:
-    path:   /Up2/{id}
-    defaults: { _controller: AnnonceBundle:Annonce:update2 }
+  path:   /Up2/{id}
+  defaults: { _controller: AnnonceBundle:Annonce:update2 }
 
 delete2:
-    path:     /delete/{id}
-    defaults: { _controller: AnnonceBundle:Annonce:delete2 }
+  path:     /delete2/{id}
+  defaults: { _controller: AnnonceBundle:Annonce:delete2 }
+
+Postulation:
+  path:     /postulation/{id}
+  defaults: { _controller: AnnonceBundle:Annonce:showPostule }
+
+Postulationok:
+  path:     /postek/{id}
+  defaults: { _controller: AnnonceBundle:Annonce:postuleok }
+
+histoClient:
+  path:     /historiqueAnnonce
+  defaults: { _controller: AnnonceBundle:Annonce:affhistorique }
+
+##### Nidhal
 
 SkillsRead:
   path:     /Skills
@@ -81,10 +97,6 @@ SkillsDelete:
 SkillsUpdate:
   path:     /Skills/Update/{id}
   defaults: { _controller: AnnonceBundle:Skills:UpdateSkills }
-
-Addp:
-  path:   /Addp
-  defaults: { _controller: AnnonceBundle:Annonce:Addp }
 
 UsContact :
   path:     /ContactUs
@@ -117,3 +129,157 @@ FreelancerProfil :
 AddSkill :
   path:     Skills/AddSkills
   defaults: { _controller: AnnonceBundle:Skills:AddSkill }
+
+UpdateSk:
+  path:     /Skills/Up/{id}
+  defaults: { _controller: AnnonceBundle:Skills:updateSkill }
+
+sendMail:
+  path:     /mail
+  defaults: { _controller: AnnonceBundle:Default:SendEmail }
+
+sendMailAdmin:
+  path:     /mailAdmin
+  defaults: { _controller: AnnonceBundle:Default:SendEmail1 }
+
+######Yasser
+
+club_redirect:
+  path:     /smart/home
+  defaults: { _controller: AnnonceBundle:Security:Redirect }
+
+freelancerv_modifier:
+  path:     /modifieEtat/{id}
+  defaults: { _controller: AnnonceBundle:AdminF:update }
+
+smart_showfeed:
+  path:     /show
+  defaults: { _controller: AnnonceBundle:Feedback:read }
+
+smart_Create:
+  path:     /create
+  defaults: { _controller: AnnonceBundle:Feedback:create }
+
+read_note:
+  path:     /note
+  defaults: { _controller: AnnonceBundle:Note:recherche}
+
+club_modifier:
+  path:     /modifie/{id}
+  defaults: { _controller: AnnonceBundle:Feedback:update }
+
+club_supprimer:
+  path:     /supprime/{id}
+  defaults: { _controller: AnnonceBundle:Feedback:supprimer }
+
+creat_note:
+  path:     /creatnote
+  defaults: { _controller: AnnonceBundle:Note:creat }
+
+supprimer_note:
+  path:     /supprimer/{id}
+  defaults: { _controller: AnnonceBundle:Note:supprimernote }
+
+##### Farah
+
+ticket_homepage:
+  path:     /
+  defaults: { _controller: AnnonceBundle:Default:index }
+
+ticket_gestion:
+  path:     /Affiche2
+  defaults: { _controller: AnnonceBundle:Ticket:affiche }
+
+delete1:
+  path:     /delete1/{id}
+  defaults: { _controller: AnnonceBundle:Ticket:delete }
+
+Add1:
+  path:     /Ajout1
+  defaults: { _controller: AnnonceBundle:Ticket:create }
+
+edit:
+  path:     /edit/{id}
+  defaults: { _controller: AnnonceBundle:Ticket:edit }
+
+ticket_rechercher:
+  path:     /rechercher
+  defaults: { _controller: AnnonceBundle:Ticket:rechercher }
+
+Ticket_AfficheH:
+  path:     /readH
+  defaults: { _controller: AnnonceBundle:Historiquereclamation:readH }
+
+createH:
+  path:     /createH
+  defaults: { _controller: AnnonceBundle:Historiquereclamation:createH }
+
+editH:
+  path:     /editH/{id}
+  defaults: { _controller: AnnonceBundle:Historiquereclamation:editH }
+
+deleteH:
+  path:     /deleteH/{id}
+  defaults: { _controller: AnnonceBundle:Historiquereclamation:deleteH }
+
+ticket_rechercherH:
+  path:     /rechercherH
+  defaults: { _controller: AnnonceBundle:Historiquereclamation:rechercherH }
+
+categorie_gestion:
+  path:     /Afficher
+  defaults: { _controller: AnnonceBundle:Categoriereclamation:afficher }
+
+deleter:
+  path:     /deleter/{id}
+  defaults: { _controller: AnnonceBundle:Categoriereclamation:deleter }
+
+Addr:
+  path:     /Ajoutr
+  defaults: { _controller: AnnonceBundle:Categoriereclamation:creater }
+
+editr:
+  path:     /editr/{id}
+  defaults: { _controller: AnnonceBundle:Categoriereclamation:editr }
+
+ticket_rechercherr:
+  path:     /rechercherr
+  defaults: { _controller: AnnonceBundle:Categoriereclamation:rechercherr}
+
+client_gestion:
+  path:     /AfficheC
+  defaults: { _controller: AnnonceBundle:User:AfficheC }
+
+deleteC:
+  path:     /deleteC/{id}
+  defaults: { _controller: AnnonceBundle:User:deleteC }
+
+createE:
+  path:     /createE
+  defaults: { _controller: AnnonceBundle:Default:createE }
+
+edite:
+  path:   /edite/{id}
+  defaults: { _controller: AnnonceBundle:Historiquereclamation:edite }
+
+show:
+  path:     /show
+  defaults: { _controller: AnnonceBundle:Ticket:show }
+
+ticket_gestion2:
+  path:     /Affiche3
+  defaults: { _controller: AnnonceBundle:Ticket:affiche2 }
+
+delete3:
+  path:     /delete3/{id}
+  defaults: { _controller: AnnonceBundle:Ticket:delete2 }
+
+Add2:
+  path:     /Ajout2
+  defaults: { _controller: AnnonceBundle:Ticket:create2 }
+
+edit2:
+  path:     /edit2/{id}
+  defaults: { _controller: AnnonceBundle:Ticket:edit2 }
+
+#### Loua

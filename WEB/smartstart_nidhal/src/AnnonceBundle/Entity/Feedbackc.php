@@ -29,24 +29,89 @@ class Feedbackc
     private $contenu;
 
     /**
-     * @var \Client
+     * @var \User
      *
-     * @ORM\ManyToOne(targetEntity="Client")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_Client", referencedColumnName="ID")
+     *   @ORM\JoinColumn(name="id_Client", referencedColumnName="id")
      * })
      */
     private $idClient;
 
     /**
-     * @var \Freelancer
+     * @var \User
      *
-     * @ORM\ManyToOne(targetEntity="Freelancer")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_freelancer", referencedColumnName="ID")
+     *   @ORM\JoinColumn(name="id_freelancer", referencedColumnName="id")
      * })
      */
     private $idFreelancer;
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContenu()
+    {
+        return $this->contenu;
+    }
+
+    /**
+     * @param string $contenu
+     */
+    public function setContenu($contenu)
+    {
+        $this->contenu = $contenu;
+    }
+
+    /**
+     * @return \Client
+     */
+    public function getIdClient()
+    {
+        return $this->idClient;
+    }
+
+    /**
+     * @param \Client $idClient
+     */
+    public function setIdClient($idClient)
+    {
+        $this->idClient = $idClient;
+    }
+
+    /**
+     * @return \Freelancer
+     */
+    public function getIdFreelancer()
+    {
+        return $this->idFreelancer;
+    }
+
+    /**
+     * @param \Freelancer $idFreelancer
+     */
+    public function setIdFreelancer($idFreelancer)
+    {
+        $this->idFreelancer = $idFreelancer;
+    }
+
 
 
 }

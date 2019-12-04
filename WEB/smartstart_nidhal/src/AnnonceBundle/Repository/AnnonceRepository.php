@@ -30,6 +30,18 @@ class AnnonceRepository extends EntityRepository
             ->getResult();
     }
 
+    public function findAnnonceById($id)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                "SELECT a
+       FROM AnnonceBundle:Annonce
+       a WHERE a.idClient = :idClient"
+            )
+            ->setParameter('idClient', $id)
+            ->getResult();
+    }
+
     public function findPostuleById($id)
     {
         return $this->getEntityManager()
@@ -52,6 +64,35 @@ class AnnonceRepository extends EntityRepository
             ->setParameter('idannonce', $id)
             ->getResult();
     }
+
+    public function AffichePostule()
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                "SELECT p
+       FROM AnnonceBundle:Annonce
+       p WHERE p.Etat = :Etat"
+            )
+            ->setParameter('Etat', 'NULL')
+            ->execute();
+
+    }
+
+    public function AfficheAnnoncehistorique($id)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                "SELECT p
+       FROM AnnonceBundle:Annonce
+       p WHERE p.Etat = :Etat AND p.idClient = :idClient"
+            )
+            ->setParameter('Etat', 'NULL')
+            ->setParameter('idClient', $id)
+            ->execute();
+
+    }
+
+
     /**
      * get one by id
      *

@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Annonce
  *
  * @ORM\Table(name="annonce", indexes={@ORM\Index(name="id_client", columns={"id_client"}), @ORM\Index(name="idfskilla", columns={"Skill"}), @ORM\Index(name="categorieAfk", columns={"idCategorieA"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AnnonceBundle\Repository\AnnonceRepository")
  */
 class Annonce
 {
@@ -55,9 +55,9 @@ class Annonce
     /**
      * @var \Client
      *
-     * @ORM\ManyToOne(targetEntity="Client")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_client", referencedColumnName="ID")
+     *   @ORM\JoinColumn(name="id_client", referencedColumnName="id")
      * })
      */
     private $idClient;
@@ -71,6 +71,18 @@ class Annonce
      * })
      */
     private $skill;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="Etat", type="integer", nullable=True)
+     */
+    private $Etat;
+
+    public function __construct()
+    {
+        $this->dateajout = new \DateTime ();
+    }
 
     /**
      * @return int
@@ -184,6 +196,21 @@ class Annonce
         $this->skill = $skill;
     }
 
+    /**
+     * @return int
+     */
+    public function getEtat()
+    {
+        return $this->Etat;
+    }
+
+    /**
+     * @param int $Etat
+     */
+    public function setEtat($Etat)
+    {
+        $this->Etat = $Etat;
+    }
+
 
 }
-

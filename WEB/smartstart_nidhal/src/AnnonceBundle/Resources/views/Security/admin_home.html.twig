@@ -1,0 +1,35 @@
+{%  extends 'baseAdmin.html.twig' %}
+{% block title %}SmartBundle:Security:Redirect{% endblock %}
+{% block body %}
+    <center><h1 class="text-center" style="margin: 20px">Register Validation list</h1></center></br></br></br></br></br>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <td scope="col">username</td>
+            <td scope="col"> email</td>
+            <td scope="col"> categorie </td>
+            <td scope="col"> etat </td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for freelancer in free %}
+        {% if freelancer.typeuser == 'freelancer' %}
+        {% for role in freelancer.roles %}
+        {% if role != 'ROLE_ADMIN' %}
+        <tr>
+            <td>{{ freelancer.username}}</td>
+            <td>{{ freelancer.email}}</td>
+            <td>{{ freelancer.typeuser}}</td>
+            <td>{{ freelancer.etat}}</td>
+            <td> <a href ="{{ path('freelancerv_modifier', {'id':freelancer.id}) }}"><button style="color: white" >Modifier</button> </a></td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+
+        </tbody>
+    </table><a  href ="{{ path('smart_showfeed')}}"><button >Feedback</button> </a>
+
+     <a  href ="{{ path('read_note')}}"><button>Note</button> </a>
+{% endblock %}
