@@ -1,0 +1,37 @@
+smart_homepage:
+    path:     /
+    defaults: { _controller: SmartBundle:Feedback:index }
+smart_showfeed:
+    path:     /show
+    defaults: { _controller: SmartBundle:Feedback:read }
+smart_Create:
+    path:     /create
+    defaults: { _controller: SmartBundle:Feedback:create }
+club_supprimer:
+    path:     /supprime/{id}
+    defaults: { _controller: SmartBundle:Feedback:supprimer }
+club_modifier:
+    path:     /modifie/{id}
+    defaults: { _controller: SmartBundle:Feedback:update }
+
+club_add:
+    path:     /add
+    defaults: { _controller: SmartBundle:Security:add }
+
+club_redirect:
+    path:     /home
+    defaults: { _controller: SmartBundle:Security:Redirect }
+freelancerv_modifier:
+    path:     /modifieEtat/{id}
+    defaults: { _controller: SmartBundle:AdminF:update }
+read_note:
+    path:     /note
+    defaults: { _controller: SmartBundle:Note:recherche}
+creat_note:
+    path:     /creatnote
+    defaults: { _controller: SmartBundle:Note:creat }
+supprimer_note:
+    path:     /supprimer/{id}
+    defaults: { _controller: SmartBundle:Note:supprimernote }
+
+

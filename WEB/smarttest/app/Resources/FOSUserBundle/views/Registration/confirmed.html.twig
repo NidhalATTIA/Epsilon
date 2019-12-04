@@ -1,0 +1,15 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+    <div class="container" style="margin-top: 175px">
+    <div class="text-center">
+    <p style="font-size: 30px">{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+    <a style="background-color: darkred; color: white; margin: 58px; padding: 10px;" href="http://localhost/smarttest/web/app_dev.php/smart/home">IN HOME</a>
+    {% if targetUrl %}
+    <p style="font-size: 30px"><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+         </div>
+        </div>
+    {% endif %}
+{% endblock fos_user_content %}

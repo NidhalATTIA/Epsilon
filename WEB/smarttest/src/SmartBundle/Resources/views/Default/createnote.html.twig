@@ -1,0 +1,19 @@
+{%  extends 'base.html.twig' %}
+
+
+
+
+     {% block content%}
+
+         {{ form_start(form) }}
+         Note :{{ form_widget(form.note)  }}
+         Freelance :{{ form_widget(form.idfreelancer)  }}
+         {{ form_widget(form.Ajouter)  }}
+    {{ form_end(form) }}
+
+          {{app.user.username}}
+
+
+
+     {% endblock %}
+

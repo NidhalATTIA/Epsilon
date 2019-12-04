@@ -1,0 +1,77 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+<div class="container contact">
+    <div class="row">
+        <div class="col-md-3" style="background: #eab057;
+		padding: 4%;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+         height: 85vh">
+            <div class="contact-info" style="margin-top:10%">
+                <img style="margin-bottom: 15%;" src="/smarttest/web/images/logo/logo2.png" alt="image"/>
+                <h2 style="margin-bottom: 10%;">Contact Us</h2>
+                <h4>We would love to hear from you !</h4>
+            </div>
+        </div>
+        <div class="col-md-9" style="background: #fff;
+		padding: 3%;
+		border-top-right-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;">
+            <form action="{{ path("fos_user_security_check") }}" method="post">
+                {% if csrf_token %}
+                    <input class="form-control" type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                {% endif %}
+               <div class="contact-form" >
+                <div class="form-group" style="margin: 20px; padding: 20px">
+                    <div class="col-sm-10">
+                        <label for="username">{{ 'security.login.username'|trans }}</label>
+                        <input placeholder="username" class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
+                    </div>
+                </div>
+                <div class="form-group" style="margin: 20px; padding: 20px">
+                    <div class="col-sm-10">
+                        <label for="password">{{ 'security.login.password'|trans }}</label>
+                        <input class="form-control" placeholder="email" type="password" id="password" name="_password" required="required" autocomplete="current-password" />
+                    </div>
+                </div>
+                <div class="form-group" style="margin: 20px; padding: 20px">
+                    <div class="col-sm-10">
+
+                        <input class="float-left" style="width: 20px" type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                        <label  for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <input style="background: #25274d;
+                               color: #fff;
+                               font-weight: 600;
+                               width: 25%;" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{#<form action="{{ path("fos_user_security_check") }}" method="post">
+    {% if csrf_token %}
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    {% endif %}
+
+    <label for="username">{{ 'security.login.username'|trans }}</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
+
+    <label for="password">{{ 'security.login.password'|trans }}</label>
+    <input type="password" id="password" name="_password" required="required" autocomplete="current-password" />
+
+    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+
+    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+</form>#}
