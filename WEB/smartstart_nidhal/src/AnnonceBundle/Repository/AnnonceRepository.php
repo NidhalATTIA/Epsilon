@@ -92,6 +92,19 @@ class AnnonceRepository extends EntityRepository
 
     }
 
+    public function AffichepostulationAccepte($id)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                "SELECT a
+       FROM AnnonceBundle:Annonce a JOIN 
+      AnnonceBundle:Postulation p WITH a.id=p.idannonce WHERE p.idfreelancer = :idfreelancer AND a.Etat = :Etat"
+            )
+            ->setParameter('idfreelancer', $id)
+            ->setParameter('Etat', 1)
+            ->getResult();
+    }
+
 
     /**
      * get one by id

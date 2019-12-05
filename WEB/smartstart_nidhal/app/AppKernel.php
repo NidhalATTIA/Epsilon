@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new AnnonceBundle\AnnonceBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Ob\HighchartsBundle\ObHighchartsBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

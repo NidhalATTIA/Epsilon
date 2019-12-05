@@ -3,12 +3,21 @@
 namespace AnnonceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Skills
  *
  * @ORM\Table(name="skills", indexes={@ORM\Index(name="id_categorie", columns={"id_categorie"})})
  * @ORM\Entity
+ */
+
+/**
+ * Skills
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ * @UniqueEntity("skill") // c'est ici que je declare le champs unique
  */
 class Skills
 {

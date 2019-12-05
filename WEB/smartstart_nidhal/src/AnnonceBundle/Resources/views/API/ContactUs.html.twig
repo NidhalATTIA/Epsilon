@@ -8,18 +8,20 @@
                        in any category. This project was developed by Team Epsilon.</br> If you wanna contact us, please insert your Email
                        below and send us your request. We would love to hear from you !</h5></br></br></br></br></center>
 
+        <h5> Your Email : {{ app.user.email }}</h5></br>
+        <h5> Object : Contact Us </h5></br></br></br>
+        <h4> Write your Email below :</h4>
+               <a href="{{ path('sendMail') }}"></a></br>
 
-
-               <a href="{{ path('sendMail') }}"></a>
-<div class="panel-footer">
+        <div class="panel-footer">
     {{ form_start(f) }}
     <div class="input-group">
-        {{ form_widget(f.message, {'attr': {'class': 'form-control input-sm','placeholder':'Type your message to send...','name': 'name','type':'text'}}) }}
+        {{ form_widget(f.message, {'attr': {'class': 'form-control input-sm','placeholder':'Type your Email to send to SmartStart Team here...','name': 'name','type':'text'}}) }}
         <span class="input-group-btn">
                                             {{ form_widget(f.send,{'attr': {'class': 'btn btn-warning btn-sm','id': 'btn-chat','type':'button'}}) }}
 
                                   </span>
-    </div>
+    </div></br>
 
 {{ form_end(f) }}
 

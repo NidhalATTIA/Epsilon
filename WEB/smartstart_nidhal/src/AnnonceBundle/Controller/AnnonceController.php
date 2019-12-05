@@ -211,4 +211,12 @@ class AnnonceController extends Controller
         return $this->render('@Annonce/Annonce/historiqueAnnonce.html.twig',array('Annonce'=>$Annonce));
     }
 
+    public function jobAction(Request $request){
+        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+        $user->getId();
+        $Annonce=$this->getDoctrine()->getRepository(Annonce::class)->AffichepostulationAccepte($user);
+        //add the list of clubs to the render function as input to base
+        return $this->render('@Annonce/Annonce/historiqueAnnonce2.html.twig',array('Annonce'=>$Annonce));
+    }
+
     }

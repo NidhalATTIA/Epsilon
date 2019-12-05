@@ -2,6 +2,69 @@ annonce_homepage:
     path:     /
     defaults: { _controller: AnnonceBundle:Default:index }
 
+##### Nidhal
+
+SkillsRead:
+  path:     /Skills
+  defaults: { _controller: AnnonceBundle:Skills:ReadSkills }
+
+SkillsCreate:
+  path:     /Skills/Create
+  defaults: { _controller: AnnonceBundle:Skills:CreateSkills }
+
+SkillsDelete:
+  path:     /Skills/Delete/{id}
+  defaults: { _controller: AnnonceBundle:Skills:DeleteSkills }
+
+SkillsUpdate:
+  path:     /Skills/Update/{id}
+  defaults: { _controller: AnnonceBundle:Skills:UpdateSkills }
+
+UsContact :
+  path:     /ContactUs
+  defaults: { _controller: AnnonceBundle:Default:ContactUs }
+
+AdminAccueil :
+  path:     /AccueilAdmin
+  defaults: { _controller: AnnonceBundle:Default:AccueilAdmin }
+
+ClientAccueil :
+  path:     /AccueilClient
+  defaults: { _controller: AnnonceBundle:Default:AccueilClient }
+
+FreelancerAccueil :
+  path:     /AccueilFreelancer
+  defaults: { _controller: AnnonceBundle:Default:AccueilFreelancer }
+
+AdminProfil :
+  path:     /ProfilAdmin
+  defaults: { _controller: AnnonceBundle:Profil:ReadProfilA }
+
+ClientProfil :
+  path:     /ProfilClient
+  defaults: { _controller: AnnonceBundle:Profil:ReadProfilC }
+
+FreelancerProfil :
+  path:     /ProfilFreelancer
+  defaults: { _controller: AnnonceBundle:Profil:ReadProfilF }
+
+AddSkill :
+  path:     Skills/AddSkills
+  defaults: { _controller: AnnonceBundle:Skills:AddSkill }
+
+UpdateSk:
+  path:     /Skills/Up/{id}
+  defaults: { _controller: AnnonceBundle:Skills:updateSkill }
+
+sendMail:
+  path:     /mail
+  defaults: { _controller: AnnonceBundle:Default:SendEmail }
+
+sendMailAdmin:
+  path:     /mailAdmin
+  defaults: { _controller: AnnonceBundle:Default:SendEmail1 }
+
+
 #### Kaffel
 
 Annonce_home:
@@ -80,67 +143,9 @@ histoClient:
   path:     /historiqueAnnonce
   defaults: { _controller: AnnonceBundle:Annonce:affhistorique }
 
-##### Nidhal
-
-SkillsRead:
-  path:     /Skills
-  defaults: { _controller: AnnonceBundle:Skills:ReadSkills }
-
-SkillsCreate:
-  path:     /Skills/Create
-  defaults: { _controller: AnnonceBundle:Skills:CreateSkills }
-
-SkillsDelete:
-  path:     /Skills/Delete/{id}
-  defaults: { _controller: AnnonceBundle:Skills:DeleteSkills }
-
-SkillsUpdate:
-  path:     /Skills/Update/{id}
-  defaults: { _controller: AnnonceBundle:Skills:UpdateSkills }
-
-UsContact :
-  path:     /ContactUs
-  defaults: { _controller: AnnonceBundle:Default:ContactUs }
-
-AdminAccueil :
-  path:     /AccueilAdmin
-  defaults: { _controller: AnnonceBundle:Default:AccueilAdmin }
-
-ClientAccueil :
-  path:     /AccueilClient
-  defaults: { _controller: AnnonceBundle:Default:AccueilClient }
-
-FreelancerAccueil :
-  path:     /AccueilFreelancer
-  defaults: { _controller: AnnonceBundle:Default:AccueilFreelancer }
-
-AdminProfil :
-  path:     /ProfilAdmin
-  defaults: { _controller: AnnonceBundle:Profil:ReadProfilA }
-
-ClientProfil :
-  path:     /ProfilClient
-  defaults: { _controller: AnnonceBundle:Profil:ReadProfilC }
-
-FreelancerProfil :
-  path:     /ProfilFreelancer
-  defaults: { _controller: AnnonceBundle:Profil:ReadProfil }
-
-AddSkill :
-  path:     Skills/AddSkills
-  defaults: { _controller: AnnonceBundle:Skills:AddSkill }
-
-UpdateSk:
-  path:     /Skills/Up/{id}
-  defaults: { _controller: AnnonceBundle:Skills:updateSkill }
-
-sendMail:
-  path:     /mail
-  defaults: { _controller: AnnonceBundle:Default:SendEmail }
-
-sendMailAdmin:
-  path:     /mailAdmin
-  defaults: { _controller: AnnonceBundle:Default:SendEmail1 }
+histo:
+  path:     /job
+  defaults: { _controller: AnnonceBundle:Annonce:job }
 
 ######Yasser
 
@@ -283,3 +288,86 @@ edit2:
   defaults: { _controller: AnnonceBundle:Ticket:edit2 }
 
 #### Loua
+
+formation_homepage:
+  path:     /
+  defaults: { _controller: AnnonceBundle:Default:index }
+
+accueilC:
+  path:     /accueilC
+  defaults: { _controller: AnnonceBundle:Formation:accueilC }
+
+accueilF:
+  path:     /accueilF
+  defaults: { _controller: AnnonceBundle:Formation:accueilF }
+
+
+afficheFormationClient:
+  path:   /afficheFormationClient
+  defaults: { _controller: AnnonceBundle:Formation:affiche }
+
+detail1:
+  path:     /detail1/{id}
+  defaults: { _controller: AnnonceBundle:Formation:detail1 }
+
+deleteL:
+  path:     /deleteL/{id}
+  defaults: { _controller: AnnonceBundle:Formation:deleteL }
+
+AddL:
+  path:     /Ajout
+  defaults: { _controller: AnnonceBundle:Formation:create }
+
+updateL:
+  path:     /update/{id}
+  defaults: { _controller: AnnonceBundle:Formation:update }
+
+chart:
+  path:   /chart
+  defaults: { _controller: AnnonceBundle:Stat:stat }
+
+chart1:
+  path:   /chart1
+  defaults: { _controller: AnnonceBundle:Stat:chart }
+
+afficheFormationFreelancer:
+  path:   /afficheFormationFreelancer
+  defaults: { _controller: AnnonceBundle:Formation:accueil }
+
+affiche:
+  path:   /showww
+  defaults: { _controller: AnnonceBundle:Categorie:afficheC }
+
+AddC:
+  path:     /AjoutC
+  defaults: { _controller: AnnonceBundle:Categorie:createC }
+
+deleteCCL:
+  path:     /deleteCC/{id}
+  defaults: { _controller: AnnonceBundle:Categorie:deleteCC }
+
+updateC:
+  path:     /updateC/{id}
+  defaults: { _controller: AnnonceBundle:Categorie:updateC }
+
+participer:
+  path:     /participer/{id}
+  defaults: { _controller: AnnonceBundle:Formation:participer }
+
+annuler:
+  path:     /annuler/{id}
+  defaults: { _controller: AnnonceBundle:Formation:annuler }
+
+acceptee:
+  path:     /acceptee
+  defaults: { _controller: AnnonceBundle:Formation:acceptee }
+
+list:
+  path:     /list
+  defaults: { _controller: AnnonceBundle:Formation:list }
+
+list2:
+  path: /list2/{id}
+  defaults: { _controller: AnnonceBundle:Formation:list2 }
+
+

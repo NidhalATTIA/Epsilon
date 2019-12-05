@@ -4,7 +4,7 @@
          <table id="mytable" class="table table-bordred table-striped">
              <thead>
              <th>Freelancer</th>
-             <th>Moyenne</th>
+             <th>Average</th>
              </thead>
          {% for non in note %}
                 {% set erreur = 0 %}
@@ -40,8 +40,8 @@
              <div class="row">
                  <table id="mytable" class="table table-bordred table-striped">
                      <thead>
-                     <th>note</th>
-                     <th> Client</th>
+                     <th>Rate</th>
+                     <th>Client</th>
                      <th>Freelancer</th>
                      <th>Score</th>
                      </thead>
@@ -57,7 +57,7 @@
 
                              {% if app.user.username == no.idClient or app.user.TypeUser == "admin" %}
 
-                                 <td> <a href ="{{ path('supprimer_note', {'id':no.id}) }}"><button style="color: white">supprimer</button> </a></td>
+                                 <td> <a href ="{{ path('supprimer_note', {'id':no.id}) }}"><button style="color: white">Delete</button> </a></td>
 
                              {% endif %}
 
@@ -67,11 +67,11 @@
                          {% endfor %}
                  </table>
              </div>
-             <a href ="{{ path('creat_note')}}"><button style="color: white; margin: 20px;">ajouter</button> </a>
+             <a href ="{{ path('creat_note')}}"><button style="color: white; margin: 20px;">Add</button> </a>
          </div>
 
          <thead>
-         <th>score</th>
+         <th>Score</th>
          </thead>
 
 

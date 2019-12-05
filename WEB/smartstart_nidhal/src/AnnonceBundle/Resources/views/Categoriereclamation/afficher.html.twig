@@ -12,14 +12,14 @@
                     <thead>
                     <tr>
 
-                        <th>Categorie</th>
+                        <th>Category</th>
 
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
 
-                        <th>Categorie</th>
+                        <th>Category</th>
 
                     </tr>
                     </tfoot>
@@ -28,18 +28,18 @@
                         <tr>
 
                             <td>{{ entity.Categorier }}</td>
-                            <td> <a href="{{ path('deleter',{'id':entity.id}) }}"><button>Supprimer</button></a> </td>
-                            <td> <a href="{{ path('editr',{'id':entity.id}) }}"><button>Modifier</button></a> </td>
+                            <td> <a href="{{ path('deleter',{'id':entity.id}) }}"><button>Delete</button></a> </td>
+                            <td> <a href="{{ path('editr',{'id':entity.id}) }}"><button>Update</button></a> </td>
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
 
-                <td> <a href="{{ path('Addr') }}"><button>Ajouter</button></a> </td>
+                <td> <a href="{{ path('Addr') }}"><button>Add</button></a> </td>
 
             </div>
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        <div class="card-footer small text-muted">Updated yesterday at 05:59 PM</div>
     </div>
 
     </div>

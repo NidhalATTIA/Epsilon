@@ -11,13 +11,12 @@
         </ol>
 
 
-            {% for entity in Postulation %}
+            <h6>Username : </h6><h2>{{ app.user.username }}</h2></br>
+            <h6>Last Name : </h6><h2>{{ app.user.nom }}</h2></br></br>
+            <h6>First Name : </h6><h2>{{ app.user.prenom }}</h2></br></br>
+            <h6>Your Email : </h6><h2>{{ app.user.email }}</h2></br></br>
 
-            <p>First Name : </p><h3>{{ entity.idA.nom }}</h3></br>
-            <p>Last Name : </p><h3>{{ entity.idA.prenom }}</h3></br>
-            <p> Your Email : </p><h3>{{ entity.idA.email }}</h3></br>
 
-            {% endfor %}
 
 
 

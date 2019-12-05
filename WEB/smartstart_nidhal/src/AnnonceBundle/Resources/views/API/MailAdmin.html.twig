@@ -1,22 +1,24 @@
 {% extends 'baseAdmin.html.twig' %}
 
     {% block body %}
-
-
+        <center><h6>________________________________________________________________________________________________________________________________________________________________________________________</h6>
+        </br><h1>Send an Email via Smart Start Dashboard !</h1>
+        </br><form method="post">
+        <table widht="100%" border ="10" cellpadding="100" cellspacing=""><tr><td>
                <a href="{{ path('sendMailAdmin') }}"></a>
 <div class="panel-footer">
-    {{ form_start(f) }}
+    {{ form_start(f) }}<h4><p>Type your Email here</p></h4>
     <div class="input-group">
-        {{ form_widget(f.message, {'attr': {'class': 'form-control input-sm','placeholder':'Type your message to send...','name': 'name','type':'text'}}) }}
+        {{ form_widget(f.message, {'attr': {'class': 'form-control input-sm','placeholder':'Type your email to send...','name': 'name','type':'text'}}) }}</br>
         <span class="input-group-btn">
-                                            {{ form_widget(f.send,{'attr': {'class': 'btn btn-warning btn-sm','id': 'btn-chat','type':'button'}}) }}
+            {{ form_widget(f.send,{'attr': {'class': 'btn btn-warning btn-sm','id': 'btn-chat','type':'button'}}) }}
 
                                   </span>
     </div>
 
 {{ form_end(f) }}
 
+</div></td></tr></table></form>
 
-
-
+</center>
     {% endblock %}

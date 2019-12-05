@@ -59,9 +59,9 @@ class Formation
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateDÃ©but", type="date", nullable=false)
+     * @ORM\Column(name="dateDebut", type="date", nullable=false)
      */
-    private $datedã©but;
+    private $datedebut;
 
     /**
      * @var \DateTime
@@ -69,6 +69,16 @@ class Formation
      * @ORM\Column(name="dateFin", type="date", nullable=false)
      */
     private $datefin;
+
+    /**
+     * @var \Client
+     *
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idClient", referencedColumnName="id")
+     * })
+     */
+    private $idclient;
 
     /**
      * @var \Categorieformation
@@ -81,14 +91,164 @@ class Formation
     private $idcategorief;
 
     /**
-     * @var \Client
-     *
-     * @ORM\ManyToOne(targetEntity="Client")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idClient", referencedColumnName="ID")
-     * })
+     * @return int
      */
-    private $idclient;
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * @param string $titre
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLieu()
+    {
+        return $this->lieu;
+    }
+
+    /**
+     * @param string $lieu
+     */
+    public function setLieu($lieu)
+    {
+        $this->lieu = $lieu;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+
+    /**
+     * @param int $prix
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNbparticipants()
+    {
+        return $this->nbparticipants;
+    }
+
+    /**
+     * @param int $nbparticipants
+     */
+    public function setNbparticipants($nbparticipants)
+    {
+        $this->nbparticipants = $nbparticipants;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDatedebut()
+    {
+        return $this->datedebut;
+    }
+
+    /**
+     * @param \DateTime $datedebut
+     */
+    public function setDatedebut($datedebut)
+    {
+        $this->datedebut = $datedebut;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDatefin()
+    {
+        return $this->datefin;
+    }
+
+    /**
+     * @param \DateTime $datefin
+     */
+    public function setDatefin($datefin)
+    {
+        $this->datefin = $datefin;
+    }
+
+    /**
+     * @return \Client
+     */
+    public function getIdclient()
+    {
+        return $this->idclient;
+    }
+
+    /**
+     * @param \Client $idclient
+     */
+    public function setIdclient($idclient)
+    {
+        $this->idclient = $idclient;
+    }
+
+    /**
+     * @return \Categorieformation
+     */
+    public function getIdcategorief()
+    {
+        return $this->idcategorief;
+    }
+
+    /**
+     * @param \Categorieformation $idcategorief
+     */
+    public function setIdcategorief($idcategorief)
+    {
+        $this->idcategorief = $idcategorief;
+    }
 
 
 }

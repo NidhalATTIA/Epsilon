@@ -111,4 +111,41 @@ class SkillsController extends Controller
         return $this->render('@Annonce/Skills/UpdateSkillF.html.twig',array('f'=> $form->createView()));
 
     }
+
+
+    // PAGINATION
+
+    // Include the paginator through dependency injection, the autowire needs to be enabled in the project
+    public function pagination(Request $request, PaginatorInterface $paginator)
+    {
+        // Retrieve the entity manager of Doctrine
+        $em = $this->getDoctrine()->getManager();
+
+        // Get some repository of data, in our case we have an Appointments entity
+        $appointmentsRepository = $em->getRepository(Appointments::class);
+
+        // Find all the data on the Appointments table, filter your query as you need
+        $allAppointmentsQuery = $appointmentsRepository->createQueryBuilder('p')
+            ->where('p.status != :status')
+            ->setParameter('status', 'canceled')
+            ->getQuery();
+
+        // Paginate the results of the query
+        $appointments = $paginator->paginate(
+        // Doctrine Query, not results
+            $allAppointmentsQuery,
+            // Define the page parameter
+            $request->query->getInt('page', 1),
+            // Items per page
+            5
+        );
+
+        // Render the twig view
+        $skills=$this->getDoctrine()->getRepository(Skills::class)->findAll();
+        return $this->render('Skills/ReadSkills.html.twig', [
+            'appointments' => $appointments
+        ]);
+    }
+
+
 }

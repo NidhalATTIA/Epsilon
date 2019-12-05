@@ -14,13 +14,21 @@
     <div class="card-header">
 
 
-        {% for entity in Postulation %}
 
-            <p>First Name : </p><h3>{{ entity.idC.nom }}</h3></br>
-            <p>Last Name : </p><h3>{{ entity.idC.prenom }}</h3></br>
-            <p> Your Email : </p><h3>{{ entity.idC.email }}</h3></br>
+        <h6>Username : </h6><h2>{{ app.user.username }}</h2></br>
+        <h6>Last Name : </h6><h2>{{ app.user.nom }}</h2></br></br>
+        <h6>First Name : </h6><h2>{{ app.user.prenom }}</h2></br></br>
+        <h6>Your Email : </h6><h2>{{ app.user.email }}</h2></br></br>
+        <h6>Nationality</h6><h2>{{ app.user.Nationalite }}</h2></br></br>
+        <h6>Description</h6><h2>{{ app.user.Description }}</h2></br></br>
+        <h6>Company Name :</h6><h2>{{ app.user.NomCompany }}</h2></br></br>
+        <h6>Company Description : </h6><h2>{{ app.user.Descriptioncompany }}</h2></br></br>
+        <h6>Type User : </h6><h2>{{ app.user.typeuser }}</h2></br></br>
 
-        {% endfor %}
+
+
+
+        </div>
 
 
 

@@ -1,13 +1,14 @@
 {% extends 'baseAdmin.html.twig' %}
 {%  block body %}
-<h>Modifier Reclamation</h>
+    <center>
+<h>Update a complaint</h>
 
 {{ form_start(f) }}
 
-    Etat:*  {{ form_widget(f.etat) }}</br>
+    State :*  {{ form_widget(f.etat) }}</br>
 
     {{ form_widget(f.save) }}
 {{ form_end(f) }}</br>
-
+    </center>
 
 {% endblock %}

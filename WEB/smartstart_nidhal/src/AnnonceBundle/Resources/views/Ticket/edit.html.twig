@@ -1,17 +1,18 @@
 {% extends 'baseFreelancer.html.twig' %}
 {%  block content %}
-<h>Modifier Reclamation</h>
+    <center>
+<h>Update a complaint</h>
 
 {{ form_start(f) }}
 
     Offre:*  {{ form_widget(f.offre) }}</br>
     Service:*  {{ form_widget(f.service) }}</br>
-    Categorie:*  {{ form_widget(f.categorie) }}</br>
-    Motifreclamation:*  {{ form_widget(f.motifreclamation) }}</br>
-    Image:*  {{ form_widget(f.image) }}</br>
+    Category:*  {{ form_widget(f.categorie) }}</br>
+    Reason of the complaint:*  {{ form_widget(f.motifreclamation) }}</br>
 
     {{ form_widget(f.save) }}
 {{ form_end(f) }}</br>
+    </center>
 
 
 {% endblock %}

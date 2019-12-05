@@ -1,18 +1,19 @@
 {% extends 'baseAdmin.html.twig' %}
 {%  block body %}
-<h>Rechercher</h>
+    <center>
+<h>Search</h>
 
  {#{{ form_start(f) }}#}
 
 <table border="1">
     {{ form(form) }}
     <tr>
-        <td>id</td>
+        <td>ID</td>
         <td>attribution</td>
-        <td>motif</td>
-        <td>gsm</td>
-        <td>datecreation</td>
-        <td>etat</td>
+        <td>Reason</td>
+        <td>GSM</td>
+        <td>Date of Creation</td>
+        <td>State</td>
 
     </tr>
     {% for entity in ticket   %}
@@ -27,5 +28,6 @@
         </tr>
     {% endfor %}
 </table>
-<td> <a href="{{ path('createH') }}"><button>ajouter</button></a> </td>
+    </center>
+<td> <a href="{{ path('createH') }}"><button>Add</button></a> </td>
 {% endblock %}

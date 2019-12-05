@@ -66,24 +66,24 @@ class DefaultController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             if ($request->isMethod('POST'))
-               $email =$form["email"]->getData();
-                    $message = $form["message"]->getData();
-                $message = \Swift_Message::newInstance()
-                    ->setSubject('Response from admin Smart Start')
-                    ->setFrom('attianidhal@gmail.com')
-                    ->setTo($email)
-                    ->setCharset('utf-8')
-                    ->setContentType('text/html')
-                    ->setBody($message);
-                $this->get('mailer')->send($message);
+                $email =$form["email"]->getData();
+            $message = $form["message"]->getData();
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Response from admin Smart Start')
+                ->setFrom('attianidhal@gmail.com')
+                ->setTo($email)
+                ->setCharset('utf-8')
+                ->setContentType('text/html')
+                ->setBody($message);
+            $this->get('mailer')->send($message);
 
-                //return $this->render('@Annonce/Default/ContactUs.html.twig', array('f' => $form->createView()));
+            //return $this->render('@Annonce/Default/ContactUs.html.twig', array('f' => $form->createView()));
 
-
-            }
-            return $this->render('@Annonce/API/MailAdmin.html.twig',array('f' => $form->createView()));
 
         }
+        return $this->render('@Annonce/API/MailAdmin.html.twig',array('f' => $form->createView()));
+
+    }
 
     public function SendEmailAction(Request $request)
     {
