@@ -1,0 +1,82 @@
+formation_homepage:
+    path:     /
+    defaults: { _controller: FormationBundle:Default:index }
+
+accueilC:
+    path:     /accueilC
+    defaults: { _controller: FormationBundle:Formation:accueilC }
+
+accueilF:
+    path:     /accueilF
+    defaults: { _controller: FormationBundle:Formation:accueilF }
+
+
+afficheFormationClient:
+    path:   /afficheFormationClient
+    defaults: { _controller: FormationBundle:Formation:affiche }
+
+detail1:
+    path:     /detail1/{id}
+    defaults: { _controller: FormationBundle:Formation:detail1 }
+
+delete:
+    path:     /delete/{id}
+    defaults: { _controller: FormationBundle:Formation:delete }
+
+Add:
+    path:     /Ajout
+    defaults: { _controller: FormationBundle:Formation:create }
+
+update:
+    path:     /update/{id}
+    defaults: { _controller: FormationBundle:Formation:update }
+
+chart:
+    path:   /chart
+    defaults: { _controller: FormationBundle:Stat:stat }
+
+chart1:
+    path:   /chart1
+    defaults: { _controller: FormationBundle:Stat:chart }
+
+afficheFormationFreelancer:
+    path:   /afficheFormationFreelancer
+    defaults: { _controller: FormationBundle:Formation:accueil }
+
+afficheC:
+    path:   /AfficheC
+    defaults: { _controller: FormationBundle:Categorie:afficheC }
+
+AddC:
+    path:     /AjoutC
+    defaults: { _controller: FormationBundle:Categorie:createC }
+
+deleteC:
+    path:     /deleteC/{id}
+    defaults: { _controller: FormationBundle:Categorie:deleteC }
+
+updateC:
+    path:     /updateC/{id}
+    defaults: { _controller: FormationBundle:Categorie:updateC }
+
+participer:
+    path:     /participer/{id}
+    defaults: { _controller: FormationBundle:Formation:participer }
+
+annuler:
+    path:     /annuler/{id}
+    defaults: { _controller: FormationBundle:Formation:annuler }
+
+acceptee:
+    path:     /acceptee
+    defaults: { _controller: FormationBundle:Formation:acceptee }
+
+list:
+    path:     /list
+    defaults: { _controller: FormationBundle:Formation:list }
+
+list2:
+    path: /list2/{id}
+    defaults: { _controller: FormationBundle:Formation:list2 }
+
+
