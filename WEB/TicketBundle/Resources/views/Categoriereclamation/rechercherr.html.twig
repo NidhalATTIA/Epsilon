@@ -1,0 +1,25 @@
+{% extends 'base1.html.twig' %}
+{%  block body %}
+<h>Rechercher</h>
+
+ {#{{ form_start(f) }}#}
+
+<table border="1">
+    {{ form(form) }}
+    <tr>
+        <td>id</td>
+        <td>categorie</td>
+
+
+    </tr>
+    {% for entity in ticket   %}
+        <tr>
+            <td>{{ entity.Id }}</td>
+            <td>{{ entity.Categorie. }}</td>
+
+
+        </tr>
+    {% endfor %}
+</table>
+<td> <a href="{{ path('Addr') }}"><button>ajouter</button></a> </td>
+{% endblock %}
