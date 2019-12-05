@@ -1,0 +1,65 @@
+{% extends 'base1.html.twig' %}
+{% block body%}
+
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Data Table Example</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Email</th>
+                        <th>Nationalite</th>
+                        <th>Nom de la company</th>
+                        <th>Description de la company</th>
+                        <th>Image client</th>
+                        <th>Date d'inscription</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Email</th>
+                        <th>Nationalite</th>
+                        <th>Nom de la company</th>
+                        <th>Description de laCompany</th>
+                        <th>Image client</th>
+                        <th>Date d'inscription</th>
+                    </tr>
+                    </tfoot>
+
+    {% for entity in Client %}
+             <tr>
+
+                    <td>{{ entity.Nom }}</td>
+                    <td>{{ entity.Prenom }}</td>
+                    <td>{{ entity.Email }}</td>
+                    <td>{{ entity.Nationalite }}</td>
+                    <td>{{ entity.NomCompany }}</td>
+                    <td>{{ entity.DescriptionCompany }}</td>
+                    <td>{{ entity.Imageclient }}</td>
+                    <td>{{ entity.Dateinscri|date}}</td>
+                 <td> <a href="{{ path('deleteC',{'id':entity.id}) }}"><button>Bloc</button></a> </td>
+
+
+            </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+    </div>
+
+    </div>
+{% endblock %}

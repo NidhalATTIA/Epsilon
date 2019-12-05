@@ -1,0 +1,13 @@
+{% extends 'base1.html.twig' %}
+{%  block body %}
+<h>Modifier Reclamation</h>
+
+{{ form_start(f) }}
+
+    Etat:*  {{ form_widget(f.etat) }}</br>
+
+    {{ form_widget(f.save) }}
+{{ form_end(f) }}</br>
+
+
+{% endblock %}
