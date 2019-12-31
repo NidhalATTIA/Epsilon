@@ -23,7 +23,7 @@ public class HomeForm {
     Button btnajout,btnaff,btns;
 
     public HomeForm() {
-        f = new Form("home");
+        f = new Form("Login");
         tnom = new TextField("","nom");
         tetat = new TextField("","état");
         btnajout = new Button("ajouter");

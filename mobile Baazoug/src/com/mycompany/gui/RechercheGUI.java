@@ -7,36 +7,28 @@ package com.mycompany.gui;
 
 import com.codename1.components.ImageViewer;
 import com.codename1.components.SpanLabel;
-
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextField;
-import com.codename1.ui.Toolbar;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
-import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import com.mycompany.Entite.SujetForum;
 import com.mycompany.Service.ServiceSujetForum;
-import com.mycompany.Service.ServiceTask;
 import java.io.IOException;
 import java.util.ArrayList;
-
-
-
 
 /**
  *
  * @author houssembaazoug
  */
-public class SujetForumGUI {
+public class RechercheGUI {
+      private Resources theme;
     
-    private Resources theme;
-    
-
+   
     Label login1;
     Label login2;
     Image im2;
@@ -59,8 +51,7 @@ public class SujetForumGUI {
      Container cnt7;
      Button search;
      ArrayList<SujetForum> l;
-     public static String reqq="";
-    public SujetForumGUI() {
+    public RechercheGUI() {
         
         
         
@@ -71,7 +62,7 @@ public class SujetForumGUI {
        f.getToolbar().addCommandToOverflowMenu("Add Subject", null, e->{AjouterSujetForum h=new AjouterSujetForum();
              h.getF().show();
             }); 
-       Sea = new TextField(reqq, "serach", 17, 1);
+       Sea = new TextField("", "serach", 17, 1);
        
         try {
             im2 = Image.createImage("/search.png");
@@ -80,24 +71,11 @@ public class SujetForumGUI {
         }
         search = new Button(im2);
         
-        cnt7.add(Sea);
-        cnt7.add(search);
-        f.add(cnt7);
-         if ("".equals(reqq)){
-          l = serviceTask.getList2();
-         }
-         else {l = serviceTask.getList3(reqq);}
-        search.addActionListener((e)->{
-            reqq = Sea.getText();
-        l = serviceTask.getList3(reqq);
-        System.out.println(l);
-        SujetForumGUI h=new SujetForumGUI ();
-             h.getF().show();
-        
        
-         
-        });
-         
+        f.add(cnt7);
+        
+     
+         l = serviceTask.getList3(Sea.getText());
           System.out.println(l);
         for (SujetForum s : l){
           
@@ -105,7 +83,7 @@ public class SujetForumGUI {
             f.add(addItem(s));
            }
            
-          f.getToolbar().addCommandToRightBar("Logout", null, (ev)->{HomeForm h=new HomeForm();
+          f.getToolbar().addCommandToRightBar("back", null, (ev)->{HomeForm h=new HomeForm();
           
           h.getF().show();
           });

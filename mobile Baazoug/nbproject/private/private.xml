@@ -4,16 +4,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService/src/com/mycompany/gui/HomeForm.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService/src/com/mycompany/Service/ServiceTask.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService/src/com/mycompany/Entite/SujetForum.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService/src/com/mycompany/Entite/Commentaire.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService/src/com/mycompany/myapp/MyApplication.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService/src/com/mycompany/Entite/Task.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService/src/com/mycompany/Service/ServiceCommentaire.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService/src/com/mycompany/gui/SujetForumGUI.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService/src/com/mycompany/gui/Affichage.java</file>
-            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService/src/com/mycompany/Service/ServiceSujetForum.java</file>
+            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService%203/src/com/mycompany/gui/EditSujetForum.java</file>
+            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService%203/src/com/mycompany/gui/Affichage.java</file>
+            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService%203/src/com/mycompany/Service/ServiceTask.java</file>
+            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService%203/src/com/mycompany/gui/AjouterSujetForum.java</file>
+            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService%203/src/search.png</file>
+            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService%203/src/com/mycompany/gui/RechercheGUI.java</file>
+            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService%203/src/com/mycompany/gui/SujetForumGUI.java</file>
+            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService%203/src/com/mycompany/gui/Affsujetf.java</file>
+            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService%203/src/com/mycompany/myapp/MyApplication.java</file>
+            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService%203/src/com/mycompany/Service/ServiceSujetForum.java</file>
+            <file>file:/Users/houssembaazoug/Downloads/CodenameOneConsommationWebService%203/src/com/mycompany/gui/HomeForm.java</file>
         </group>
     </open-files>
 </project-private>

@@ -99,7 +99,7 @@ public class Affsujetf {
              f.add(affcomm(c));
         }
             
-          f.getToolbar().addCommandToRightBar("back", null, (ev)->{HomeForm h=new HomeForm();
+          f.getToolbar().addCommandToRightBar("back", null, (ev)->{SujetForumGUI h=new SujetForumGUI();
           
           h.getF().show();
           });
