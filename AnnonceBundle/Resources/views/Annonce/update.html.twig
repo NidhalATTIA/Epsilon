@@ -1,0 +1,19 @@
+
+{% extends 'baseClient.html.twig' %}
+
+{% block content %}
+    <h>Modifier une Annonce<<h>
+
+
+
+
+    {{ form_start(f) }}
+    Titre:*  {{ form_widget(f.Titre) }}</br>
+    Description:*  {{ form_widget(f.DESCRIPTION) }}</br>
+    Categorie:*  {{ form_widget(f.idcategoriea) }}</br>
+    Skills:*  {{ form_widget(f.Skill) }}</br>
+
+
+    {{ form_widget(f.save) }}
+    {{ form_end(f) }}</br>
+{% endblock %}

@@ -1,0 +1,34 @@
+
+{% extends 'baseFreelancer.html.twig' %}
+
+{% block content %}
+
+    {% for entity in Annonce   %}
+    Titre :* <h>{{ entity.titre }}</h> <br>
+    Client :* <h>{{ entity.idClient.Nom }}</h> <br>
+    Skills :* <h>{{  entity.skill.skill}}</h> <br>
+    Categorie :* <h>{{ entity.idcategoriea.categoriea }}</h> <br>
+    Description :* <h>{{ entity.description }}</h> <br>
+    <div class="card my-4">
+        <h5 class="card-header">Postuler:</h5>
+        <div class="card-body">
+            <form action="{{  path('Addp',{'idannonce':entity.id})  }}" method="post" id="comment">
+                <div class="form-group">
+
+                    <textarea class="form-control" rows="3" name="comment" placeholder="Apply here"></textarea>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    {% endfor %}
+
+
+
+
+
+{% endblock %}
