@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Export" default="generateResource" basedir=".">
+<target name="generateResource">
+<taskdef classpath="editor.jar" classname="com.codename1.tools.resourcebuilder.CodenameOneTask" name="build" />
+    <build dest="output.res">
+   <image file="image/unselected-walkthru.png" name="unselected-walkthru.png" />
+   <image file="image/sidemenu-top.png" name="sidemenu-top.png" />
+   <image file="image/BackgroundRect.png" name="BackgroundRect.png" />
+   <image file="image/text-field-underline.png" name="text-field-underline.png" />
+   <image file="image/duke.png" name="duke.png" />
+   <image file="image/login-background.jpg" name="login-background.jpg" />
+   <image file="image/user-picture.jpg" name="user-picture.jpg" />
+   <image file="image/round-mask.png" name="round-mask.png" />
+   <image file="image/white.png" name="white.png" />
+   <image file="image/blog.jpg" name="blog.jpg" />
+   <image file="image/user-picture.png" name="user-picture.png" />
+   <image file="image/gradient-overlay.png" name="gradient-overlay.png" />
+   <image file="image/post.png" name="post.png" />
+   <image file="image/selected-walkthru.png" name="selected-walkthru.png" />
+   <image file="image/fileStart2.png" name="fileStart2.png" />
+   <image file="image/fileStart.png" name="fileStart.png" />
+   <image file="image/notes.png" name="notes.png" />
+   <image file="image/gradient-overlay.jpg" name="gradient-overlay.jpg" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen1" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen2" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen3" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen4" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen5" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen6" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen7" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen8" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen9" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen10" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen11" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen12" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen13" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen14" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen15" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen16" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen17" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen18" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen19" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen20" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen21" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen22" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen23" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen24" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen25" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen26" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen27" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen28" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen29" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen30" />
+   <font system="FACE_SYSTEM | STYLE_PLAIN | SIZE_MEDIUM" name="gen31" />
+   <theme file="theme/Theme" name="Theme" />
+   </build>
+</target>
+</project>
