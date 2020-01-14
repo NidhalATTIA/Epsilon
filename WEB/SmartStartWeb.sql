@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 04 déc. 2019 à 19:36
+-- Généré le :  mar. 14 jan. 2020 à 11:24
 -- Version du serveur :  5.7.19
 -- Version de PHP :  7.0.23
 
@@ -63,16 +63,16 @@ CREATE TABLE IF NOT EXISTS `annonce` (
   KEY `id_client` (`id_client`),
   KEY `idfskilla` (`Skill`),
   KEY `categorieAfk` (`idCategorieA`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `annonce`
 --
 
 INSERT INTO `annonce` (`id_client`, `ID`, `Titre`, `DESCRIPTION`, `dateAjout`, `idCategorieA`, `Skill`, `Etat`) VALUES
-(1, 4, 'annonce 1', 'test', '2019-12-04 16:02:30', 1, 3, 3),
-(1, 5, 'annonce 1', 'test', '2019-12-04 16:13:22', 1, 3, 0),
-(1, 6, 'annonce 2', 'ezae', '2019-12-04 16:15:10', 1, 2, 0);
+(6, 7, 'Poste de developpeur Web', 'Require JavaFX Skills', '2019-12-05 07:12:56', 1, 16, 0),
+(6, 8, 'Poste de designer', 'Skills en photoshop requis', '2019-12-05 07:13:38', 1, 21, 0),
+(6, 9, 'annonce 12', 'test', '2019-12-05 09:48:47', 2, 21, 0);
 
 -- --------------------------------------------------------
 
@@ -86,13 +86,15 @@ CREATE TABLE IF NOT EXISTS `categorieannonce` (
   `categorieA` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `categorieA` (`categorieA`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `categorieannonce`
 --
 
 INSERT INTO `categorieannonce` (`id`, `categorieA`) VALUES
+(2, 'Full Time'),
+(3, 'Half Time'),
 (1, 'PFA');
 
 -- --------------------------------------------------------
@@ -106,7 +108,17 @@ CREATE TABLE IF NOT EXISTS `categorieformation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `categorieF` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Déchargement des données de la table `categorieformation`
+--
+
+INSERT INTO `categorieformation` (`id`, `categorieF`) VALUES
+(1, 'Developpement Web'),
+(3, 'programmation'),
+(4, 'Management'),
+(5, 'SoftSkills');
 
 -- --------------------------------------------------------
 
@@ -126,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `categoriereclamation` (
 --
 
 INSERT INTO `categoriereclamation` (`id`, `categorieR`) VALUES
-(2, 'Reclamation 1');
+(2, 'Reclamation 2');
 
 -- --------------------------------------------------------
 
@@ -139,14 +151,23 @@ CREATE TABLE IF NOT EXISTS `categorie_skills` (
   `id_categorie` int(11) NOT NULL AUTO_INCREMENT,
   `categorie` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id_categorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `categorie_skills`
 --
 
 INSERT INTO `categorie_skills` (`id_categorie`, `categorie`) VALUES
-(1, 'Web');
+(9, 'Web dev'),
+(10, 'App dev'),
+(11, 'IT'),
+(12, 'Software'),
+(13, 'Media'),
+(14, 'Digital'),
+(15, 'Architecture'),
+(16, 'Civil Engineering'),
+(17, 'Translation'),
+(18, 'Delevry');
 
 -- --------------------------------------------------------
 
@@ -203,7 +224,7 @@ CREATE TABLE IF NOT EXISTS `feedbackc` (
   PRIMARY KEY (`id`),
   KEY `id_freelancer` (`id_freelancer`),
   KEY `id_Client` (`id_Client`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `feedbackc`
@@ -211,7 +232,10 @@ CREATE TABLE IF NOT EXISTS `feedbackc` (
 
 INSERT INTO `feedbackc` (`id`, `id_freelancer`, `contenu`, `id_Client`) VALUES
 (1, 1, 'Bravo', 3),
-(2, 1, 'good', 1);
+(2, 1, 'good', 1),
+(3, 7, 'Satisfait', 6),
+(4, 7, 'très bien', 3),
+(5, 7, 'Bravo', 6);
 
 -- --------------------------------------------------------
 
@@ -227,14 +251,45 @@ CREATE TABLE IF NOT EXISTS `formation` (
   `lieu` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `prix` int(11) NOT NULL,
   `nbParticipants` int(11) NOT NULL,
-  `dateDébut` date NOT NULL,
+  `dateDebut` date NOT NULL,
   `dateFin` date NOT NULL,
   `idCategorieF` int(11) DEFAULT NULL,
   `idClient` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idClient` (`idClient`),
   KEY `categorie` (`idCategorieF`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Déchargement des données de la table `formation`
+--
+
+INSERT INTO `formation` (`id`, `Titre`, `description`, `lieu`, `prix`, `nbParticipants`, `dateDebut`, `dateFin`, `idCategorieF`, `idClient`) VALUES
+(1, 'Formation JS', 'Developpement avec JavaScript', 'Lac 2, Tunis', 160, 25, '2019-12-08', '2019-12-30', 1, NULL),
+(3, 'Formation Angular', 'Angular for beginners', 'Marsa, Tunis', 250, 15, '2019-12-08', '2019-12-25', 1, 6);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `formationcat`
+--
+
+DROP TABLE IF EXISTS `formationcat`;
+CREATE TABLE IF NOT EXISTS `formationcat` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idFreelancer` int(11) DEFAULT NULL,
+  `idFormation` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idFreelancer` (`idFreelancer`),
+  KEY `idFormation` (`idFormation`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Déchargement des données de la table `formationcat`
+--
+
+INSERT INTO `formationcat` (`id`, `idFreelancer`, `idFormation`) VALUES
+(2, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -271,16 +326,18 @@ CREATE TABLE IF NOT EXISTS `fos_user` (
   UNIQUE KEY `UNIQ_957A647992FC23A8` (`username_canonical`),
   UNIQUE KEY `UNIQ_957A6479A0D96FBF` (`email_canonical`),
   UNIQUE KEY `UNIQ_957A6479C05FB297` (`confirmation_token`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `fos_user`
 --
 
 INSERT INTO `fos_user` (`id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `confirmation_token`, `password_requested_at`, `roles`, `nom`, `prenom`, `type_user`, `etat`, `nationalite`, `cv`, `description`, `image_freelancer`, `nom_company`, `image_client`, `description_company`) VALUES
-(1, 'nidhal', 'nidhal', 'attianidhal@gmail.com', 'attianidhal@gmail.com', 1, NULL, '$2y$13$DvzAsJgHyw44Y44vyvItV.yGytHTaLEV0gfgSZrX3ShjOcSdTjLoS', '2019-12-04 18:38:12', NULL, NULL, 'a:1:{i:0;s:11:\"ROLE_CLIENT\";}', 'Attia', 'Nidhal', 'Client', '', '', '', '', '', '', '', ''),
-(2, 'houssem', 'houssem', 'houssem@esprit.tn', 'houssem@esprit.tn', 1, NULL, '$2y$13$UkqCCx.jv19Si/p75szO6u.T1G48WdnBYebs/3ED0AAkGF0MohNty', '2019-12-04 19:26:27', NULL, NULL, 'a:1:{i:0;s:10:\"ROLE_AGENT\";}', 'houssem', 'kaffel', 'freelancer', 'Valide', '', '', '', '', '', '', ''),
-(3, 'admin', 'admin', 'admin@esprit.tn', 'admin@esprit.tn', 1, NULL, '$2y$13$UoR3uIv46lLNkB2lRyVpUetR3G4UUVxvzVRYTYUKQjTOacI3H7kZe', '2019-12-04 18:44:32', NULL, NULL, 'a:2:{i:0;s:10:\"ROLE_AGENT\";i:1;s:10:\"ROLE_ADMIN\";}', 'root', 'root', '', '', '', '', '', '', '', '', '');
+(1, 'sahsi', 'sahsi', 'housbaaz@esprit.tn', 'housbaaz@esprit.tn', 1, NULL, '$2y$13$DvzAsJgHyw44Y44vyvItV.yGytHTaLEV0gfgSZrX3ShjOcSdTjLoS', '2019-12-05 07:02:59', NULL, NULL, 'a:1:{i:0;s:11:\"ROLE_CLIENT\";}', 'baazoug', 'houssem', 'Client', '', '', '', '', '', 'nidhalcompany', '', ''),
+(2, 'houssem', 'houssem', 'houssem@esprit.tn', 'houssem@esprit.tn', 1, NULL, '$2y$13$UkqCCx.jv19Si/p75szO6u.T1G48WdnBYebs/3ED0AAkGF0MohNty', '2020-01-11 11:48:13', NULL, NULL, 'a:1:{i:0;s:10:\"ROLE_AGENT\";}', 'houssem', 'kaffel', 'freelancer', 'Valide', '', '', '', '', '', '', ''),
+(3, 'admin', 'admin', 'admin@esprit.tn', 'admin@esprit.tn', 1, NULL, '$2y$13$UoR3uIv46lLNkB2lRyVpUetR3G4UUVxvzVRYTYUKQjTOacI3H7kZe', '2019-12-05 09:42:21', NULL, NULL, 'a:2:{i:0;s:10:\"ROLE_AGENT\";i:1;s:10:\"ROLE_ADMIN\";}', 'root', 'root', '', '', '', '', '', '', '', '', ''),
+(6, 'Attia', 'attia', 'nidhal.attia@esprit.tn', 'nidhal.attia@esprit.tn', 1, NULL, '$2y$13$h/ecZw8HLWCIk3WtqMjIgum/zkgnjVAgiE0/WQOm/.yb/Kda9vxEG', '2019-12-05 09:47:43', NULL, NULL, 'a:1:{i:0;s:11:\"ROLE_CLIENT\";}', 'Attia', 'Nidhal', 'Client', '', 'Tunisienne', '#', 'Chef de Projet', '#', 'VERMEG', '#', 'Banking Company'),
+(7, 'Kaffel', 'kaffel', 'houssem@gmail.com', 'houssem@gmail.com', 1, NULL, '$2y$13$6C46pZvqoaqW2laydq3f0OZDZVPJB8NQk9QY.Rgn.RVobfLqLolYu', '2020-01-11 11:49:48', NULL, NULL, 'a:0:{}', 'Kaffel', 'Houssem', 'freelancer', 'Valide', 'Allemande', 'CV_Houssem.pdf', 'Ingénieur FullStack', '#', '#', '#', '#');
 
 -- --------------------------------------------------------
 
@@ -297,14 +354,16 @@ CREATE TABLE IF NOT EXISTS `freelancer` (
   PRIMARY KEY (`ID`),
   KEY `IDX_4C2ED1E89FFCCB73` (`Skill`),
   KEY `IDX_4C2ED1E8373D238` (`Freelancer`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `freelancer`
 --
 
 INSERT INTO `freelancer` (`ID`, `Description`, `Skill`, `Freelancer`) VALUES
-(4, 'test', 3, 2);
+(5, 'Fullstack', 15, 2),
+(7, 'Developer Full Stack', 23, 7),
+(8, 'devdev', 16, 2);
 
 -- --------------------------------------------------------
 
@@ -314,12 +373,14 @@ INSERT INTO `freelancer` (`ID`, `Description`, `Skill`, `Freelancer`) VALUES
 
 DROP TABLE IF EXISTS `freelancerskills`;
 CREATE TABLE IF NOT EXISTS `freelancerskills` (
-  `skill5` int(11) DEFAULT NULL,
+  `skill` int(11) DEFAULT NULL,
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `idFreelancer` int(11) DEFAULT NULL,
+  `idCategorie` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `idfreeskills` (`idFreelancer`),
-  KEY `fkskill5` (`skill5`)
+  KEY `IDX_A2DE75DFB597FD62` (`idCategorie`),
+  KEY `fkskill5` (`skill`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -383,14 +444,15 @@ CREATE TABLE IF NOT EXISTS `note` (
   PRIMARY KEY (`ID`),
   KEY `noteC_fk` (`idClient`),
   KEY `noteF_fk` (`idfreelancer`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `note`
 --
 
 INSERT INTO `note` (`ID`, `note`, `idClient`, `idfreelancer`) VALUES
-(1, 3, 1, 2);
+(1, 3, 1, 2),
+(4, 4, 6, 7);
 
 -- --------------------------------------------------------
 
@@ -408,14 +470,14 @@ CREATE TABLE IF NOT EXISTS `postulation` (
   PRIMARY KEY (`ID`),
   KEY `idFreelancer` (`idFreelancer`),
   KEY `idAnnonce` (`idAnnonce`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `postulation`
 --
 
 INSERT INTO `postulation` (`ID`, `Contenu`, `dateAjout`, `idAnnonce`, `idFreelancer`) VALUES
-(1, 'je postule', '2019-12-04 16:39:25', 4, 2);
+(2, 'je participe', '2019-12-05 09:45:28', 7, 7);
 
 -- --------------------------------------------------------
 
@@ -481,16 +543,23 @@ CREATE TABLE IF NOT EXISTS `skills` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Skill` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ID`),
-  KEY `id_categorie` (`id_categorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  KEY `IDX_D5311670C9486A13` (`id_categorie`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `skills`
 --
 
 INSERT INTO `skills` (`id_categorie`, `ID`, `Skill`) VALUES
-(1, 2, 'Symfony'),
-(1, 3, 'php');
+(9, 15, 'Symfony'),
+(10, 16, 'java'),
+(13, 17, 'Photograph'),
+(14, 18, 'Community Manager'),
+(16, 19, 'Road'),
+(17, 20, 'en - fr'),
+(15, 21, 'Designer'),
+(13, 23, 'CM'),
+(9, 24, 'dev');
 
 -- --------------------------------------------------------
 
@@ -541,14 +610,16 @@ CREATE TABLE IF NOT EXISTS `ticket` (
   `image` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `categorie` (`categorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `ticket`
 --
 
 INSERT INTO `ticket` (`id`, `categorie`, `offre`, `service`, `motifReclamation`, `image`) VALUES
-(1, 2, 'Offre 1', 'Client', 'Demande information', 'C:\\wamp\\www\\smartstart_test\\');
+(1, 2, 'Offre 1', 'Client', 'Demande information', 'C:\\wamp\\www\\smartstart_test\\'),
+(2, 2, 'Arnaque', 'Paiement', 'Le client \"X\" ne m\'a pas payé', 'C:\\wamp64\\tmp\\php44E5.tmp'),
+(3, 2, 'Arnaque', 'livraison', 'vol', 'C:\\wamp64\\tmp\\php9737.tmp');
 
 --
 -- Contraintes pour les tables déchargées
@@ -580,7 +651,7 @@ ALTER TABLE `feedbackc`
 -- Contraintes pour la table `formation`
 --
 ALTER TABLE `formation`
-  ADD CONSTRAINT `FK_404021BFA455ACCF` FOREIGN KEY (`idClient`) REFERENCES `client` (`ID`),
+  ADD CONSTRAINT `FK_404021BFA455ACCF` FOREIGN KEY (`idClient`) REFERENCES `fos_user` (`id`),
   ADD CONSTRAINT `FK_404021BFEEB49CA1` FOREIGN KEY (`idCategorieF`) REFERENCES `categorieformation` (`id`);
 
 --
@@ -594,8 +665,9 @@ ALTER TABLE `freelancer`
 -- Contraintes pour la table `freelancerskills`
 --
 ALTER TABLE `freelancerskills`
-  ADD CONSTRAINT `FK_A2DE75DF4A8EF2D5` FOREIGN KEY (`skill5`) REFERENCES `skills` (`ID`),
-  ADD CONSTRAINT `FK_A2DE75DFCEDACF02` FOREIGN KEY (`idFreelancer`) REFERENCES `freelancer` (`ID`);
+  ADD CONSTRAINT `FK_A2DE75DF5E3DE477` FOREIGN KEY (`skill`) REFERENCES `skills` (`ID`),
+  ADD CONSTRAINT `FK_A2DE75DFB597FD62` FOREIGN KEY (`idCategorie`) REFERENCES `categorie_skills` (`id_categorie`),
+  ADD CONSTRAINT `FK_A2DE75DFCEDACF02` FOREIGN KEY (`idFreelancer`) REFERENCES `fos_user` (`id`);
 
 --
 -- Contraintes pour la table `historiquereclamation`

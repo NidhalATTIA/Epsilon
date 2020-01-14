@@ -1,0 +1,54 @@
+
+{% extends 'baseClient.html.twig' %}
+
+{% block content %}
+{% if Annonce == NULL %}
+    <center> <h3>There is no ads</h3></center>
+{% else %}
+    <div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Data Table Example</div>
+    <div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="200%" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>date of creation</th>
+            <th>Skills </th>
+            <th>Category </th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in Annonce   %}
+            <tr>
+                <td>{{ entity.titre|upper }}</td>
+                <td>{{ entity.description }}</td>
+                <td>{{ entity.dateajout|date }}</td>
+                <td>{{ entity.skill.skill }}</td>
+                <td>{{ entity.idcategoriea.categoriea }}</td>
+                <td> <a href="{{ path('update',{'id':entity.id}) }}"><button style="color: white">Update</button></a> </td>
+                <td> <a href="{{ path('delete',{'id':entity.id}) }}"><button style="color: white">Delete</button></a> </td>
+                <td> <a href="{{ path('Postulation',{'id':entity.id}) }}"><button style="color: white">Postulate</button></a> </td>
+
+
+
+
+            </tr>
+        {% endfor %}
+        </tbody>
+        <td> <a href="{{ path('Add') }}"><button style="color: white">Add</button></a> </td>
+
+    </table>
+        <h3>The number of the ads is : {{ Annonce|length }}</h3>
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+{%  endif %}
+{% endblock %}

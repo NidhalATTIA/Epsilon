@@ -1,0 +1,69 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block body%}
+
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Data Table Example</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+
+                        <th>Attribution</th>
+                        <th>Reason for the complaint</th>
+                        <th>GSM</th>
+                        <th>Date of creation</th>
+                        <th>State</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+
+                        <th>Attribution</th>
+                        <th>Reason for the complaint</th>
+                        <th>GSM</th>
+                        <th>Date of creation</th>
+                        <th>State</th>
+                    </tr>
+                    </tfoot>
+
+    {% for entity in Historiquereclamation %}
+             <tr>
+
+                    <td>{{ entity.Attribution }}</td>
+                    <td>{{ entity.MotifReclamation.MotifReclamation }}</td>
+                    <td>{{ entity.GSM }}</td>
+                    <td>{{ entity.dateCreation|date}}</td>
+                 {% if entity.etat  == 0%}
+                     <td> <a href="{{ path('editH',{'id':entity.id}) }}"><button>Closed</button></a> </td>
+                 {% else %}
+
+                     <td> <a href="{{ path('editH',{'id':entity.id}) }}"><button>Open</button></a> </td>
+
+                 {%endif%}
+
+                 <td> <a href="{{ path('deleteH',{'id':entity.id}) }}"><button>Delete</button></a> </td>
+
+                 <td> <a href="{{ path('editH',{'id':entity.id}) }}"><button>Update</button></a> </td>
+
+
+
+
+
+            </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+                <td> <a href="{{ path('createH') }}"><button>Add</button></a> </td>
+
+            </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+    </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,46 @@
+
+{% extends 'baseClient.html.twig' %}
+
+{% block content %}
+{% if Annonce == NULL %}
+   <center> <h3>There is no ads</h3></center>
+{% else %}
+    <div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Data Table Example</div>
+    <div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="200%" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>date D ajout</th>
+            <th>Skills </th>
+            <th>Categorie </th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in Annonce   %}
+            <tr>
+                <td>{{ entity.titre|upper }}</td>
+                <td>{{ entity.description }}</td>
+                <td>{{ entity.dateajout|date }}</td>
+                <td>{{ entity.skill.skill }}</td>
+                <td>{{ entity.idcategoriea.categoriea }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+        <h3>Le nombre d'Annonces est {{ Annonce|length }}</h3>
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+{%  endif %}
+{% endblock %}

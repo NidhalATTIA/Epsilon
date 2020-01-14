@@ -1,0 +1,40 @@
+{%  extends 'baseAdmin.html.twig' %}
+{% block title %}SmartBundle:Security:Redirect{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="text-center">Welcome to admin</h1>
+
+        <table class="table">
+            <thead style="background-color: #1b4679; color: white">
+            <tr>
+                <th scope="col">username</th>
+                <th scope="col"> email</th>
+                <th scope="col"> categorie </th>
+                <th scope="col"> etat </th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for freelancer in free %}
+                {% if freelancer.typeuser == 'freelancer' %}
+                    {% for role in freelancer.roles %}
+                        {% if role != 'ROLE_ADMIN' %}
+                            <tr>
+                                <td>{{ freelancer.username}}</td>
+                                <td>{{ freelancer.email}}</td>
+                                <td>{{ freelancer.typeuser}}</td>
+                                <td>{{ freelancer.etat}}</td>
+                                <td> <a href ="{{ path('freelancerv_modifier', {'id':freelancer.id}) }}"><button class="btn btn-outline-dark">Modifier</button> </a></td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-4"></div>
+            <a  class="col-2 " href ="{{ path('smart_showfeed')}}"><button class="btn btn-dark" style=" margin-top: 20px;">Feedback</button> </a>
+            <a class="col-2 " href ="{{ path('read_note')}}"><button class="btn btn-dark" style="margin-top: 20px; margin-bottom: 100px;" >Note</button> </a>
+        </div>
+    </div>
+{% endblock %}
