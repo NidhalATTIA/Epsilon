@@ -1,0 +1,43 @@
+ loginButton.addActionListener((e) -> {
+            url = "http://localhost/fixit/web/app_dev.php/client/login/" + login.getText() + "/" + password.getText();
+            System.out.println(url);
+            con = new ConnectionRequest(url);
+            con.addResponseListener(new ActionListener<NetworkEvent>() {
+                @Override
+                public void actionPerformed(NetworkEvent evt) {
+                    User u = new User();
+                    String message = new String(con.getResponseData());
+                    System.out.println(message);
+                    System.out.println(message);
+                    System.out.println(message);
+                    System.out.println(message);
+
+                    if (message.equals("false")) {
+                        Dialog.show("ERROR !", "Login ou password incorrect", "OK", null);
+
+                    }
+
+                    if ((!message.equals("false"))) {
+                        ServiceUser ser = new ServiceUser();
+                        try {
+                            u = ser.parseUserJson(message);
+                        } catch (ParseException ex) {
+                        }
+                        System.out.println(u.getRoles());
+                        if ((u.getRoles().equals("[ROLE_CLIENT]"))) {
+                            Toolbar.setGlobalToolbar(false);
+                            new WalkthruForm(theme).show();
+                            Toolbar.setGlobalToolbar(true);
+                        } else {
+                            Toolbar.setGlobalToolbar(false);
+                            new WalkthruForm_1(theme).show();
+                            Toolbar.setGlobalToolbar(true);
+                        }
+                    }
+
+                }
+
+            });
+            NetworkManager.getInstance().addToQueueAndWait(con);
+
+        });
