@@ -1,0 +1,62 @@
+{% extends 'baseFreelancer.html.twig' %}
+
+{% block content %}
+
+    {% for entity in formation   %}
+        <center>
+        <table>
+            <center > <h1 style="font-weight: bold">{{ entity.Titre }}</h1></center> <br>
+
+
+            <tr>
+                <td><h3 style="color: #b94a48">Category : </h3></td>
+                <td><h3>{{ entity.idCategorief.categorief }}</h3> </td>
+            </tr>
+            <tr>
+                <td><h3 style="color: #b94a48">Client : </h3></td>
+                <td><h3>{{ entity.idClient.NomCompany }}</h3> </td>
+            </tr>
+            <tr>
+                <td ><h3 style="color: #b94a48">Description : </h3></td>
+                <td><h3>{{ entity.DESCRIPTION }}</h3> </td>
+            </tr>
+            <tr>
+                <td><h3 style="color: #b94a48">Place : </h3></td>
+                <td><h3>{{ entity.lieu }}</h3> </td>
+            </tr>
+            <tr>
+                <td><h3 style="color: #b94a48">Price : </h3></td>
+                <td><h3>{{ entity.Prix }}</h3> </td>
+            </tr>
+            <tr>
+                <td><h3 style="color: #b94a48">Number of places : </h3></td>
+                <td><h3>{{ entity.nbparticipants }}</h3> </td>
+            </tr>
+            <tr>
+                <td><h3 style="color: #b94a48">Date of start : </h3></td>
+                <td><h3>{{ entity.datedebut|date }}</h3> </td>
+            </tr>
+            <tr>
+                <td><h3 style="color: #b94a48">Date of end : </td>
+                <td><h3>{{ entity.datefin|date }}</h3> </td>
+            </tr>
+        </table><br><br>
+        </center>
+        <table>
+          <center> <a href="{{ path('participer',{'id':entity.id()}) }}" class="button large-button" style="color: white">Participate</a></center>
+           {# <td>  <a href="{{ path('retour',{'id':entity.id()}) }}" class="button large-button">Retour</a></td>#}
+        </table>
+
+
+
+
+
+    {% endfor %}
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+{% extends 'baseClient.html.twig' %}
+{#{% block content %}#}
+{% block content %}
+    <table>
+        <tr><td><h3>Update a training</h3></td></tr>
+
+{{ form_start(f) }}
+
+
+        <tr>
+            <td>Title :*</td>
+            <td>{{ form_widget(f.titre) }}</td>
+        </tr>
+        <tr>
+            <td>Category of the training :*</td>
+            <td>{{ form_widget(f.idCategorieF) }}</td>
+        </tr>
+        <tr>
+            <td>Description :* </td>
+            <td>{{ form_widget(f.description) }}</td>
+        </tr>
+        <tr>
+            <td>Place :* </td>
+            <td>{{ form_widget(f.lieu) }}</td>
+        </tr>
+        <tr>
+            <td>Price :*</td>
+            <td>{{ form_widget(f.prix) }}</td>
+        </tr>
+        <tr> <td>Number of the participants :* </td>
+            <td>{{ form_widget(f.nbparticipants) }}</td></tr>
+        <tr><td>Date of start :* </td>
+            <td>{{ form_widget(f.datedebut) }}</td></tr>
+        <tr><td>Date of end :*</td>
+            <td> {{ form_widget(f.datefin) }}</td></tr>
+
+        <tr><td> Organizer :*</td>
+            <td> {{ form_widget(f.idClient) }}</td></tr>
+        <tr><td>{{ form_widget(f.save) }}</br></td></tr>
+{{ form_end(f) }}
+
+</table>
+{% endblock %}
+
+
+
+
+
+

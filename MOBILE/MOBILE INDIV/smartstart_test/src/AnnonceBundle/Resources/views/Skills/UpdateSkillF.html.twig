@@ -1,0 +1,27 @@
+{% extends 'baseFreelancer.html.twig' %}
+
+    {% block content %}
+<div class="card mb-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="http://localhost/SmartStart_test/web/app_dev.php/ProfilFreelancer">Profile</a>
+        </li>
+        <li class="breadcrumb-item active">Skills</li>
+    </ol>
+    <div class="card-header">
+        <center>
+                <h2>Update your skill !</h2></br></br></br></br></br>
+            <table widht="100%" border ="10" cellpadding="100" cellspacing="50">
+
+
+        {{ form_start(f) }}
+                <h3>Skill :* </h3> </br>{{ form_widget(f.Description) }}</br>
+                <h3>Category :* </h3> </br> {{ form_widget(f.Skill) }}</br></br></br></br>
+                <h3>Confirm your choice</h3>
+                {{ form_end(f) }}
+
+            </table></br></br></br></br></br></br></br>
+
+    {% endblock %}
+
+
